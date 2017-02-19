@@ -102,6 +102,10 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 
 	for ( int n = 2; n < 7; n++ ) {
 		for ( int c = 0; c < 600; c++ ) {
+			if ( yQaabc[n][c] > 0. ) dQaabc[n][c] /= yQaabc[n][c];
+			if ( yQac[n][c] > 0. ) dQac[n][c] /= yQac[n][c];
+			if ( yQab[n][c] > 0. ) dQab[n][c] /= yQab[n][c];
+
 			hQaabc[n]->SetBinContent(c+1, dQaabc[n][c]);
 			hQab[n]->SetBinContent(c+1, dQab[n][c]);
 			hQac[n]->SetBinContent(c+1, dQac[n][c]);
@@ -116,7 +120,7 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	double dCn[7][600] = {};
 	for ( int n = 2; n < 7; n++ ) {
 		for ( int c = 0; c < 600; c++ ) {
-			dCn[n][c] = dQaabc[n][c]/yQaabc[n][c] - 2*dQab[n][c]*dQac[n][c]/yQab[n][c]/yQac[n][c];
+			dCn[n][c] = dQaabc[n][c] - 2*dQab[n][c]*dQac[n][c];
 			hCn[n]->SetBinContent(c+1, dCn[n][c]);
 		}
 	}

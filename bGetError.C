@@ -27,8 +27,8 @@ void bGetError(int s1 = 0, int s3 = 10)
 	}
 
 	// Save
-	TH1D * hCnR[n] = {};
-	TH1D * hVnR[n] = {};
+	TH1D * hCnR[7] = {};
+	TH1D * hVnR[7] = {};
 
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n] = (TH1D*) fr[s3]->Get(Form("hCnR%i", n));
