@@ -9,6 +9,7 @@ char const * fname[] = {
 	"",			// 6 pPb HM5 standard
 	"",			// 7 pPb HM6 standard
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_v1/170215_180432/0000/",			// 8 pPb HM7 standard
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_v1/170219_072350/0000/",				// 9 pPb MB1 standard
 };
 
 char const * ftxt[] = {
@@ -21,6 +22,7 @@ char const * ftxt[] = {
 	"txt/PAHM5/",			// 6
 	"txt/PAHM6/",			// 7
 	"txt/PAHM7/",			// 8
+	"txt/PAMB1/",			// 9
 };
 
 
