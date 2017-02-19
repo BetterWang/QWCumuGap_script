@@ -133,8 +133,8 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 			double weight = 0;
 			for ( int m = pCent[c]; m < pCent[c+1]; m++ ) {
 				if ( m > 600 ) continue;
-				sum += dCn[n][c] * yQaabc[n][c];
-				weight += yQaabc[n][c];
+				sum += dCn[n][m] * yQaabc[n][m];
+				weight += yQaabc[n][m];
 			}
 			if ( weight > 0 ) sum /= weight;
 			else sum = 0;
