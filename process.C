@@ -26,6 +26,12 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	double rQac[7] = {};
 	double wQac[7] = {};
 
+	double rQ2[7] = {};
+	double wQ2[7] = {};
+
+	double rQ4[7] = {};
+	double wQ4[7] = {};
+
 	chV->SetBranchAddress("Noff", &gNoff);
 	chV->SetBranchAddress("Mult", &gMult);
 
@@ -33,10 +39,15 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	chV->SetBranchAddress("wQab", &wQab[2]);
 	chV->SetBranchAddress("wQac", &wQac[2]);
 
+	chV->SetBranchAddress("wQ2", &wQ2[2]);
+	chV->SetBranchAddress("wQ4", &wQ4[2]);
+
 	for ( int n = 2; n < 7; n++ ) {
 		chV->SetBranchAddress(Form("rQaabc%i", n), &rQaabc[n]);
 		chV->SetBranchAddress(Form("rQab%i", n), &rQab[n]);
 		chV->SetBranchAddress(Form("rQac%i", n), &rQac[n]);
+		chV->SetBranchAddress(Form("rQ2%i", n), &rQ2[n]);
+		chV->SetBranchAddress(Form("rQ4%i", n), &rQ4[n]);
 	}
 
 	TH1D * hMult = new TH1D("hMult", "hMult", 1000, -0.5, 999.5);
@@ -50,7 +61,13 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	TH1D * hWQab[7] = {};
 	TH1D * hWQac[7] = {};
 
+	TH1D * hQ2[7] = {};
+	TH1D * hQ4[7] = {};
+	TH1D * hWQ2[7] = {};
+	TH1D * hWQ4[7] = {};
+
 	TH1D * hCn[7] = {};
+	TH1D * hC4n[7] = {};
 
 	for ( int n = 2; n < 7; n++ ) {
 		hQaabc[n] = new TH1D(Form("hQaabc%i", n), Form("hQaabc%i", n), 600, -0.5, 599.5);
@@ -61,7 +78,14 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 		hWQab[n] = new TH1D(Form("hWQab%i", n), Form("hWQab%i", n), 600, -0.5, 599.5);
 		hWQac[n] = new TH1D(Form("hWQac%i", n), Form("hWQac%i", n), 600, -0.5, 599.5);
 
+		hQ2[n] = new TH1D(Form("hQ2%i", n), Form("hQ2%i", n), 600, -0.5, 599.5);
+		hQ4[n] = new TH1D(Form("hQ4%i", n), Form("hQ4%i", n), 600, -0.5, 599.5);
+
+		hWQ2[n] = new TH1D(Form("hWQ2%i", n), Form("hWQ2%i", n), 600, -0.5, 599.5);
+		hWQ4[n] = new TH1D(Form("hWQ4%i", n), Form("hWQ4%i", n), 600, -0.5, 599.5);
+
 		hCn[n] = new TH1D(Form("hCn%i", n), Form("hCn%i", n), 600, -0.5, 599.5);
+		hC4n[n] = new TH1D(Form("hC4n%i", n), Form("hC4n%i", n), 600, -0.5, 599.5);
 	}
 
 	double dQaabc[7][600] = {};
@@ -71,6 +95,11 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	double yQaabc[7][600] = {};
 	double yQab[7][600] = {};
 	double yQac[7][600] = {};
+
+	double dQ2[7][600] = {};
+	double dQ4[7][600] = {};
+	double yQ2[7][600] = {};
+	double yQ4[7][600] = {};
 
 	unsigned int ievt = 0;
 	if (s2!=s3) ievt = s2;
@@ -84,6 +113,8 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 			wQaabc[n] = wQaabc[2];
 			wQab[n] = wQab[2];
 			wQac[n] = wQac[2];
+			wQ2[n] = wQ2[2];
+			wQ4[n] = wQ4[2];
 		}
 		for ( int n = 2; n < 7; n++ ) {
 			if ( TMath::IsNaN( rQaabc[n] ) ) continue;
@@ -95,6 +126,11 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 
 			dQac[n][gNoff] += rQac[n];
 			yQac[n][gNoff] += wQac[n];
+
+			dQ2[n][gNoff] += rQ2[n];
+			dQ4[n][gNoff] += rQ4[n];
+			yQ2[n][gNoff] += wQ2[n];
+			yQ4[n][gNoff] += wQ4[n];
 		}
 		hNoff->Fill(gNoff);
 		hMult->Fill(gMult);
@@ -105,6 +141,8 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 			if ( yQaabc[n][c] > 0. ) dQaabc[n][c] /= yQaabc[n][c];
 			if ( yQac[n][c] > 0. ) dQac[n][c] /= yQac[n][c];
 			if ( yQab[n][c] > 0. ) dQab[n][c] /= yQab[n][c];
+			if ( yQ2[n][c] > 0. ) dQ2[n][c] /= yQ2[n][c];
+			if ( yQ4[n][c] > 0. ) dQ4[n][c] /= yQ4[n][c];
 
 			hQaabc[n]->SetBinContent(c+1, dQaabc[n][c]);
 			hQab[n]->SetBinContent(c+1, dQab[n][c]);
@@ -113,32 +151,48 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 			hWQaabc[n]->SetBinContent(c+1, yQaabc[n][c]);
 			hWQab[n]->SetBinContent(c+1, yQab[n][c]);
 			hWQac[n]->SetBinContent(c+1, yQac[n][c]);
+
+			hQ2[n]->SetBinContent(c+1, dQ2[n][c]);
+			hQ4[n]->SetBinContent(c+1, dQ4[n][c]);
+			hWQ2[n]->SetBinContent(c+1, yQ2[n][c]);
+			hWQ4[n]->SetBinContent(c+1, yQ4[n][c]);
 		}
 	}
 
 	// calculate cn{4}
 	double dCn[7][600] = {};
+	double dC4n[7][600] = {};
 	for ( int n = 2; n < 7; n++ ) {
 		for ( int c = 0; c < 600; c++ ) {
 			dCn[n][c] = dQaabc[n][c] - 2*dQab[n][c]*dQac[n][c];
 			hCn[n]->SetBinContent(c+1, dCn[n][c]);
+			dC4n[n][c] = dQ4[n][c] - 2*dQ2[n][c]*dQ2[n][c];
+			hC4n[n]->SetBinContent(c+1, dC4n[n][c]);
 		}
 	}
 
 	// rebin
 	double dCnR[7][20] = {};
+	double dC4nR[7][20] = {};
 	for ( int n = 2; n < 7; n++ ) {
 		for ( int c = 0; c <  NCent; c++ ) {
 			double sum = 0;
 			double weight = 0;
+			double sum4 = 0;
+			double weight4 = 0;
 			for ( int m = pCent[c]; m < pCent[c+1]; m++ ) {
 				if ( m > 600 ) continue;
 				sum += dCn[n][m] * yQaabc[n][m];
 				weight += yQaabc[n][m];
+				sum4 += dC4n[n][m] * yQ4[n][m];
+				weight4 += yQ4[n][m];
 			}
 			if ( weight > 0 ) sum /= weight;
 			else sum = 0;
+			if ( weight4 > 0 ) sum4 /= weight4;
+			else sum4 = 0;
 			dCnR[n][c] = sum;
+			dC4nR[n][c] = sum4;
 		}
 	}
 	TH1D * hNoffR = new TH1D("hNoffR", "hNoffR", 20, 0, 20);
@@ -151,10 +205,13 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 	}
 
 	TH1D * hCnR[7];
+	TH1D * hC4nR[7];
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n] = new TH1D(Form("hCnR%i", n), Form("hCnR%i", n), 20, 0, 20);
+		hC4nR[n] = new TH1D(Form("hC4nR%i", n), Form("hC4nR%i", n), 20, 0, 20);
 		for ( int c = 0; c < NCent; c++ ) {
 			hCnR[n]->SetBinContent( c+1, dCnR[n][c] );
+			hC4nR[n]->SetBinContent( c+1, dC4nR[n][c] );
 		}
 	}
 
@@ -171,6 +228,14 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 
 		hCn[n]->Write();
 		hCnR[n]->Write();
+
+		hQ2[n]->Write();
+		hQ4[n]->Write();
+		hWQ2[n]->Write();
+		hWQ4[n]->Write();
+
+		hC4n[n]->Write();
+		hC4nR[n]->Write();
 	}
 	hNoff->Write();
 	hMult->Write();
