@@ -15,6 +15,22 @@ char const * fname[] = {
 	"../pPb/PAMinimumBias4/crab_PAMB4_cumugap_eff_v4/170227_152827/0000/",				// 12 pPb MB4 standard
 	"../pPb/PAMinimumBias5/crab_PAMB5_cumugap_eff_v4/170227_152848/0000/",				// 13 pPb MB5 standard
 	"../pPb/PAMinimumBias6/crab_PAMB6_cumugap_eff_v4/170227_152904/0000/",				// 14 pPb MB6 standard
+        "NA",			// 15 pPb MB sum standard
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_reverse_v4/170227_155556/0000/",		// 16 pPb HM0 reverse
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_reverse_v4/170227_155622/0000/",		// 17 pPb HM1 reverse
+	"",			// 18 pPb HM2 reverse
+	"",			// 19 pPb HM3 reverse
+	"",			// 20 pPb HM4 reverse
+	"",			// 21 pPb HM5 reverse
+	"",			// 22 pPb HM6 reverse
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_reverse_v4/170227_155653/0000/",		// 23 pPb HM7 reverse
+	"",		// 24 pPb MB1 reverse
+	"",		// 25 pPb MB2 reverse
+	"",		// 26 pPb MB3 reverse
+	"",		// 27 pPb MB4 reverse
+	"",		// 28 pPb MB5 reverse
+	"",		// 29 pPb MB6 reverse
+	"NA",		// 30 pPb MB sum reverse
 };
 
 char const * ftxt[] = {
@@ -33,6 +49,22 @@ char const * ftxt[] = {
 	"txt/PAMB4/",			// 12
 	"txt/PAMB5/",			// 13
 	"txt/PAMB6/",			// 14
+	"txt/PAMB_full/",		// 15
+	"txt/PAHM0_reverse/",		// 16
+	"txt/PAHM1_reverse/",		// 17
+	"txt/PAHM2_reverse/",		// 18
+	"txt/PAHM3_reverse/",		// 19
+	"txt/PAHM4_reverse/",		// 20
+	"txt/PAHM5_reverse/",		// 21
+	"txt/PAHM6_reverse/",		// 22
+	"txt/PAHM7_reverse/",		// 23
+	"txt/PAMB1_reverse/",		// 24
+	"txt/PAMB2_reverse/",		// 25
+	"txt/PAMB3_reverse/",		// 26
+	"txt/PAMB4_reverse/",		// 27
+	"txt/PAMB5_reverse/",		// 28
+	"txt/PAMB6_reverse/",		// 29
+	"txt/PAMB_reverse_full/",	// 30
 };
 
 
