@@ -24,12 +24,12 @@ char const * fname[] = {
 	"",			// 21 pPb HM5 reverse
 	"",			// 22 pPb HM6 reverse
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_reverse_v4/170227_155653/0000/",		// 23 pPb HM7 reverse
-	"",		// 24 pPb MB1 reverse
-	"",		// 25 pPb MB2 reverse
-	"",		// 26 pPb MB3 reverse
-	"",		// 27 pPb MB4 reverse
-	"",		// 28 pPb MB5 reverse
-	"",		// 29 pPb MB6 reverse
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_reverse_v4/170301_110704/0000/",			// 24 pPb MB1 reverse
+	"../pPb/PAMinimumBias2/crab_PAMB2_cumugap_eff_reverse_v4/170301_110720/0000/",			// 25 pPb MB2 reverse
+	"../pPb/PAMinimumBias3/crab_PAMB3_cumugap_eff_reverse_v4/170301_110737/0000/",			// 26 pPb MB3 reverse
+	"../pPb/PAMinimumBias4/crab_PAMB4_cumugap_eff_reverse_v4/170301_110758/0000/",			// 27 pPb MB4 reverse
+	"../pPb/PAMinimumBias5/crab_PAMB5_cumugap_eff_reverse_v4/170301_110816/0000/",			// 28 pPb MB5 reverse
+	"../pPb/PAMinimumBias6/crab_PAMB6_cumugap_eff_reverse_v4/170301_110832/0000/",			// 29 pPb MB6 reverse
 	"NA",		// 30 pPb MB sum reverse
 };
 
