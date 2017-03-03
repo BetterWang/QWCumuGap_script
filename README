@@ -1,3 +1,4 @@
-1) process.C, get raw distributions, rebin
-2) bGetError.C, get error
-3) genPlot.C, generate graph
+1) process.C, get raw distributions
+2) bGet.C, rebin
+3) bGetError.C, get error
+4) genPlot.C, generate graph

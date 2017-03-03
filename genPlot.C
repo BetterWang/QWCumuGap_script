@@ -25,6 +25,16 @@ void genPlot(int s1 =0)
 	double dV4n[7][20];
 	double eV4n[7][20];
 
+	double dC6n[7][20];
+	double eC6n[7][20];
+	double dV6n[7][20];
+	double eV6n[7][20];
+
+	double dC8n[7][20];
+	double eC8n[7][20];
+	double dV8n[7][20];
+	double eV8n[7][20];
+
 	for ( int n = 2; n < 7; n++ ) {
 		TH1D * hc = (TH1D*) f->Get(Form("hCnR%i", n));
 		TH1D * hv = (TH1D*) f->Get(Form("hVnR%i", n));
@@ -32,6 +42,11 @@ void genPlot(int s1 =0)
 		TH1D * hc4 = (TH1D*) f->Get(Form("hC4nR%i", n));
 		TH1D * hv4 = (TH1D*) f->Get(Form("hV4nR%i", n));
 
+		TH1D * hc6 = (TH1D*) f->Get(Form("hC6nR%i", n));
+		TH1D * hv6 = (TH1D*) f->Get(Form("hV6nR%i", n));
+
+		TH1D * hc8 = (TH1D*) f->Get(Form("hC8nR%i", n));
+		TH1D * hv8 = (TH1D*) f->Get(Form("hV8nR%i", n));
 		for ( int c = 0; c < 20; c++ ) {
 			dCn[n][c] = hc->GetBinContent(c+1);
 			eCn[n][c] = hc->GetBinError(c+1);
@@ -42,6 +57,16 @@ void genPlot(int s1 =0)
 			eC4n[n][c] = hc4->GetBinError(c+1);
 			dV4n[n][c] = hv4->GetBinContent(c+1);
 			eV4n[n][c] = hv4->GetBinError(c+1);
+
+			dC6n[n][c] = hc4->GetBinContent(c+1);
+			eC6n[n][c] = hc4->GetBinError(c+1);
+			dV6n[n][c] = hv4->GetBinContent(c+1);
+			eV6n[n][c] = hv4->GetBinError(c+1);
+
+			dC8n[n][c] = hc4->GetBinContent(c+1);
+			eC8n[n][c] = hc4->GetBinError(c+1);
+			dV8n[n][c] = hv4->GetBinContent(c+1);
+			eV8n[n][c] = hv4->GetBinError(c+1);
 		}
 	}
 
@@ -64,11 +89,29 @@ void genPlot(int s1 =0)
 		grC4[n] = new TGraphErrors(NCent, CentX, dC4n[n], 0, eC4n[n]);
 		grV4[n] = new TGraphErrors(NCent, CentX, dV4n[n], 0, eV4n[n]);
 		grC4[n]->SetMarkerStyle(kOpenSquare);
-		grC4[n]->SetMarkerColor(kBlue+2);
-		grC4[n]->SetLineColor(kBlue+2);
+		grC4[n]->SetMarkerColor(kBlue);
+		grC4[n]->SetLineColor(kBlue);
 		grV4[n]->SetMarkerStyle(kOpenSquare);
-		grV4[n]->SetMarkerColor(kBlue+2);
-		grV4[n]->SetLineColor(kBlue+2);
+		grV4[n]->SetMarkerColor(kBlue);
+		grV4[n]->SetLineColor(kBlue);
+
+		grC6[n] = new TGraphErrors(NCent, CentX, dC6n[n], 0, eC6n[n]);
+		grV6[n] = new TGraphErrors(NCent, CentX, dV6n[n], 0, eV6n[n]);
+		grC6[n]->SetMarkerStyle(kFullCross);
+		grC6[n]->SetMarkerColor(kBlue);
+		grC6[n]->SetLineColor(kBlue);
+		grV6[n]->SetMarkerStyle(kFullCross);
+		grV6[n]->SetMarkerColor(kBlue);
+		grV6[n]->SetLineColor(kBlue);
+
+		grC8[n] = new TGraphErrors(NCent, CentX, dC8n[n], 0, eC8n[n]);
+		grV8[n] = new TGraphErrors(NCent, CentX, dV8n[n], 0, eV8n[n]);
+		grC8[n]->SetMarkerStyle(kFullDiamond);
+		grC8[n]->SetMarkerColor(kRed);
+		grC8[n]->SetLineColor(kRed);
+		grV8[n]->SetMarkerStyle(kFullDiamond);
+		grV8[n]->SetMarkerColor(kRed);
+		grV8[n]->SetLineColor(kRed);
 	}
 
 	TCanvas * cT = MakeCanvas("cT", "cT", 600, 500);
@@ -80,6 +123,8 @@ void genPlot(int s1 =0)
 		hframe_cent->Draw();
 		grVn[n]->Draw("Psame");
 		grV4[n]->Draw("Psame");
+		grV6[n]->Draw("Psame");
+		grV8[n]->Draw("Psame");
 		cT->SaveAs(Form("%s/v%i4.pdf", ftxt[s1], n));
 	}
 
@@ -102,5 +147,9 @@ void genPlot(int s1 =0)
 		grVn[n]->Write(Form("grVn%i", n));
 		grC4[n]->Write(Form("grC4%i", n));
 		grV4[n]->Write(Form("grV4%i", n));
+		grC6[n]->Write(Form("grC6%i", n));
+		grV6[n]->Write(Form("grV6%i", n));
+		grC8[n]->Write(Form("grC8%i", n));
+		grV8[n]->Write(Form("grV8%i", n));
 	}
 }
