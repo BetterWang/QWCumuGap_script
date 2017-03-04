@@ -35,7 +35,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	double yQ6[7][600] = {};
 	double yQ8[7][600] = {};
 
-	TH1D * hNoff = (TH1D*) f->Get("Noff");
+	TH1D * hNoff = (TH1D*) f->Get("hNoff");
 
 	for ( int n = 2; n < 7; n++ ) {
 		hWQaabc[n] = (TH1D*) f->Get(Form("hWQaabc%i", n));

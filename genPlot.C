@@ -76,6 +76,11 @@ void genPlot(int s1 =0)
 	TGraphErrors * grC4[7] = {};
 	TGraphErrors * grV4[7] = {};
 
+	TGraphErrors * grC6[7] = {};
+	TGraphErrors * grV6[7] = {};
+
+	TGraphErrors * grC8[7] = {};
+	TGraphErrors * grV8[7] = {};
 	for ( int n = 2; n < 7; n++ ) {
 		grCn[n] = new TGraphErrors(NCent, CentX, dCn[n], 0, eCn[n]);
 		grVn[n] = new TGraphErrors(NCent, CentX, dVn[n], 0, eVn[n]);
