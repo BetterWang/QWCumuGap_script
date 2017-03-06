@@ -58,15 +58,15 @@ void genPlot(int s1 =0)
 			dV4n[n][c] = hv4->GetBinContent(c+1);
 			eV4n[n][c] = hv4->GetBinError(c+1);
 
-			dC6n[n][c] = hc4->GetBinContent(c+1);
-			eC6n[n][c] = hc4->GetBinError(c+1);
-			dV6n[n][c] = hv4->GetBinContent(c+1);
-			eV6n[n][c] = hv4->GetBinError(c+1);
+			dC6n[n][c] = hc6->GetBinContent(c+1);
+			eC6n[n][c] = hc6->GetBinError(c+1);
+			dV6n[n][c] = hv6->GetBinContent(c+1);
+			eV6n[n][c] = hv6->GetBinError(c+1);
 
-			dC8n[n][c] = hc4->GetBinContent(c+1);
-			eC8n[n][c] = hc4->GetBinError(c+1);
-			dV8n[n][c] = hv4->GetBinContent(c+1);
-			eV8n[n][c] = hv4->GetBinError(c+1);
+			dC8n[n][c] = hc8->GetBinContent(c+1);
+			eC8n[n][c] = hc8->GetBinError(c+1);
+			dV8n[n][c] = hv8->GetBinContent(c+1);
+			eV8n[n][c] = hv8->GetBinError(c+1);
 		}
 	}
 

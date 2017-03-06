@@ -175,8 +175,8 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 			if ( yQab[n][c] > 0. ) dQab[n][c] /= yQab[n][c];
 			if ( yQ2[n][c] > 0. ) dQ2[n][c] /= yQ2[n][c];
 			if ( yQ4[n][c] > 0. ) dQ4[n][c] /= yQ4[n][c];
-			if ( yQ6[n][c] > 0. ) dQ4[n][c] /= yQ6[n][c];
-			if ( yQ8[n][c] > 0. ) dQ4[n][c] /= yQ8[n][c];
+			if ( yQ6[n][c] > 0. ) dQ6[n][c] /= yQ6[n][c];
+			if ( yQ8[n][c] > 0. ) dQ8[n][c] /= yQ8[n][c];
 
 			hQaabc[n]->SetBinContent(c+1, dQaabc[n][c]);
 			hQab[n]->SetBinContent(c+1, dQab[n][c]);
