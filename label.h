@@ -33,6 +33,14 @@ char const * fname[] = {
 	"NA",		// 30 pPb MB sum reverse
 	"../pPb/HighMultiplicity/crab_PPHM_totem_cumugap_eff_v1/170303_103746/0000/",			// 31 pp HM TOTEM
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_v1/170303_115252/0000/",	// 32 PbPb 5 TeV pp reco
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight_v5/170307_095900/0000/",		// 33 pPb HM0 8 TeV sysTight
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight_v5/170307_095914/0000/",		// 34 pPb HM1 8 TeV sysTight
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight_v5/170307_095927/0000/",		// 35 pPb HM7 8 TeV sysTight
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight_v5/170307_104005/0000/",			// 36 pPb MB1 8 TeV sysTight
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight_reverse_v5/170307_110237/0000/",	// 37 pPb HM0 reverse 8 TeV sysTight
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight_reverse_v5/170307_110252/0000/",	// 38 pPb HM1 reverse 8 TeV sysTight
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight_reverse_v5/170307_110307/0000/",	// 39 pPb HM7 reverse 8 TeV sysTight
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight_reverse_v5/170307_110742/0000/",		// 40 pPb MB1 reverse 8 TeV sysTight
 };
 
 char const * ftxt[] = {
@@ -69,6 +77,14 @@ char const * ftxt[] = {
 	"txt/PAMB_reverse_full/",	// 30
 	"txt/PP15_TOTEM/",		// 31
 	"txt/PbPb15_ppreco/",		// 32
+	"txt/PAHM0_sysTight/",		// 33
+	"txt/PAHM1_sysTight/",		// 34
+	"txt/PAHM7_sysTight/",		// 35
+	"txt/PAMB1_sysTight/",		// 36
+	"txt/PAHM0_sysTight_reverse/",		// 37
+	"txt/PAHM1_sysTight_reverse/",		// 38
+	"txt/PAHM7_sysTight_reverse/",		// 39
+	"txt/PAMB1_sysTight_reverse/",		// 40
 };
 
 
