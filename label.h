@@ -53,6 +53,10 @@ char const * fname[] = {
 	"NA",		// 50 pPb HM1 merged
 	"NA",		// 51 pPb HM7 merged
 	"NA",		// 52 pPb MB1 merged
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysNarrow_v5/170308_230455/0000/",		// 53 pPb HM0 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysNarrow_v5/170308_230506/0000/",		// 54 pPb HM1 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysNarrow_v5/170308_230517/0000/",		// 55 pPb HM7 8TeV sysNarrow
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysNarrow_v5/170308_230541/0000/",		// 56 pPb MB1 8TeV sysNarrow
 };
 
 char const * ftxt[] = {
@@ -109,6 +113,10 @@ char const * ftxt[] = {
 	"txt/PAHM1_merge/",		// 50
 	"txt/PAHM7_merge/",		// 51
 	"txt/PAMB1_merge/",		// 52
+	"txt/PAHM0_sysNarrow/",			// 53
+	"txt/PAHM1_sysNarrow/",			// 54
+	"txt/PAHM7_sysNarrow/",			// 55
+	"txt/PAMB1_sysNarrow/",			// 56
 };
 
 
