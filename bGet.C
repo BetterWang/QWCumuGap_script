@@ -13,24 +13,49 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 
 	TFile * f = new TFile(Form("%s/output_%i_%i.root", ftxt[s1], s2, s3));
 
-	TH1D * hWQaabc[7]	= {};
-	TH1D * hCn[7]		= {};
+	TH1D * hQaabc[7] = {};
+	TH1D * hQab[7] = {};
+	TH1D * hQac[7] = {};
 
+	TH1D * hWQaabc[7] = {};
+	TH1D * hWQab[7] = {};
+	TH1D * hWQac[7] = {};
+
+	TH1D * hQ2[7] = {};
+	TH1D * hQ4[7] = {};
+	TH1D * hQ6[7] = {};
+	TH1D * hQ8[7] = {};
+	TH1D * hWQ2[7] = {};
+	TH1D * hWQ4[7] = {};
+	TH1D * hWQ6[7] = {};
+	TH1D * hWQ8[7] = {};
+
+	TH1D * hCn[7]		= {};
 	TH1D * hC4n[7]		= {};
 	TH1D * hC6n[7]		= {};
 	TH1D * hC8n[7]		= {};
 
-	TH1D * hWQ4[7]		= {};
-	TH1D * hWQ6[7]		= {};
-	TH1D * hWQ8[7]		= {};
+
+
 
 	double dCn[7][600] = {};
-	double yQaabc[7][600] = {};
-
 	double dC4n[7][600] = {};
 	double dC6n[7][600] = {};
 	double dC8n[7][600] = {};
 
+	double dQaabc[7][600] = {};
+	double dQab[7][600] = {};
+	double dQac[7][600] = {};
+
+	double yQaabc[7][600] = {};
+	double yQab[7][600] = {};
+	double yQac[7][600] = {};
+
+	double dQ2[7][600] = {};
+	double dQ4[7][600] = {};
+	double dQ6[7][600] = {};
+	double dQ8[7][600] = {};
+	double yQ2[7][600] = {};
 	double yQ4[7][600] = {};
 	double yQ6[7][600] = {};
 	double yQ8[7][600] = {};
@@ -38,27 +63,66 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	TH1D * hNoff = (TH1D*) f->Get("hNoff");
 
 	for ( int n = 2; n < 7; n++ ) {
+		hQaabc[n] = (TH1D*) f->Get(Form("hQaabc%i", n));
+		hQab[n] =   (TH1D*) f->Get(Form("hQab%i", n));
+		hQac[n] =   (TH1D*) f->Get(Form("hQac%i", n));
+
 		hWQaabc[n] = (TH1D*) f->Get(Form("hWQaabc%i", n));
-		hCn[n] = (TH1D*) f->Get(Form("hCn%i", n));
+		hWQab[n] =   (TH1D*) f->Get(Form("hWQab%i", n));
+		hWQac[n] =   (TH1D*) f->Get(Form("hWQac%i", n));
 
-		hC4n[n] = (TH1D*) f->Get(Form("hC4n%i", n));
-		hC6n[n] = (TH1D*) f->Get(Form("hC6n%i", n));
-		hC8n[n] = (TH1D*) f->Get(Form("hC8n%i", n));
+		hQ2[n] = (TH1D*) f->Get(Form("hQ2%i", n));
+		hQ4[n] = (TH1D*) f->Get(Form("hQ4%i", n));
+		hQ6[n] = (TH1D*) f->Get(Form("hQ6%i", n));
+		hQ8[n] = (TH1D*) f->Get(Form("hQ8%i", n));
 
+		hWQ2[n] = (TH1D*) f->Get(Form("hWQ2%i", n));
 		hWQ4[n] = (TH1D*) f->Get(Form("hWQ4%i", n));
 		hWQ6[n] = (TH1D*) f->Get(Form("hWQ6%i", n));
 		hWQ8[n] = (TH1D*) f->Get(Form("hWQ8%i", n));
+
 		for ( int c = 0; c < 600; c++ ) {
-			dCn[n][c] = hCn[n]->GetBinContent(c+1);
+			dQaabc[n][c] = hQaabc[n]->GetBinContent(c+1);
+			dQab[n][c]   = hQab[n]->GetBinContent(c+1);
+			dQac[n][c]   = hQac[n]->GetBinContent(c+1);
+
 			yQaabc[n][c] = hWQaabc[n]->GetBinContent(c+1);
+			yQab[n][c]   = hWQab[n]->GetBinContent(c+1);
+			yQac[n][c]   = hWQac[n]->GetBinContent(c+1);
 
-			dC4n[n][c] = hC4n[n]->GetBinContent(c+1);
-			dC6n[n][c] = hC6n[n]->GetBinContent(c+1);
-			dC8n[n][c] = hC8n[n]->GetBinContent(c+1);
+			dQ2[n][c] = hQ2[n]->GetBinContent(c+1);
+			dQ4[n][c] = hQ4[n]->GetBinContent(c+1);
+			dQ6[n][c] = hQ6[n]->GetBinContent(c+1);
+			dQ8[n][c] = hQ8[n]->GetBinContent(c+1);
 
+			yQ2[n][c] = hWQ2[n]->GetBinContent(c+1);
 			yQ4[n][c] = hWQ4[n]->GetBinContent(c+1);
 			yQ6[n][c] = hWQ6[n]->GetBinContent(c+1);
 			yQ8[n][c] = hWQ8[n]->GetBinContent(c+1);
+
+			if ( yQaabc[n][c] > 0. ) dQaabc[n][c] /= yQaabc[n][c];
+			if ( yQac[n][c] > 0. ) dQac[n][c] /= yQac[n][c];
+			if ( yQab[n][c] > 0. ) dQab[n][c] /= yQab[n][c];
+			if ( yQ2[n][c] > 0. ) dQ2[n][c] /= yQ2[n][c];
+			if ( yQ4[n][c] > 0. ) dQ4[n][c] /= yQ4[n][c];
+			if ( yQ6[n][c] > 0. ) dQ6[n][c] /= yQ6[n][c];
+			if ( yQ8[n][c] > 0. ) dQ8[n][c] /= yQ8[n][c];
+		}
+	}
+
+	for ( int n = 2; n < 7; n++ ) {
+		for ( int c = 0; c < 600; c++ ) {
+			dCn[n][c] = dQaabc[n][c] - 2*dQab[n][c]*dQac[n][c];
+			hCn[n]->SetBinContent(c+1, dCn[n][c]);
+
+			dC4n[n][c] = dQ4[n][c] - 2*dQ2[n][c]*dQ2[n][c];
+			hC4n[n]->SetBinContent(c+1, dC4n[n][c]);
+
+			dC6n[n][c] = dQ6[n][c] - 9*dQ2[n][c]*dQ4[n][c] + 12*dQ2[n][c]*dQ2[n][c]*dQ2[n][c];
+			hC6n[n]->SetBinContent(c+1, dC6n[n][c]);
+
+			dC8n[n][c] = dQ8[n][c] - 16*dQ2[n][c]*dQ6[n][c] - 18*dQ4[n][c]*dQ4[n][c] + 144*dQ4[n][c]*dQ2[n][c]*dQ2[n][c] - 144*dQ2[n][c]*dQ2[n][c]*dQ2[n][c]*dQ2[n][c];
+			hC8n[n]->SetBinContent(c+1, dC8n[n][c]);
 		}
 	}
 
