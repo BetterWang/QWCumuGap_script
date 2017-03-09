@@ -156,6 +156,27 @@ void process(int s1 = 0, int s2 = 10, int s3 = 10)
 		hMult->Fill(gMult);
 	}
 
+	for ( int n = 2; n < 7; n++ ) {
+		for ( int c = 0; c < 600; c++ ) {
+			hQaabc[n]->SetBinContent(c+1, dQaabc[n][c]);
+			hQab[n]->SetBinContent(c+1, dQab[n][c]);
+			hQac[n]->SetBinContent(c+1, dQac[n][c]);
+
+			hWQaabc[n]->SetBinContent(c+1, yQaabc[n][c]);
+			hWQab[n]->SetBinContent(c+1, yQab[n][c]);
+			hWQac[n]->SetBinContent(c+1, yQac[n][c]);
+
+			hQ2[n]->SetBinContent(c+1, dQ2[n][c]);
+			hQ4[n]->SetBinContent(c+1, dQ4[n][c]);
+			hQ6[n]->SetBinContent(c+1, dQ6[n][c]);
+			hQ8[n]->SetBinContent(c+1, dQ8[n][c]);
+			hWQ2[n]->SetBinContent(c+1, yQ2[n][c]);
+			hWQ4[n]->SetBinContent(c+1, yQ4[n][c]);
+			hWQ6[n]->SetBinContent(c+1, yQ6[n][c]);
+			hWQ8[n]->SetBinContent(c+1, yQ8[n][c]);
+		}
+	}
+
 	TFile * fwrite = new TFile(Form("%s/output_%i_%i.root", ftxt[s1], s2, s3), "recreate");
 	for ( int n = 2; n < 7; n++ ) {
 		hQaabc[n]->Write();

@@ -81,6 +81,11 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 		hWQ6[n] = (TH1D*) f->Get(Form("hWQ6%i", n));
 		hWQ8[n] = (TH1D*) f->Get(Form("hWQ8%i", n));
 
+		hCn[n] = new TH1D(Form("hCn%i", n), Form("hCn%i", n), 600, -0.5, 599.5);
+		hC4n[n] = new TH1D(Form("hC4n%i", n), Form("hC4n%i", n), 600, -0.5, 599.5);
+		hC6n[n] = new TH1D(Form("hC6n%i", n), Form("hC6n%i", n), 600, -0.5, 599.5);
+		hC8n[n] = new TH1D(Form("hC8n%i", n), Form("hC8n%i", n), 600, -0.5, 599.5);
+
 		for ( int c = 0; c < 600; c++ ) {
 			dQaabc[n][c] = hQaabc[n]->GetBinContent(c+1);
 			dQab[n][c]   = hQab[n]->GetBinContent(c+1);
