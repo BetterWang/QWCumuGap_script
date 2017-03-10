@@ -57,6 +57,18 @@ char const * fname[] = {
 	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysNarrow_v5/170308_230506/0000/",		// 54 pPb HM1 8TeV sysNarrow
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysNarrow_v5/170308_230517/0000/",		// 55 pPb HM7 8TeV sysNarrow
 	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysNarrow_v5/170308_230541/0000/",		// 56 pPb MB1 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysNarrow_reverse_v5/170309_150207/0000/",	// 57 pPb HM0 reverse 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysNarrow_reverse_v5/170309_150221/0000/",	// 58 pPb HM1 reverse 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysNarrow_reverse_v5/170309_150234/0000/",	// 59 pPb HM7 reverse 8TeV sysNarrow
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysNarrow_reverse_v5/170309_150305/0000/",	// 60 pPb MB1 reverse 8TeV sysNarrow
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysWide_v5/170309_224329/0000/",		// 61 pPb HM0 8TeV sysWide
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysWide_v5/170309_224343/0000/",		// 62 pPb HM1 8TeV sysWide
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysWide_v5/170309_224356/0000/",		// 63 pPb HM7 8TeV sysWide
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysWide_v5/170309_224440/0000/",			// 64 pPb MB1 8TeV sysWide
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysWide_reverse_v5/170309_224555/0000/",	// 65 pPb HM0 8TeV reverse sysWide
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysWide_reverse_v5/170309_224609/0000/",	// 66 pPb HM1 8TeV reverse sysWide
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysWide_reverse_v5/170309_224622/0000/",	// 67 pPb HM7 8TeV reverse sysWide
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysWide_reverse_v5/170309_224723/0000/",		// 68 pPb MB1 8TeV reverse sysWide
 };
 
 char const * ftxt[] = {
@@ -117,6 +129,18 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysNarrow/",			// 54
 	"txt/PAHM7_sysNarrow/",			// 55
 	"txt/PAMB1_sysNarrow/",			// 56
+	"txt/PAHM0_sysNarrow_reverse/",		// 57
+	"txt/PAHM1_sysNarrow_reverse/",		// 58
+	"txt/PAHM7_sysNarrow_reverse/",		// 59
+	"txt/PAMB1_sysNarrow_reverse/",		// 60
+	"txt/PAHM0_sysWide/",			// 61
+	"txt/PAHM1_sysWide/",			// 62
+	"txt/PAHM7_sysWide/",			// 63
+	"txt/PAMB1_sysWide/",			// 64
+	"txt/PAHM0_sysWide_reverse/",		// 65
+	"txt/PAHM1_sysWide_reverse/",		// 66
+	"txt/PAHM7_sysWide_reverse/",		// 67
+	"txt/PAMB1_sysWide_reverse/",		// 68
 };
 
 
