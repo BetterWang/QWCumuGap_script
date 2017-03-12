@@ -69,6 +69,22 @@ char const * fname[] = {
 	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysWide_reverse_v5/170309_224609/0000/",	// 66 pPb HM1 8TeV reverse sysWide
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysWide_reverse_v5/170309_224622/0000/",	// 67 pPb HM7 8TeV reverse sysWide
 	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysWide_reverse_v5/170309_224723/0000/",		// 68 pPb MB1 8TeV reverse sysWide
+	"NA",		// 69 pPb HM0 8 TeV sysTight merge
+	"NA",		// 70 pPb HM1 8 TeV sysTight merge
+	"NA",		// 71 pPb HM7 8 TeV sysTight merge
+	"NA",		// 72 pPb MB1 8 TeV sysTight merge
+	"NA",		// 73 pPb HM0 8 TeV sysLoose merge
+	"NA",		// 74 pPb HM1 8 TeV sysLoose merge
+	"NA",		// 75 pPb HM7 8 TeV sysLoose merge
+	"NA",		// 76 pPb MB1 8 TeV sysLoose merge
+	"NA",		// 77 pPb HM0 8 TeV sysNarrow merge
+	"NA",		// 78 pPb HM1 8 TeV sysNarrow merge
+	"NA",		// 79 pPb HM7 8 TeV sysNarrow merge
+	"NA",		// 80 pPb MB1 8 TeV sysNarrow merge
+	"NA",		// 81 pPb HM0 8 TeV sysWide merge
+	"NA",		// 82 pPb HM1 8 TeV sysWide merge
+	"NA",		// 83 pPb HM7 8 TeV sysWide merge
+	"NA",		// 84 pPb MB1 8 TeV sysWide merge
 };
 
 char const * ftxt[] = {
@@ -141,6 +157,22 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysWide_reverse/",		// 66
 	"txt/PAHM7_sysWide_reverse/",		// 67
 	"txt/PAMB1_sysWide_reverse/",		// 68
+	"txt/PAHM0_sysTight_merge/",		// 69
+	"txt/PAHM1_sysTight_merge/",		// 70
+	"txt/PAHM7_sysTight_merge/",		// 71
+	"txt/PAMB1_sysTight_merge/",		// 72
+	"txt/PAHM0_sysLoose_merge/",		// 73
+	"txt/PAHM1_sysLoose_merge/",		// 74
+	"txt/PAHM7_sysLoose_merge/",		// 75
+	"txt/PAMB1_sysLoose_merge/",		// 76
+	"txt/PAHM0_sysNarrow_merge/",		// 77
+	"txt/PAHM1_sysNarrow_merge/",		// 78
+	"txt/PAHM7_sysNarrow_merge/",		// 79
+	"txt/PAMB1_sysNarrow_merge/",		// 80
+	"txt/PAHM0_sysWide_merge/",		// 81
+	"txt/PAHM1_sysWide_merge/",		// 82
+	"txt/PAHM7_sysWide_merge/",		// 83
+	"txt/PAMB1_sysWide_merge/",		// 84
 };
 
 

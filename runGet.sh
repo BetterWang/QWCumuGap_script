@@ -1,3 +1,15 @@
+./runGet3.sh 32 0 10  
+./runGet3.sh 32 1 10  
+./runGet3.sh 32 2 10  
+./runGet3.sh 32 3 10  
+./runGet3.sh 32 4 10  
+./runGet3.sh 32 5 10  
+./runGet3.sh 32 6 10  
+./runGet3.sh 32 7 10  
+./runGet3.sh 32 8 10  
+./runGet3.sh 32 9 10  
+./runGet3.sh 32 10 10 
+
 #./runGet3.sh 49 0 10  
 #./runGet3.sh 49 1 10  
 #./runGet3.sh 49 2 10  
@@ -105,18 +117,18 @@
 #./runGet3.sh 1 8 10  
 #./runGet3.sh 1 9 10  
 #./runGet3.sh 1 10 10 
-
-./runGet3.sh 2 0 10  
-./runGet3.sh 2 1 10  
-./runGet3.sh 2 2 10  
-./runGet3.sh 2 3 10  
-./runGet3.sh 2 4 10  
-./runGet3.sh 2 5 10  
-./runGet3.sh 2 6 10  
-./runGet3.sh 2 7 10  
-./runGet3.sh 2 8 10  
-./runGet3.sh 2 9 10  
-./runGet3.sh 2 10 10 
+#
+#./runGet3.sh 2 0 10  
+#./runGet3.sh 2 1 10  
+#./runGet3.sh 2 2 10  
+#./runGet3.sh 2 3 10  
+#./runGet3.sh 2 4 10  
+#./runGet3.sh 2 5 10  
+#./runGet3.sh 2 6 10  
+#./runGet3.sh 2 7 10  
+#./runGet3.sh 2 8 10  
+#./runGet3.sh 2 9 10  
+#./runGet3.sh 2 10 10 
 #
 #./runGet3.sh 8 0 10  
 #./runGet3.sh 8 1 10  
