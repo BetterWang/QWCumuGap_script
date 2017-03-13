@@ -32,7 +32,7 @@ char const * fname[] = {
 	"",			// 29 pPb MB6 reverse
 	"NA",		// 30 pPb MB sum reverse
 	"../pPb/HighMultiplicity/crab_PPHM_totem_cumugap_eff_v1/170303_103746/0000/",			// 31 pp HM TOTEM
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_v1/170303_115252/0000/",	// 32 PbPb 5 TeV pp reco
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_v2/170312_182749/0000/",	// 32 PbPb 5 TeV pp reco
 	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight_v5/170307_095900/0000/",		// 33 pPb HM0 8 TeV sysTight
 	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight_v5/170307_095914/0000/",		// 34 pPb HM1 8 TeV sysTight
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight_v5/170307_095927/0000/",		// 35 pPb HM7 8 TeV sysTight
@@ -85,6 +85,15 @@ char const * fname[] = {
 	"NA",		// 82 pPb HM1 8 TeV sysWide merge
 	"NA",		// 83 pPb HM7 8 TeV sysWide merge
 	"NA",		// 84 pPb MB1 8 TeV sysWide merge
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight_v2/170312_185101/0000/",	// 85 PbPb 5 TeV pp reco sysTight
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoose_v2/170312_185152/0000/",	// 86 PbPb 5 TeV pp reco sysLoose
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysNarrow_v2/170312_185233/0000/",	// 87 PbPb 5 TeV pp reco sysNarrow
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysWide_v2/170312_185250/0000/",	// 88 PbPb 5 TeV pp reco sysWide
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_v2/170313_105001/0000/",		// 89 PbPb 5 TeV pp reco
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_v2/170313_110422/0000/",	// 90 PbPb 5 TeV pp reco sysTight
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoose_v2/170313_110442/0000/",	// 91 PbPb 5 TeV pp reco sysLoose
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysNarrow_v2/170313_110507/0000/",	// 92 PbPb 5 TeV pp reco sysNarrow
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysWide_v2/170313_110525/0000/",	// 93 PbPb 5 TeV pp reco sysWide
 };
 
 char const * ftxt[] = {
@@ -173,6 +182,15 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysWide_merge/",		// 82
 	"txt/PAHM7_sysWide_merge/",		// 83
 	"txt/PAMB1_sysWide_merge/",		// 84
+	"txt/PbPb15_ppreco_sysTight/",		// 85
+	"txt/PbPb15_ppreco_sysLoose/",		// 86
+	"txt/PbPb15_ppreco_sysNarrow/",		// 87
+	"txt/PbPb15_ppreco_sysWide/",		// 88
+	"txt/PbPb15_ppreco6/",			// 89
+	"txt/PbPb15_ppreco6_sysTight/",		// 90
+	"txt/PbPb15_ppreco6_sysLoose/",		// 91
+	"txt/PbPb15_ppreco6_sysNarrow/",	// 92
+	"txt/PbPb15_ppreco6_sysWide/",		// 93
 };
 
 
