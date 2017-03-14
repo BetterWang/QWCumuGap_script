@@ -29,6 +29,46 @@ void plot(int n, int sMB, int sHM0, int sHM1, int sHM7)
 		0.00001,	// 6
 	};
 
+	double C6Low[7] = {
+		0,		// 0
+		0, 		// 1
+		-0.0000005,	// 2
+		-0.0000005,	// 3
+		-0.0000001,	// 4
+		-0.00001,	// 5
+		-0.00001,	// 6
+	};
+
+	double C6Up[7] = {
+		0,		// 0
+		0, 		// 1
+		0.0000005,	// 2
+		0.000001,	// 3
+		0.000001,	// 4
+		0.00001,	// 5
+		0.00001,	// 6
+	};
+
+	double C8Low[7] = {
+		0,		// 0
+		0, 		// 1
+		-0.000000005,	// 2
+		-0.0000005,	// 3
+		-0.0000001,	// 4
+		-0.00001,	// 5
+		-0.00001,	// 6
+	};
+
+	double C8Up[7] = {
+		0,		// 0
+		0, 		// 1
+		0.000000005,	// 2
+		0.000001,	// 3
+		0.000001,	// 4
+		0.00001,	// 5
+		0.00001,	// 6
+	};
+
 	double VLow[7] = {
 		0.01,		// 0
 		0.01, 		// 1
@@ -60,6 +100,7 @@ void plot(int n, int sMB, int sHM0, int sHM1, int sHM7)
 	TGraphErrors * grV8 = (TGraphErrors*) f->Get("grV8");
 
 	grV4->SetMarkerStyle(kFullSquare);
+	grC4->SetMarkerStyle(kFullSquare);
 
 	grCn->SetMarkerSize(2.0);
 	grC4->SetMarkerSize(2.0);
@@ -86,7 +127,17 @@ void plot(int n, int sMB, int sHM0, int sHM1, int sHM7)
 	grV6->Draw("Psame");
 	grV8->Draw("Psame");
 
-	TCanvas * cTC = MakeCanvas("cTC", "cTC", 600, 600);
+	TLegend * leg = new TLegend(0.7, 0.7, 0.85, 0.9);
+	leg->SetFillColor(kWhite);
+	leg->SetTextFont(42);
+	leg->SetTextSize(0.06);
+	leg->SetBorderSize(0);
+	leg->AddEntry(grV4, Form("v_{%i}{4}", n), "p");
+	leg->AddEntry(grV6, Form("v_{%i}{6}", n), "p");
+	leg->AddEntry(grV8, Form("v_{%i}{8}", n), "p");
+	leg->Draw();
+
+	TCanvas * cTC4 = MakeCanvas("cTC4", "cTC4", 600, 600);
 	TH2D * hframeC4 = new TH2D("hframeC4", Form(";N_{trk}^{offline};c_{%i}{4}",n), 1, 0, 399, 1, C4Low[n], C4Up[n]);
 	initHist(hframeC4);
 	hframeC4->Draw();
@@ -94,6 +145,44 @@ void plot(int n, int sMB, int sHM0, int sHM1, int sHM7)
 	l0->Draw();
 //	grCn->Draw("Psame");
 	grC4->Draw("Psame");
+
+	TLegend * legC4 = new TLegend(0.5, 0.7, 0.85, 0.9);
+	legC4->SetFillColor(kWhite);
+	legC4->SetTextFont(42);
+	legC4->SetTextSize(0.06);
+	legC4->SetBorderSize(0);
+	legC4->AddEntry(grC4, Form("c_{%i}{4}", n), "p");
+	legC4->Draw();
+
+	TCanvas * cTC6 = MakeCanvas("cTC6", "cTC6", 600, 600);
+	TH2D * hframeC6 = new TH2D("hframeC6", Form(";N_{trk}^{offline};c_{%i}{6}",n), 1, 0, 399, 1, C6Low[n], C6Up[n]);
+	initHist(hframeC6);
+	hframeC6->Draw();
+	l0->Draw();
+	grC6->Draw("Psame");
+
+	TLegend * legC6 = new TLegend(0.5, 0.7, 0.85, 0.9);
+	legC6->SetFillColor(kWhite);
+	legC6->SetTextFont(42);
+	legC6->SetTextSize(0.06);
+	legC6->SetBorderSize(0);
+	legC6->AddEntry(grC6, Form("c_{%i}{6}", n), "p");
+	legC6->Draw();
+
+	TCanvas * cTC8 = MakeCanvas("cTC8", "cTC8", 600, 600);
+	TH2D * hframeC8 = new TH2D("hframeC8", Form(";N_{trk}^{offline};c_{%i}{8}",n), 1, 0, 399, 1, C8Low[n], C8Up[n]);
+	initHist(hframeC8);
+	hframeC8->Draw();
+	l0->Draw();
+	grC8->Draw("Psame");
+
+	TLegend * legC8 = new TLegend(0.5, 0.7, 0.85, 0.9);
+	legC8->SetFillColor(kWhite);
+	legC8->SetTextFont(42);
+	legC8->SetTextSize(0.06);
+	legC8->SetBorderSize(0);
+	legC8->AddEntry(grC8, Form("c_{%i}{8}", n), "p");
+	legC8->Draw();
 }
 
 void initHist(TH2D * h)

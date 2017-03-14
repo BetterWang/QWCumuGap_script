@@ -85,15 +85,25 @@ char const * fname[] = {
 	"NA",		// 82 pPb HM1 8 TeV sysWide merge
 	"NA",		// 83 pPb HM7 8 TeV sysWide merge
 	"NA",		// 84 pPb MB1 8 TeV sysWide merge
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight_v2/170312_185101/0000/",	// 85 PbPb 5 TeV pp reco sysTight
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoose_v2/170312_185152/0000/",	// 86 PbPb 5 TeV pp reco sysLoose
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysNarrow_v2/170312_185233/0000/",	// 87 PbPb 5 TeV pp reco sysNarrow
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysWide_v2/170312_185250/0000/",	// 88 PbPb 5 TeV pp reco sysWide
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_v2/170313_105001/0000/",		// 89 PbPb 5 TeV pp reco
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_v2/170313_110422/0000/",	// 90 PbPb 5 TeV pp reco sysTight
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoose_v2/170313_110442/0000/",	// 91 PbPb 5 TeV pp reco sysLoose
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysNarrow_v2/170313_110507/0000/",	// 92 PbPb 5 TeV pp reco sysNarrow
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysWide_v2/170313_110525/0000/",	// 93 PbPb 5 TeV pp reco sysWide
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight_v2/170312_185101/0000/",	// 85 PbPb HIMB5 5 TeV pp reco sysTight
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoose_v2/170312_185152/0000/",	// 86 PbPb HIMB5 5 TeV pp reco sysLoose
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysNarrow_v2/170312_185233/0000/",	// 87 PbPb HIMB5 5 TeV pp reco sysNarrow
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysWide_v2/170312_185250/0000/",	// 88 PbPb HIMB5 5 TeV pp reco sysWide
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_v2/170313_105001/0000/",		// 89 PbPb HIMB6 5 TeV pp reco
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_v2/170313_110422/0000/",	// 90 PbPb HIMB6 5 TeV pp reco sysTight
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoose_v2/170313_110442/0000/",	// 91 PbPb HIMB6 5 TeV pp reco sysLoose
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysNarrow_v2/170313_110507/0000/",	// 92 PbPb HIMB6 5 TeV pp reco sysNarrow
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysWide_v2/170313_110525/0000/",	// 93 PbPb HIMB6 5 TeV pp reco sysWide
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_v2/170314_095631/0000/",		// 94 PbPb HIMB7 5 TeV pp reco
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight_v2/170314_095724/0000/",	// 95 PbPb HIMB7 5 TeV pp reco sysTight
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysLoose_v2/170314_095834/0000/",	// 96 PbPb HIMB7 5 TeV pp reco sysLoose
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysNarrow_v2/170314_095946/0000/",	// 97 PbPb HIMB7 5 TeV pp reco sysNarrow
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysWide_v2/170314_095918/0000/",	// 98 PbPb HIMB7 5 TeV pp reco sysWide
+	"",	// 99 PbPb merged HIMB5,6,7 5 TeV pp reco
+	"",	// 100 PbPb merged HIMB5,6,7 5 TeV pp reco sysTight
+	"",	// 101 PbPb merged HIMB5,6,7 5 TeV pp reco sysLoose
+	"",	// 102 PbPb merged HIMB5,6,7 5 TeV pp reco sysNarrow
+	"",	// 103 PbPb merged HIMB5,6,7 5 TeV pp reco sysWide
 };
 
 char const * ftxt[] = {
@@ -191,6 +201,16 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysLoose/",		// 91
 	"txt/PbPb15_ppreco6_sysNarrow/",	// 92
 	"txt/PbPb15_ppreco6_sysWide/",		// 93
+	"txt/PbPb15_ppreco7/",			// 94
+	"txt/PbPb15_ppreco7_sysTight/",		// 95
+	"txt/PbPb15_ppreco7_sysLoose/",		// 96
+	"txt/PbPb15_ppreco7_sysNarrow/",	// 97
+	"txt/PbPb15_ppreco7_sysWide/",		// 98
+	"txt/PbPb15_ppreco_merge/",		// 99
+	"txt/PbPb15_ppreco_sysTight_merge/",	// 100
+	"txt/PbPb15_ppreco_sysLoose_merge/",	// 101
+	"txt/PbPb15_ppreco_sysNarrow_merge/",	// 102
+	"txt/PbPb15_ppreco_sysWide_merge/",	// 103
 };
 
 

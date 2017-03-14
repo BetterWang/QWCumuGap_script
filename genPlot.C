@@ -10,8 +10,11 @@ void genPlot(int s1 =0)
 {
 	int NCent = NCent8TeV4;
 	const double * CentX = CentPPbX4;
-	TFile *f;
-	f = new TFile(Form("%s/outputE.root", ftxt[s1]));
+	if ( s1 == 31 ) {
+		NCent = NCentPP13TeV;
+		CentX = CentPP13X4;
+	}
+	TFile *f = new TFile(Form("%s/outputE.root", ftxt[s1]));
 
 	SetStyle();
 
