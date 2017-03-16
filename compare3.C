@@ -23,11 +23,37 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	gr3->SetLineColor(kBlack);
 
 	map<string, pair<double, double>> hrange{
-		{"grV4", make_pair(0.01, 0.14)},
-		{"grVn", make_pair(0.01, 0.14)},
-		{"grV6", make_pair(0.01, 0.14)},
-		{"grV8", make_pair(0.01, 0.14)},
+		{"grV24", make_pair(0.01, 0.14)},
+		{"grV2n", make_pair(0.01, 0.14)},
+		{"grV26", make_pair(0.01, 0.14)},
+		{"grV28", make_pair(0.01, 0.14)},
+		{"grC24", make_pair(-0.000014, 0.0000119)},
+		{"grC2n", make_pair(-0.000014, 0.0000119)},
+
+		{"grV34", make_pair(0.00, 0.04)},
+		{"grV3n", make_pair(0.00, 0.04)},
+		{"grV36", make_pair(0.00, 0.04)},
+		{"grV38", make_pair(0.00, 0.04)},
+		{"grC34", make_pair(-0.00000044, 0.0000019)},
+		{"grC3n", make_pair(-0.00000044, 0.0000019)},
 	};
+	if ( s1.find("PbPb") != string::npos ) {
+		hrange = {
+			{"grV24", make_pair(0.01, 0.19)},
+			{"grV2n", make_pair(0.01, 0.19)},
+			{"grV26", make_pair(0.01, 0.19)},
+			{"grV28", make_pair(0.01, 0.19)},
+			{"grC24", make_pair(-0.000074, 0.0000499)},
+			{"grC2n", make_pair(-0.000074, 0.0000499)},
+
+			{"grV34", make_pair(0.00, 0.04)},
+			{"grV3n", make_pair(0.00, 0.04)},
+			{"grV36", make_pair(0.00, 0.04)},
+			{"grV38", make_pair(0.00, 0.04)},
+			{"grC34", make_pair(-0.00000044, 0.0000019)},
+			{"grC3n", make_pair(-0.00000044, 0.0000019)},
+		};
+	}
 
 	TCanvas * cT = MakeCanvas("cT", "cT", 600, 600);
 	splitCanv(cT);
@@ -47,8 +73,10 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	legPt->AddEntry(gr2, str_leg2.c_str(), "p"); 
 	legPt->AddEntry(gr3, str_leg3.c_str(), "p"); 
 
+	TLine * l0 = new TLine(0, 0, 399, 0);
 	cT->cd(1);
 	hframe->Draw();
+	l0->Draw();
 	gr1->Draw("Psame");
 	gr2->Draw("Psame");
 	gr3->Draw("Psame");
@@ -60,11 +88,11 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 
 	for ( int i = 0; i < grR1->GetN(); i++ ) {
 		grR1->GetY()[i] = gr1->GetY()[i] / gr3->GetY()[i];
-		grR1->GetEY()[i] = fabs( grR1->GetY()[i] * sqrt( (gr1->GetEY()[i]/gr1->GetY()[i])*(gr1->GetEY()[i]/gr1->GetY()[i]) + (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
+		grR1->GetEY()[i] = fabs( grR1->GetY()[i] * sqrt( (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
 	}
 	for ( int i = 0; i < grR2->GetN(); i++ ) {
 		grR2->GetY()[i] = gr2->GetY()[i] / gr3->GetY()[i];
-		grR2->GetEY()[i] = fabs( grR2->GetY()[i] * sqrt( (gr2->GetEY()[i]/gr2->GetY()[i])*(gr2->GetEY()[i]/gr2->GetY()[i]) + (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
+		grR2->GetEY()[i] = fabs( grR2->GetY()[i] * sqrt( (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
 	}
 
 	hframeR->Draw();
@@ -83,7 +111,7 @@ void splitCanv(TCanvas * c)
 	p1->SetLeftMargin(0.15);
 	p1->SetRightMargin(0.05);
 	p1->SetBottomMargin(0.);
-	p1->SetTopMargin(0.05);
+	p1->SetTopMargin(0.07);
 	p1->Draw();
 	p1->SetNumber(1);
 

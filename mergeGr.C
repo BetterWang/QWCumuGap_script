@@ -83,12 +83,12 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 	TGraphErrors * grV8 = combineGr(grMB0.grV8, grHM0.grV8, grHM1.grV8, grHM7.grV8);
 
 	TFile * fsave = new TFile(Form("combined_%i_%i_%i_%i_%i.root", sMB, sHM0, sHM1, sHM7, n), "recreate");
-	grCn->Write("grCn");
-	grVn->Write("grVn");
-	grC4->Write("grC4");
-	grV4->Write("grV4");
-	grC6->Write("grC6");
-	grV6->Write("grV6");
-	grC8->Write("grC8");
-	grV8->Write("grV8");
+	grCn->Write(Form("grC%in", n));
+	grVn->Write(Form("grV%in", n));
+	grC4->Write(Form("grC%i4", n));
+	grV4->Write(Form("grV%i4", n));
+	grC6->Write(Form("grC%i6", n));
+	grV6->Write(Form("grV%i6", n));
+	grC8->Write(Form("grC%i8", n));
+	grV8->Write(Form("grV%i8", n));
 }

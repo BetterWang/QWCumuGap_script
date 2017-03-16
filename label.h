@@ -89,7 +89,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoose_v2/170312_185152/0000/",	// 86 PbPb HIMB5 5 TeV pp reco sysLoose
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysNarrow_v2/170312_185233/0000/",	// 87 PbPb HIMB5 5 TeV pp reco sysNarrow
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysWide_v2/170312_185250/0000/",	// 88 PbPb HIMB5 5 TeV pp reco sysWide
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_v2/170313_105001/0000/",		// 89 PbPb HIMB6 5 TeV pp reco
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_rerun_v2/170316_064727/0000/",	// 89 PbPb HIMB6 5 TeV pp reco
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_v2/170313_110422/0000/",	// 90 PbPb HIMB6 5 TeV pp reco sysTight
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoose_v2/170313_110442/0000/",	// 91 PbPb HIMB6 5 TeV pp reco sysLoose
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysNarrow_v2/170313_110507/0000/",	// 92 PbPb HIMB6 5 TeV pp reco sysNarrow
@@ -99,11 +99,29 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysLoose_v2/170314_095834/0000/",	// 96 PbPb HIMB7 5 TeV pp reco sysLoose
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysNarrow_v2/170314_095946/0000/",	// 97 PbPb HIMB7 5 TeV pp reco sysNarrow
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysWide_v2/170314_095918/0000/",	// 98 PbPb HIMB7 5 TeV pp reco sysWide
-	"",	// 99 PbPb merged HIMB5,6,7 5 TeV pp reco
-	"",	// 100 PbPb merged HIMB5,6,7 5 TeV pp reco sysTight
-	"",	// 101 PbPb merged HIMB5,6,7 5 TeV pp reco sysLoose
-	"",	// 102 PbPb merged HIMB5,6,7 5 TeV pp reco sysNarrow
-	"",	// 103 PbPb merged HIMB5,6,7 5 TeV pp reco sysWide
+	"NA",	// 99 PbPb merged HIMB5,6,7 5 TeV pp reco
+	"NA",	// 100 PbPb merged HIMB5,6,7 5 TeV pp reco sysTight
+	"NA",	// 101 PbPb merged HIMB5,6,7 5 TeV pp reco sysLoose
+	"NA",	// 102 PbPb merged HIMB5,6,7 5 TeV pp reco sysNarrow
+	"NA",	// 103 PbPb merged HIMB5,6,7 5 TeV pp reco sysWide
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysHLT_v5/170315_162034/0000/",		// 104 pPb HM0 8 TeV sysHLT
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysHLT_v5/170315_162053/0000/",		// 105 pPb HM1 8 TeV sysHLT
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysHLT_reverse_v5/170315_162418/0000/",	// 106 pPb HM0 8 TeV reverse sysHLT
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysHLT_reverse_v5/170315_162432/0000/",	// 107 pPb HM1 8 TeV reverse sysHLT
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysEff_v5/170315_165743/0000/",		// 108 pPb HM0 8 TeV sysEff
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysEff_v5/170315_165759/0000/",		// 109 pPb HM1 8 TeV sysEff
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysEff_v5/170315_165811/0000/",		// 110 pPb HM7 8 TeV sysEff
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysEff_v5/170315_165839/0000/",			// 111 pPb MB1 8 TeV sysEff
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysEff_reverse_v5/170315_165910/0000/",	// 112 pPb HM0 8 TeV reverse sysEff
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysEff_reverse_v5/170315_165933/0000/",	// 113 pPb HM1 8 TeV reverse sysEff
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysEff_reverse_v5/170315_165959/0000/",	// 114 pPb HM7 8 TeV reverse sysEff
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysEff_reverse_v5/170315_170104/0000/",		// 115 pPb MB1 8 TeV reverse sysEff
+	"NA",		// 116 pPb HM0 8 TeV merge sysHLT
+	"NA",		// 117 pPb HM1 8 TeV merge sysHLT
+	"NA",		// 118 pPb HM0 8 TeV merge sysEff
+	"NA",		// 119 pPb HM1 8 TeV merge sysEff
+	"NA",		// 120 pPb HM7 8 TeV merge sysEff
+	"NA",		// 121 pPb MB1 8 TeV merge sysEff
 };
 
 char const * ftxt[] = {
@@ -211,6 +229,24 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco_sysLoose_merge/",	// 101
 	"txt/PbPb15_ppreco_sysNarrow_merge/",	// 102
 	"txt/PbPb15_ppreco_sysWide_merge/",	// 103
+	"txt/PAHM0_sysHLT/",			// 104
+	"txt/PAHM1_sysHLT/",			// 105
+	"txt/PAHM0_sysHLT_reverse/",		// 106
+	"txt/PAHM1_sysHLT_reverse/",		// 107
+	"txt/PAHM0_sysEff/",			// 108
+	"txt/PAHM1_sysEff/",			// 109
+	"txt/PAHM7_sysEff/",			// 110
+	"txt/PAMB1_sysEff/",			// 111
+	"txt/PAHM0_sysEff_reverse/",		// 112
+	"txt/PAHM1_sysEff_reverse/",		// 113
+	"txt/PAHM7_sysEff_reverse/",		// 114
+	"txt/PAMB1_sysEff_reverse/",		// 115
+	"txt/PAHM0_sysHLT_merge/",		// 116
+	"txt/PAHM1_sysHLT_merge/",		// 117
+	"txt/PAHM0_sysEff_merge/",		// 118
+	"txt/PAHM1_sysEff_merge/",		// 119
+	"txt/PAHM7_sysEff_merge/",		// 120
+	"txt/PAMB1_sysEff_merge/",		// 121
 };
 
 

@@ -12,19 +12,19 @@ typedef struct
 	TGraphErrors * grV8;
 } VnGraph;
 
-void getGraph(TFile * f, VnGraph &gr)
+void getGraph(TFile * f, VnGraph &gr, int n)
 {
-	gr.grCn = (TGraphErrors*) f->Get("grCn");
-	gr.grVn = (TGraphErrors*) f->Get("grVn");
+	gr.grCn = (TGraphErrors*) f->Get(Form("grC%in", n));
+	gr.grVn = (TGraphErrors*) f->Get(Form("grV%in", n));
 
-	gr.grC4 = (TGraphErrors*) f->Get("grC4");
-	gr.grV4 = (TGraphErrors*) f->Get("grV4");
+	gr.grC4 = (TGraphErrors*) f->Get(Form("grC%i4", n));
+	gr.grV4 = (TGraphErrors*) f->Get(Form("grV%i4", n));
 
-	gr.grC6 = (TGraphErrors*) f->Get("grC6");
-	gr.grV6 = (TGraphErrors*) f->Get("grV6");
+	gr.grC6 = (TGraphErrors*) f->Get(Form("grC%i6", n));
+	gr.grV6 = (TGraphErrors*) f->Get(Form("grV%i6", n));
 
-	gr.grC8 = (TGraphErrors*) f->Get("grC8");
-	gr.grV8 = (TGraphErrors*) f->Get("grV8");
+	gr.grC8 = (TGraphErrors*) f->Get(Form("grC%i8", n));
+	gr.grV8 = (TGraphErrors*) f->Get(Form("grV%i8", n));
 }
 
 
@@ -49,12 +49,12 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	VnGraph grPP2;
 	VnGraph grPP3;
 
-	getGraph( f2pPb, grPA2 );
-	getGraph( f3pPb, grPA3 );
-	getGraph( f2PbPb, grAA2 );
-	getGraph( f3PbPb, grAA3 );
-	getGraph( f2pp, grPP2 );
-	getGraph( f3pp, grPP3 );
+	getGraph( f2pPb, grPA2, 2 );
+	getGraph( f3pPb, grPA3, 3 );
+	getGraph( f2PbPb, grAA2, 2 );
+	getGraph( f3PbPb, grAA3, 3 );
+	getGraph( f2pp, grPP2, 2 );
+	getGraph( f3pp, grPP3, 3 );
 
 
 	grAA2.grC4->SetMarkerStyle(kFullSquare);
@@ -250,8 +250,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	legV->SetTextSize(0.06);
 	legV->SetBorderSize(0);
 
-	legV->AddEntry(grPA2.grV4, "pPb 8.16 TeV", "p");
-	legV->AddEntry(grAA3.grV4, "PbPb 5.02 TeV", "p");
+	legV->AddEntry(grPA2.grV4, "v_{2}{4}", "p");
+	legV->AddEntry(grAA3.grV4, "v_{3}{4}", "p");
 	legV->Draw();
 
 	p = cV->cd(2);
