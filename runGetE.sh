@@ -1,7 +1,16 @@
-./runGetE3.sh 85
-./runGetE3.sh 86
-./runGetE3.sh 87
-./runGetE3.sh 88
+#./runGetE3.sh 89
+#./runGetE3.sh 94
+
+./runGetE3.sh 99
+#./runGetE3.sh 100
+#./runGetE3.sh 101
+#./runGetE3.sh 102
+#./runGetE3.sh 103
+
+#./runGetE3.sh 85
+#./runGetE3.sh 86
+#./runGetE3.sh 87
+#./runGetE3.sh 88
 
 #./runGetE3.sh 77
 #./runGetE3.sh 78

@@ -122,6 +122,30 @@ char const * fname[] = {
 	"NA",		// 119 pPb HM1 8 TeV merge sysEff
 	"NA",		// 120 pPb HM7 8 TeV merge sysEff
 	"NA",		// 121 pPb MB1 8 TeV merge sysEff
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysHighPU_v5/170316_132626/0000/",		// 122 pPb HM0 8 TeV sysHighPU
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysHighPU_v5/170316_132646/0000/",		// 123 pPb HM1 8 TeV sysHighPU
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysHighPU_v5/170316_132707/0000/",		// 124 pPb HM7 8 TeV sysHighPU
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysHighPU_v5/170316_133426/0000/",		// 125 pPb MB1 8 TeV sysHighPU
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysHighPU_reverse_v5/170316_133946/0000/",	// 126 pPb HM0 8 TeV reverse sysHighPU
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysHighPU_reverse_v5/170316_134003/0000/",	// 127 pPb HM1 8 TeV reverse sysHighPU
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysHighPU_reverse_v5/170316_134023/0000/",	// 128 pPb HM7 8 TeV reverse sysHighPU
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysHighPU_reverse_v5/170316_134225/0000/",	// 129 pPb MB1 8 TeV reverse sysHighPU
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysLowPU_v5/170316_132915/0000/",		// 130 pPb HM0 8 TeV sysLowPU
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysLowPU_v5/170316_132937/0000/",		// 131 pPb HM1 8 TeV sysLowPU
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysLowPU_v5/170316_132952/0000/",		// 132 pPb HM7 8 TeV sysLowPU
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysLowPU_v5/170316_134703/0000/",			// 133 pPb MB1 8 TeV sysLowPU
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysLowPU_reverse_v5/170316_134109/0000/",	// 134 pPb HM0 8 TeV reverse sysLowPU
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysLowPU_reverse_v5/170316_134124/0000/",	// 135 pPb HM1 8 TeV reverse sysLowPU
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysLowPU_reverse_v5/170316_134140/0000/",	// 136 pPb HM7 8 TeV reverse sysLowPU
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysLowPU_reverse_v5/170316_134802/0000/",		// 137 pPb MB1 8 TeV reverse sysLowPU
+	"NA",		// 138 pPb HM0 8 TeV merge sysHighPU
+	"NA",		// 139 pPb HM1 8 TeV merge sysHighPU
+	"NA",		// 140 pPb HM7 8 TeV merge sysHighPU
+	"NA",		// 141 pPb MB1 8 TeV merge sysHighPU
+	"NA",		// 142 pPb HM0 8 TeV merge sysLowPU
+	"NA",		// 143 pPb HM1 8 TeV merge sysLowPU
+	"NA",		// 144 pPb HM7 8 TeV merge sysLowPU
+	"NA",		// 145 pPb MB1 8 TeV merge sysLowPU
 };
 
 char const * ftxt[] = {
@@ -247,6 +271,30 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysEff_merge/",		// 119
 	"txt/PAHM7_sysEff_merge/",		// 120
 	"txt/PAMB1_sysEff_merge/",		// 121
+	"txt/PAHM0_sysHighPU/",			// 122
+	"txt/PAHM1_sysHighPU/",			// 123
+	"txt/PAHM7_sysHighPU/",			// 124
+	"txt/PAMB1_sysHighPU/",			// 125
+	"txt/PAHM0_sysHighPU_reverse/",		// 126
+	"txt/PAHM1_sysHighPU_reverse/",		// 127
+	"txt/PAHM7_sysHighPU_reverse/",		// 128
+	"txt/PAMB1_sysHighPU_reverse/",		// 129
+	"txt/PAHM0_sysLowPU/",			// 130
+	"txt/PAHM1_sysLowPU/",			// 131
+	"txt/PAHM7_sysLowPU/",			// 132
+	"txt/PAMB1_sysLowPU/",			// 133
+	"txt/PAHM0_sysLowPU_reverse/",		// 134
+	"txt/PAHM1_sysLowPU_reverse/",		// 135
+	"txt/PAHM7_sysLowPU_reverse/",		// 136
+	"txt/PAMB1_sysLowPU_reverse/",		// 137
+	"txt/PAHM0_sysHighPU_merge/",		// 138
+	"txt/PAHM1_sysHighPU_merge/",		// 139
+	"txt/PAHM7_sysHighPU_merge/",		// 140
+	"txt/PAMB1_sysHighPU_merge/",		// 141
+	"txt/PAHM0_sysLowPU_merge/",		// 142
+	"txt/PAHM1_sysLowPU_merge/",		// 143
+	"txt/PAHM7_sysLowPU_merge/",		// 144
+	"txt/PAMB1_sysLowPU_merge/",		// 145
 };
 
 
