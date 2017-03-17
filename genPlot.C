@@ -13,6 +13,9 @@ void genPlot(int s1 =0)
 	if ( s1 == 31 ) {
 		NCent = NCentPP13TeV;
 		CentX = CentPP13X4;
+	} else if ( s1 == 99 ) {
+		NCent = NCentAA5TeV4;
+		CentX = CentPbPbX4;
 	}
 	TFile *f = new TFile(Form("%s/outputE.root", ftxt[s1]));
 

@@ -30,7 +30,7 @@ void getGraph(TFile * f, VnGraph &gr, int n)
 
 TGraphErrors* combineGr(TGraphErrors* gMB0, TGraphErrors* gHM0, TGraphErrors* gHM1, TGraphErrors* gHM7)
 {
-	double y[14], ey[14];
+	double y[20], ey[20];
 	for ( int i = 0; i < 6; i++ ) {
 		y[i]  = gMB0->GetY() [i];
 		ey[i] = gMB0->GetEY()[i];
@@ -43,11 +43,11 @@ TGraphErrors* combineGr(TGraphErrors* gMB0, TGraphErrors* gHM0, TGraphErrors* gH
 		y[i]  = gHM1->GetY() [i];
 		ey[i] = gHM1->GetEY()[i];
 	}
-	for ( int i = 10; i < 14; i++ ) {
+	for ( int i = 10; i < gMB0->GetN(); i++ ) {
 		y[i]  = gHM7->GetY() [i];
 		ey[i] = gHM7->GetEY()[i];
 	}
-	TGraphErrors * ret = new TGraphErrors(14, CentPPbX4, y, 0, ey);
+	TGraphErrors * ret = new TGraphErrors(gMB0->GetN(), CentPbPbX4, y, 0, ey);
 	ret->SetMarkerStyle(gMB0->GetMarkerStyle());
 	ret->SetMarkerColor(gMB0->GetMarkerColor());
 	ret->SetLineColor(gMB0->GetLineColor());
