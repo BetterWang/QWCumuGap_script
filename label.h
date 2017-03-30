@@ -146,7 +146,7 @@ char const * fname[] = {
 	"NA",		// 143 pPb HM1 8 TeV merge sysLowPU
 	"NA",		// 144 pPb HM7 8 TeV merge sysLowPU
 	"NA",		// 145 pPb MB1 8 TeV merge sysLowPU
-	"../PbPb2015_cumu/MC/HIJING/",									// 146 HIJING 5-10fm fEllP_8pct_v2
+	"../PbPb2015_cumu/MC/HIJING/",							// 146 HIJING 5-10fm fEllP_8pct_v2 non-flow
 	"../PbPb2015_cumu/MC/Hydjet5-10_fNhsel0/",					// 147 Hydjet 5-10cent pure hydro (jets (nonflow) off),
 	"../PbPb2015_cumu/MC/Hydjet5-10_fNhsel2/",					// 148 Hydjet 5-10cent full sample (hydro+jets (nonflow))
 	"../PbPb2015_cumu/MC/Hydjet5-10_fNhsel4/",					// 149 Hydjet 5-10cent only jets (nonflow) (hydro off)
@@ -156,6 +156,8 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/Hydjet35-40_fNhsel0/",					// 153 Hydjet 35-40cent pure hydro (jets (nonflow) off),
 	"../PbPb2015_cumu/MC/Hydjet35-40_fNhsel2/",					// 154 Hydjet 35-40cent full sample (hydro+jets (nonflow))
 	"../PbPb2015_cumu/MC/Hydjet35-40_fNhsel4/",					// 155 Hydjet 35-40cent only jets (nonflow) (hydro off)
+	"../PbPb2015_cumu/MC/HIJING_mod1/",						// 156 HIJING 5-10fm fEllP_8pct_v2 without non-flow
+	"../PbPb2015_cumu/MC/HIJING_mod0/",						// 157 HIJING 5-10fm flow off
 };
 
 char const * ftxt[] = {
@@ -315,6 +317,8 @@ char const * ftxt[] = {
 	"txt/Hydjet35-40_0/",			// 153
 	"txt/Hydjet35-40_2/",			// 154
 	"txt/Hydjet35-40_4/",			// 155
+	"txt/HIJING_fEllP_8pct_v2_mod1/",	// 156
+	"txt/HIJING_mod0/",			// 157
 };
 
 
