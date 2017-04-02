@@ -158,6 +158,11 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/Hydjet35-40_fNhsel4/",					// 155 Hydjet 35-40cent only jets (nonflow) (hydro off)
 	"../PbPb2015_cumu/MC/HIJING_mod1/",						// 156 HIJING 5-10fm fEllP_8pct_v2 without non-flow
 	"../PbPb2015_cumu/MC/HIJING_mod0/",						// 157 HIJING 5-10fm flow off
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220910/0000/",	// 158 PbPb 5 TeV ppreco HIMB5 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220924/0000/",	// 159 PbPb 5 TeV ppreco HIMB6 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220937/0000/",	// 160 PbPb 5 TeV ppreco HIMB7 sysPxLayer1
+	"NA",	// 161 PbPb 5 TeV ppreco HIMB567 sysPxLayer1
+
 };
 
 char const * ftxt[] = {
@@ -319,6 +324,10 @@ char const * ftxt[] = {
 	"txt/Hydjet35-40_4/",			// 155
 	"txt/HIJING_fEllP_8pct_v2_mod1/",	// 156
 	"txt/HIJING_mod0/",			// 157
+	"txt/PbPb15_ppreco5_sysPxLayer1/",	// 158
+	"txt/PbPb15_ppreco6_sysPxLayer1/",	// 159
+	"txt/PbPb15_ppreco7_sysPxLayer1/",	// 160
+	"txt/PbPb15_ppreco_sysPxLayer1/",	// 161
 };
 
 
