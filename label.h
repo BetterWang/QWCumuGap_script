@@ -161,7 +161,22 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220910/0000/",	// 158 PbPb 5 TeV ppreco HIMB5 sysPxLayer1
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220924/0000/",	// 159 PbPb 5 TeV ppreco HIMB6 sysPxLayer1
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220937/0000/",	// 160 PbPb 5 TeV ppreco HIMB7 sysPxLayer1
-	"NA",	// 161 PbPb 5 TeV ppreco HIMB567 sysPxLayer1
+	"NA",		// 161 PbPb 5 TeV ppreco HIMB567 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2_v2/170406_102854/0000/",		// 162 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight3_v2/170406_090218/0000/",		// 163 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 3.0 pterrorpt = 0.05
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTighter_v2/170406_090248/0000/",		// 164 PbPb 5 TeV ppreco HIMB5 sysTighter dzdzerror = d0d0error = 2.0 pterrorpt = 0.05
+	"../PbPb2015_cumu/MC/Hydjet10-15_fNhsel0/",					// 165 Hydjet 10-15cent pure hydro (jets (nonflow) off),
+	"../PbPb2015_cumu/MC/Hydjet10-15_fNhsel2/",					// 166 Hydjet 10-15cent full sample (hydro+jets (nonflow))
+	"../PbPb2015_cumu/MC/Hydjet10-15_fNhsel4/",					// 167 Hydjet 10-15cent only jets (nonflow) (hydro off)
+	"../PbPb2015_cumu/MC/Hydjet15-20_fNhsel0/",					// 168 Hydjet 15-20cent pure hydro (jets (nonflow) off),
+	"../PbPb2015_cumu/MC/Hydjet15-20_fNhsel2/",					// 169 Hydjet 15-20cent full sample (hydro+jets (nonflow))
+	"../PbPb2015_cumu/MC/Hydjet15-20_fNhsel4/",					// 170 Hydjet 15-20cent only jets (nonflow) (hydro off)
+	"../PbPb2015_cumu/MC/Hydjet25-30_fNhsel0/",					// 171 Hydjet 25-30cent pure hydro (jets (nonflow) off),
+	"../PbPb2015_cumu/MC/Hydjet25-30_fNhsel2/",					// 172 Hydjet 25-30cent full sample (hydro+jets (nonflow))
+	"../PbPb2015_cumu/MC/Hydjet25-30_fNhsel4/",					// 173 Hydjet 25-30cent only jets (nonflow) (hydro off)
+	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel0/",					// 174 Hydjet 10-15cent pure hydro (jets (nonflow) off),
+	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel2/",					// 175 Hydjet 10-15cent full sample (hydro+jets (nonflow))
+	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel4/",					// 176 Hydjet 10-15cent only jets (nonflow) (hydro off)
 
 };
 
@@ -328,6 +343,21 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysPxLayer1/",	// 159
 	"txt/PbPb15_ppreco7_sysPxLayer1/",	// 160
 	"txt/PbPb15_ppreco_sysPxLayer1/",	// 161
+	"txt/PbPb15_ppreco_sysTight2/",		// 162
+	"txt/PbPb15_ppreco_sysTight3/",		// 163
+	"txt/PbPb15_ppreco_sysTighter/",	// 164
+	"txt/Hydjet10-15_0/",			// 165
+	"txt/Hydjet10-15_2/",			// 166
+	"txt/Hydjet10-15_4/",			// 167
+	"txt/Hydjet15-20_0/",			// 168
+	"txt/Hydjet15-20_2/",			// 169
+	"txt/Hydjet15-20_4/",			// 170
+	"txt/Hydjet25-30_0/",			// 171
+	"txt/Hydjet25-30_2/",			// 172
+	"txt/Hydjet25-30_4/",			// 173
+	"txt/Hydjet30-35_0/",			// 174
+	"txt/Hydjet30-35_2/",			// 175
+	"txt/Hydjet30-35_4/",			// 176
 };
 
 
