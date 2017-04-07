@@ -158,9 +158,9 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/Hydjet35-40_fNhsel4/",					// 155 Hydjet 35-40cent only jets (nonflow) (hydro off)
 	"../PbPb2015_cumu/MC/HIJING_mod1/",						// 156 HIJING 5-10fm fEllP_8pct_v2 without non-flow
 	"../PbPb2015_cumu/MC/HIJING_mod0/",						// 157 HIJING 5-10fm flow off
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220910/0000/",	// 158 PbPb 5 TeV ppreco HIMB5 sysPxLayer1
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220924/0000/",	// 159 PbPb 5 TeV ppreco HIMB6 sysPxLayer1
-	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysPxLayer1_v2/170401_220937/0000/",	// 160 PbPb 5 TeV ppreco HIMB7 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysPxLayer1_v4/170407_141154/0000/",	// 158 PbPb 5 TeV ppreco HIMB5 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysPxLayer1_v4/170407_141211/0000/",	// 159 PbPb 5 TeV ppreco HIMB6 sysPxLayer1
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysPxLayer1_v4/170407_141229/0000/",	// 160 PbPb 5 TeV ppreco HIMB7 sysPxLayer1
 	"NA",		// 161 PbPb 5 TeV ppreco HIMB567 sysPxLayer1
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2_v2/170406_102854/0000/",		// 162 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight3_v2/170406_090218/0000/",		// 163 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 3.0 pterrorpt = 0.05
@@ -177,6 +177,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel0/",					// 174 Hydjet 10-15cent pure hydro (jets (nonflow) off),
 	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel2/",					// 175 Hydjet 10-15cent full sample (hydro+jets (nonflow))
 	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel4/",					// 176 Hydjet 10-15cent only jets (nonflow) (hydro off)
+	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_v1/170407_093344/0000/",			// 177 PbPb HIMB2 Pixel 0.3<pT<3.0
 
 };
 
@@ -358,6 +359,7 @@ char const * ftxt[] = {
 	"txt/Hydjet30-35_0/",			// 174
 	"txt/Hydjet30-35_2/",			// 175
 	"txt/Hydjet30-35_4/",			// 176
+	"txt/PbPb15_pixel/",			// 177
 };
 
 
