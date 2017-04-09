@@ -178,6 +178,9 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel2/",					// 175 Hydjet 10-15cent full sample (hydro+jets (nonflow))
 	"../PbPb2015_cumu/MC/Hydjet30-35_fNhsel4/",					// 176 Hydjet 10-15cent only jets (nonflow) (hydro off)
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_v1/170407_093344/0000/",			// 177 PbPb HIMB2 Pixel 0.3<pT<3.0
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysStd_v2/170407_182700/0000/",	// 178 PbPb HIMB5 5 TeV pp reco sysStd
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysStd_v2/170407_183134/0000/",	// 179 PbPb HIMB6 5 TeV pp reco sysStd
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysStd_v2/170407_182715/0000/",	// 180 PbPb HIMB7 5 TeV pp reco sysStd
 
 };
 
@@ -360,6 +363,9 @@ char const * ftxt[] = {
 	"txt/Hydjet30-35_2/",			// 175
 	"txt/Hydjet30-35_4/",			// 176
 	"txt/PbPb15_pixel/",			// 177
+	"txt/PbPb15_ppreco5_sysStd/",		// 178
+	"txt/PbPb15_ppreco6_sysStd/",		// 179
+	"txt/PbPb15_ppreco7_sysStd/",		// 180
 };
 
 
