@@ -163,7 +163,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysPxLayer1_v4/170407_141229/0000/",	// 160 PbPb 5 TeV ppreco HIMB7 sysPxLayer1
 	"NA",		// 161 PbPb 5 TeV ppreco HIMB567 sysPxLayer1
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2_v2/170406_102854/0000/",		// 162 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight3_v2/170406_090218/0000/",		// 163 PbPb 5 TeV ppreco HIMB5 sysTight2 dzdzerror = d0d0error = 3.0 pterrorpt = 0.05
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight3_v2/170406_090218/0000/",		// 163 PbPb 5 TeV ppreco HIMB5 sysTight3 dzdzerror = d0d0error = 3.0 pterrorpt = 0.05
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTighter_v2/170406_090248/0000/",		// 164 PbPb 5 TeV ppreco HIMB5 sysTighter dzdzerror = d0d0error = 2.0 pterrorpt = 0.05
 	"../PbPb2015_cumu/MC/Hydjet10-15_fNhsel0/",					// 165 Hydjet 10-15cent pure hydro (jets (nonflow) off),
 	"../PbPb2015_cumu/MC/Hydjet10-15_fNhsel2/",					// 166 Hydjet 10-15cent full sample (hydro+jets (nonflow))
@@ -182,6 +182,9 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysStd_v2/170407_183134/0000/",	// 179 PbPb HIMB6 5 TeV pp reco sysStd
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysStd_v2/170407_182715/0000/",	// 180 PbPb HIMB7 5 TeV pp reco sysStd
 	"NA",	// 181 PbPb HIMB567 5 TeV pp reco sysStd
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight2_v2/170411_100355/0000/",		// 182 PbPb 5 TeV ppreco HIMB6 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight2_v2/170411_100419/0000/",		// 183 PbPb 5 TeV ppreco HIMB7 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
+	"NA",		// 184 PbPb 5 TeV ppreco HIMB567 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
 
 };
 
@@ -348,7 +351,7 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysPxLayer1/",	// 159
 	"txt/PbPb15_ppreco7_sysPxLayer1/",	// 160
 	"txt/PbPb15_ppreco_sysPxLayer1/",	// 161
-	"txt/PbPb15_ppreco_sysTight2/",		// 162
+	"txt/PbPb15_ppreco5_sysTight2/",	// 162
 	"txt/PbPb15_ppreco_sysTight3/",		// 163
 	"txt/PbPb15_ppreco_sysTighter/",	// 164
 	"txt/Hydjet10-15_0/",			// 165
@@ -368,6 +371,9 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysStd/",		// 179
 	"txt/PbPb15_ppreco7_sysStd/",		// 180
 	"txt/PbPb15_ppreco_sysStd/",		// 181
+	"txt/PbPb15_ppreco6_sysTight2/",	// 182
+	"txt/PbPb15_ppreco7_sysTight2/",	// 183
+	"txt/PbPb15_ppreco_sysTight2/",		// 184
 };
 
 
