@@ -185,7 +185,16 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight2_v2/170411_100355/0000/",		// 182 PbPb 5 TeV ppreco HIMB6 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight2_v2/170411_100419/0000/",		// 183 PbPb 5 TeV ppreco HIMB7 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
 	"NA",		// 184 PbPb 5 TeV ppreco HIMB567 sysTight2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1
-
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysWide2_v2/170412_094102/0000/",		// 185 PbPb 5 TeV ppreco HIMB5 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 3<|vz|<15
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysWide2_v2/170412_094134/0000/",		// 186 PbPb 5 TeV ppreco HIMB6 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 3<|vz|<15
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysWide2_v2/170412_094212/0000/",		// 187 PbPb 5 TeV ppreco HIMB7 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 3<|vz|<15
+	"NA",		// 188 PbPb 5 TeV ppreco HIMB567 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 3<|vz|<15
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysNarrow2_v2/170412_094331/0000/",		// 189 PbPb 5 TeV ppreco HIMB5 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 0<|vz|<3
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysNarrow2_v2/170412_094352/0000/",		// 190 PbPb 5 TeV ppreco HIMB6 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 0<|vz|<3
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysNarrow2_v2/170412_094419/0000/",		// 191 PbPb 5 TeV ppreco HIMB7 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 0<|vz|<3
+	"NA",		// 192 PbPb 5 TeV ppreco HIMB567 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 0<|vz|<3
+	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_sysPos_v1/170411_165838/0000/",		// 193 PbPb HIMB2 Pixel 0.3<pT<3.0 eta>0
+	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_sysNeg_v1/170411_165915/0000/",		// 194 PbPb HIMB2 Pixel 0.3<pT<3.0 eta<0
 };
 
 char const * ftxt[] = {
@@ -374,6 +383,16 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysTight2/",	// 182
 	"txt/PbPb15_ppreco7_sysTight2/",	// 183
 	"txt/PbPb15_ppreco_sysTight2/",		// 184
+	"txt/PbPb15_ppreco5_sysWide2/",		// 185
+	"txt/PbPb15_ppreco6_sysWide2/",		// 186
+	"txt/PbPb15_ppreco7_sysWide2/",		// 187
+	"txt/PbPb15_ppreco_sysWide2/",		// 188
+	"txt/PbPb15_ppreco5_sysNarrow2/",	// 189
+	"txt/PbPb15_ppreco6_sysNarrow2/",	// 190
+	"txt/PbPb15_ppreco7_sysNarrow2/",	// 191
+	"txt/PbPb15_ppreco_sysNarrow2/",	// 192
+	"txt/PbPb15_pixel_sysPos/",		// 193
+	"txt/PbPb15_pixel_sysNeg/",		// 194
 };
 
 
