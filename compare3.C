@@ -28,6 +28,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 		{"grV26", make_pair(0.01, 0.14)},
 		{"grV28", make_pair(0.01, 0.14)},
 		{"grC24", make_pair(-0.000014, 0.0000119)},
+		{"grC26", make_pair(-0.000000014, 0.000000199)},
+		{"grC28", make_pair(-0.0000000024, 0.00000000119)},
 		{"grC2n", make_pair(-0.000014, 0.0000119)},
 
 		{"grV34", make_pair(0.00, 0.04)},
@@ -44,6 +46,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 			{"grV26", make_pair(0.01, 0.19)},
 			{"grV28", make_pair(0.01, 0.19)},
 			{"grC24", make_pair(-0.000074, 0.0000499)},
+			{"grC26", make_pair(-0.0000014, 0.00000699)},
+			{"grC28", make_pair(-0.00000029, 0.000000499)},
 			{"grC2n", make_pair(-0.000074, 0.0000499)},
 
 			{"grV34", make_pair(0.00, 0.04)},
@@ -60,7 +64,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 
 	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{2}", 1, 0, 399, 1, hrange[str_gr].first, hrange[str_gr].second);
 	initHist(hframe);
-	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.9, 1.09);
+	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.79, 1.19);
 	initHist(hframeR);
 
 	TLegend * legPt = new TLegend(0.5, 0.7, 0.85, 0.9);

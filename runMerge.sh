@@ -1,7 +1,38 @@
+
+#PbPb sysStd
+root -l -b -q "mergeGr.C(2, 181, 181, 181, 181)"
+root -l -b -q "mergeGr.C(3, 181, 181, 181, 181)"
+root -l -b -q "mergeGr.C(4, 181, 181, 181, 181)"
+
+#PbPb sysPxLayer1
+#root -l -b -q "mergeGr.C(2, 161, 161, 161, 161)"
+#root -l -b -q "mergeGr.C(3, 161, 161, 161, 161)"
+#root -l -b -q "mergeGr.C(4, 161, 161, 161, 161)"
+
+# pPb HLT
+#root -l -b -q "mergeGr.C(2, 52, 49, 116, 117)"
+#root -l -b -q "mergeGr.C(3, 52, 49, 116, 117)"
+#root -l -b -q "mergeGr.C(4, 52, 49, 116, 117)"
+
+## pPb sysEff
+#root -l -b -q "mergeGr.C(2, 121, 118, 119, 120)"
+#root -l -b -q "mergeGr.C(3, 121, 118, 119, 120)"
+#root -l -b -q "mergeGr.C(4, 121, 118, 119, 120)"
+#
+## pPb sysHighPU
+#root -l -b -q "mergeGr.C(2, 141, 138, 139, 140)"
+#root -l -b -q "mergeGr.C(3, 141, 138, 139, 140)"
+#root -l -b -q "mergeGr.C(4, 141, 138, 139, 140)"
+#
+## pPb sysLowPU
+#root -l -b -q "mergeGr.C(2, 145, 142, 143, 144)"
+#root -l -b -q "mergeGr.C(3, 145, 142, 143, 144)"
+#root -l -b -q "mergeGr.C(4, 145, 142, 143, 144)"
+
 # PbPb
-root -l -b -q "mergeGr.C(2, 99, 99, 99, 99)"
-root -l -b -q "mergeGr.C(3, 99, 99, 99, 99)"
-root -l -b -q "mergeGr.C(4, 99, 99, 99, 99)"
+#root -l -b -q "mergeGr.C(2, 99, 99, 99, 99)"
+#root -l -b -q "mergeGr.C(3, 99, 99, 99, 99)"
+#root -l -b -q "mergeGr.C(4, 99, 99, 99, 99)"
 
 #root -l -b -q "mergeGr.C(2, 89, 89, 89, 89)"
 #root -l -b -q "mergeGr.C(3, 89, 89, 89, 89)"
