@@ -195,6 +195,14 @@ char const * fname[] = {
 	"NA",		// 192 PbPb 5 TeV ppreco HIMB567 sysWide2 dzdzerror = d0d0error = 2.0 pterrorpt = 0.1 0<|vz|<3
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_sysPos_v1/170411_165838/0000/",		// 193 PbPb HIMB2 Pixel 0.3<pT<3.0 eta>0
 	"../PbPb2015_cumu/HIMinimumBias2/crab_HIMB2_CumuGap_Pixel_eff_cent_sysNeg_v1/170411_165915/0000/",		// 194 PbPb HIMB2 Pixel 0.3<pT<3.0 eta<0
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2dz_v2/170420_083825/0000/",	// 195 PbPb 5 TeV ppreco HIMB5 sysTight2dz
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight2dz_v2/170420_083846/0000/",	// 196 PbPb 5 TeV ppreco HIMB6 sysTight2dz
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight2dz_v2/170420_083907/0000/",	// 197 PbPb 5 TeV ppreco HIMB7 sysTight2dz
+	"NA",	// 198 PbPb 5 TeV ppreco HIMB567 sysTight2dz
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2dxy_v2/170420_083930/0000/",	// 199 PbPb 5 TeV ppreco HIMB5 sysTight2dxy
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight2dxy_v2/170420_083953/0000/",	// 200 PbPb 5 TeV ppreco HIMB6 sysTight2dxy
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight2dxy_v2/170420_084015/0000/",	// 201 PbPb 5 TeV ppreco HIMB7 sysTight2dxy
+	"NA",	// 202 PbPb 5 TeV ppreco HIMB567 sysTight2dxy
 };
 
 char const * ftxt[] = {
@@ -393,6 +401,14 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco_sysNarrow2/",	// 192
 	"txt/PbPb15_pixel_sysPos/",		// 193
 	"txt/PbPb15_pixel_sysNeg/",		// 194
+	"txt/PbPb15_ppreco5_sysTight2dz/",		// 195
+	"txt/PbPb15_ppreco6_sysTight2dz/",		// 196
+	"txt/PbPb15_ppreco7_sysTight2dz/",		// 197
+	"txt/PbPb15_ppreco_sysTight2dz/",		// 198
+	"txt/PbPb15_ppreco5_sysTight2dxy/",		// 199
+	"txt/PbPb15_ppreco6_sysTight2dxy/",		// 200
+	"txt/PbPb15_ppreco7_sysTight2dxy/",		// 201
+	"txt/PbPb15_ppreco_sysTight2dxy/",		// 202
 };
 
 
