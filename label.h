@@ -219,6 +219,9 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight2NegEta_v5/170504_095050/0000/",	// 216 PbPb 5 TeV ppreco HIMB5 sysTight2NegEta
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight2NegEta_v5/170504_095107/0000/",	// 217 PbPb 5 TeV ppreco HIMB5 sysTight2NegEta
 	"NA",	// 218 PbPb 5 TeV ppreco HIMB567 sysTight2NegEta
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysEta1_v2/170516_092708/0000/",		// 219 PbPb 5 TeV ppreco HIMB5 sysEta1 |eta|<1
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLooseEta1_v2/170516_090207/0000/",	// 220 PbPb 5 TeV ppreco HIMB5 sysLooseEta1 |eta|<1
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTightEta1_v2/170516_092725/0000/",	// 221 PbPb 5 TeV ppreco HIMB5 sysTightEta1 |eta|<1
 };
 
 char const * ftxt[] = {
@@ -441,6 +444,9 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysTight2NegEta2/",		// 216
 	"txt/PbPb15_ppreco7_sysTight2NegEta2/",		// 217
 	"txt/PbPb15_ppreco_sysTight2NegEta2/",		// 218
+	"txt/PbPb15_ppreco5_sysEta1/",			// 219
+	"txt/PbPb15_ppreco5_sysLooseEta1/",		// 220
+	"txt/PbPb15_ppreco5_sysTightEta1/",		// 221
 };
 
 
