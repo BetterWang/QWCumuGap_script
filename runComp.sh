@@ -4,6 +4,10 @@
 #root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grC24", "comp_pPb_C24.pdf", "c_{2}{4} pPb", "c_{2}{4} Pbp", "c_{2}{4} pPb+Pbp")'
 #root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grV2n", "comp_pPb_v2n.pdf", "v_{2}{4} pPb 3-sub", "v_{2}{4} Pbp 3-sub", "v_{2}{4} pPb+Pbp 3-sub")'
 #root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grC2n", "comp_pPb_C2n.pdf", "c_{2}{4} pPb 3-sub", "c_{2}{4} Pbp 3-sub", "c_{2}{4} pPb+Pbp 3-sub")'
+
+#root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grC24", "comp_pPb_C24.pdf", "c_{2}{4} pPb", "c_{2}{4} Pbp", "c_{2}{4} pPb+Pbp")'
+#root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grC26", "comp_pPb_C26.pdf", "c_{2}{6} pPb", "c_{2}{6} Pbp", "c_{2}{6} pPb+Pbp")'
+#root -l -b -q 'compare3.C("grV2_pPb.root", "grV2_Pbp.root", "grV2_merged.root", "grC28", "comp_pPb_C28.pdf", "c_{2}{8} pPb", "c_{2}{8} Pbp", "c_{2}{8} pPb+Pbp")'
 #
 #root -l -b -q 'compare3.C("grV3_pPb.root", "grV3_Pbp.root", "grV3_merged.root", "grV34", "comp_pPb_v34.pdf", "v_{3}{4} pPb", "v_{3}{4} Pbp", "v_{3}{4} pPb+Pbp")'
 #root -l -b -q 'compare3.C("grV3_pPb.root", "grV3_Pbp.root", "grV3_merged.root", "grV36", "comp_pPb_v36.pdf", "v_{3}{6} pPb", "v_{3}{6} Pbp", "v_{3}{6} pPb+Pbp")'
@@ -34,6 +38,9 @@
 #root -l -b -q 'compare3.C("grV2_sysNarrow.root", "grV2_sysWide.root", "grV2_merged.root", "grC24", "comp_pPb_vz_c24.pdf", "c_{2}{4} |vz|<3.0", "c_{2}{4} 3.0<|vz|<15.", "c_{2}{4} standard")'
 #root -l -b -q 'compare3.C("grV2_sysNarrow.root", "grV2_sysWide.root", "grV2_merged.root", "grV2n", "comp_pPb_vz_v2n.pdf", "v_{2}{4} |vz|<3.0 3-sub", "v_{2}{4} 3.0<|vz|<15 3-sub", "v_{2}{4} standard 3-sub")'
 #root -l -b -q 'compare3.C("grV2_sysNarrow.root", "grV2_sysWide.root", "grV2_merged.root", "grC2n", "comp_pPb_vz_c2n.pdf", "c_{2}{4} |vz|<3.0 3-sub", "c_{2}{4} 3.0<|vz|<15 3-sub", "c_{2}{4} standard 3-sub")'
+
+#root -l -b -q 'compare3.C("grV2_sysNarrow.root", "grV2_sysWide.root", "grV2_merged.root", "grC26", "comp_pPb_vz_c26.pdf", "c_{2}{6} |vz|<3.0", "c_{2}{6} 3.0<|vz|<15.", "c_{2}{6} standard")'
+#root -l -b -q 'compare3.C("grV2_sysNarrow.root", "grV2_sysWide.root", "grV2_merged.root", "grC28", "comp_pPb_vz_c28.pdf", "c_{2}{8} |vz|<3.0", "c_{2}{8} 3.0<|vz|<15.", "c_{2}{8} standard")'
 
 #root -l -b -q 'compare3.C("grV3_sysNarrow.root", "grV3_sysWide.root", "grV3_merged.root", "grV34", "comp_pPb_vz_v34.pdf", "v_{3}{4} |vz|<3.0", "v_{3}{4} 3.0<|vz|<15.", "v_{3}{4} standard")'
 #root -l -b -q 'compare3.C("grV3_sysNarrow.root", "grV3_sysWide.root", "grV3_merged.root", "grV36", "comp_pPb_vz_v36.pdf", "v_{3}{6} |vz|<3.0", "v_{3}{6} 3.0<|vz|<15.", "v_{3}{6} standard")'
@@ -169,3 +176,66 @@
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight.root", "grC28", "comp_PbPb_trackTight2er_c28.pdf", "c_{2}{8} Tight2",       "c_{2}{8} Tighter",       "c_{2}{8} Tight")'
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight.root", "grV2n", "comp_PbPb_trackTight2er_v2n.pdf", "v_{2}{4} Tight2 3-sub", "v_{2}{4} Tighter 3-sub", "v_{2}{4} Tight 3-sub")'
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight.root", "grC2n", "comp_PbPb_trackTight2er_c2n.pdf", "c_{2}{4} Tight2 3-sub", "c_{2}{4} Tighter 3-sub", "c_{2}{4} Tight 3-sub")'
+
+
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_trackTight2xyz_v24.pdf", "v_{2}{4} Tight2dxy",       "v_{2}{4} Tight2dz",       "v_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_trackTight2xyz_v26.pdf", "v_{2}{6} Tight2dxy",       "v_{2}{6} Tight2dz",       "v_{2}{6} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grV28", "comp_PbPb_trackTight2xyz_v28.pdf", "v_{2}{8} Tight2dxy",       "v_{2}{8} Tight2dz",       "v_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_trackTight2xyz_c24.pdf", "c_{2}{4} Tight2dxy",       "c_{2}{4} Tight2dz",       "c_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_trackTight2xyz_c26.pdf", "c_{2}{6} Tight2dxy",       "c_{2}{6} Tight2dz",       "c_{2}{6} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_trackTight2xyz_c28.pdf", "c_{2}{8} Tight2dxy",       "c_{2}{8} Tight2dz",       "c_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grV2n", "comp_PbPb_trackTight2xyz_v2n.pdf", "v_{2}{4} Tight2dxy 3-sub", "v_{2}{4} Tight2dz 3-sub", "v_{2}{4} Tight2 3-sub")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_trackTight2xyz_c2n.pdf", "c_{2}{4} Tight2dxy 3-sub", "c_{2}{4} Tight2dz 3-sub", "c_{2}{4} Tight2 3-sub")'
+
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_vz2_v24.pdf", "v_{2}{4} |vz|<3.0 tight2",       "v_{2}{4} 3.0<|vz|<15.0 tight2",       "v_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_vz2_v26.pdf", "v_{2}{6} |vz|<3.0 tight2",       "v_{2}{6} 3.0<|vz|<15.0 tight2",       "v_{2}{6} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV28", "comp_PbPb_vz2_v28.pdf", "v_{2}{8} |vz|<3.0 tight2",       "v_{2}{8} 3.0<|vz|<15.0 tight2",       "v_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_vz2_c24.pdf", "c_{2}{4} |vz|<3.0 tight2",       "c_{2}{4} 3.0<|vz|<15.0 tight2",       "c_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_vz2_c26.pdf", "c_{2}{6} |vz|<3.0 tight2",       "c_{2}{6} 3.0<|vz|<15.0 tight2",       "c_{2}{6} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_vz2_c28.pdf", "c_{2}{8} |vz|<3.0 tight2",       "c_{2}{8} 3.0<|vz|<15.0 tight2",       "c_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV2n", "comp_PbPb_vz2_v2n.pdf", "v_{2}{4} |vz|<3.0 tight2 3-sub", "v_{2}{4} 3.0<|vz|<15.0 tight2 3-sub", "v_{2}{4} Tight2 3-sub")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_vz2_c2n.pdf", "c_{2}{4} |vz|<3.0 tight2 3-sub", "c_{2}{4} 3.0<|vz|<15.0 tight2 3-sub", "c_{2}{4} Tight2 3-sub")'
+
+#root -l -b -q 'compare3.C("grV3PbPb_sysNarrow2.root", "grV3PbPb_sysWide2.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_vz2_c34.pdf", "c_{3}{4} |vz|<3.0 tight2",       "c_{3}{4} 3.0<|vz|<15.0 tight2",       "c_{3}{4} Tight2")'
+
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_eta_v24.pdf", "v_{2}{4} 0<#eta<2.4",       "v_{2}{4} -2.4<#eta<0",       "v_{2}{4} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_eta_v26.pdf", "v_{2}{6} 0<#eta<2.4",       "v_{2}{6} -2.4<#eta<0",       "v_{2}{6} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV28", "comp_PbPb_eta_v28.pdf", "v_{2}{8} 0<#eta<2.4",       "v_{2}{8} -2.4<#eta<0",       "v_{2}{8} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_eta_c24.pdf", "c_{2}{4} 0<#eta<2.4",       "c_{2}{4} -2.4<#eta<0",       "c_{2}{4} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_eta_c26.pdf", "c_{2}{6} 0<#eta<2.4",       "c_{2}{6} -2.4<#eta<0",       "c_{2}{6} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_eta_c28.pdf", "c_{2}{8} 0<#eta<2.4",       "c_{2}{8} -2.4<#eta<0",       "c_{2}{8} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV2n", "comp_PbPb_eta_v2n.pdf", "v_{2}{4} 0<#eta<2.4 3-sub", "v_{2}{4} -2.4<#eta<0 3-sub", "v_{2}{4} -2.4<#eta<2.4 3-sub")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_eta_c2n.pdf", "c_{2}{4} 0<#eta<2.4 3-sub", "c_{2}{4} -2.4<#eta<0 3-sub", "c_{2}{4} -2.4<#eta<2.4 3-sub")'
+#
+
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grV34", "comp_PbPb_eta_v34.pdf", "v_{3}{4} 0<#eta<2.4",       "v_{3}{4} -2.4<#eta<0",       "v_{3}{4} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grV36", "comp_PbPb_eta_v36.pdf", "v_{3}{6} 0<#eta<2.4",       "v_{3}{6} -2.4<#eta<0",       "v_{3}{6} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grV38", "comp_PbPb_eta_v38.pdf", "v_{3}{8} 0<#eta<2.4",       "v_{3}{8} -2.4<#eta<0",       "v_{3}{8} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_eta_c34.pdf", "c_{3}{4} 0<#eta<2.4",       "c_{3}{4} -2.4<#eta<0",       "c_{3}{4} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grC36", "comp_PbPb_eta_c36.pdf", "c_{3}{6} 0<#eta<2.4",       "c_{3}{6} -2.4<#eta<0",       "c_{3}{6} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grC38", "comp_PbPb_eta_c38.pdf", "c_{3}{8} 0<#eta<2.4",       "c_{3}{8} -2.4<#eta<0",       "c_{3}{8} -2.4<#eta<2.4")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grV3n", "comp_PbPb_eta_v3n.pdf", "v_{3}{4} 0<#eta<2.4 3-sub", "v_{3}{4} -2.4<#eta<0 3-sub", "v_{3}{4} -2.4<#eta<2.4 3-sub")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta.root", "grV3PbPb_sysTight2NegEta.root", "grV3PbPb_sysTight2.root", "grC3n", "comp_PbPb_eta_c3n.pdf", "c_{3}{4} 0<#eta<2.4 3-sub", "c_{3}{4} -2.4<#eta<0 3-sub", "c_{3}{4} -2.4<#eta<2.4 3-sub")'
+
+
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_eta2_v24.pdf", "v_{2}{4} 0<#eta<2.4",       "v_{2}{4} -2.4<#eta<0",       "v_{2}{4} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_eta2_v26.pdf", "v_{2}{6} 0<#eta<2.4",       "v_{2}{6} -2.4<#eta<0",       "v_{2}{6} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grV28", "comp_PbPb_eta2_v28.pdf", "v_{2}{8} 0<#eta<2.4",       "v_{2}{8} -2.4<#eta<0",       "v_{2}{8} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_eta2_c24.pdf", "c_{2}{4} 0<#eta<2.4",       "c_{2}{4} -2.4<#eta<0",       "c_{2}{4} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_eta2_c26.pdf", "c_{2}{6} 0<#eta<2.4",       "c_{2}{6} -2.4<#eta<0",       "c_{2}{6} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_eta2_c28.pdf", "c_{2}{8} 0<#eta<2.4",       "c_{2}{8} -2.4<#eta<0",       "c_{2}{8} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grV2n", "comp_PbPb_eta2_v2n.pdf", "v_{2}{4} 0<#eta<2.4 3-sub", "v_{2}{4} -2.4<#eta<0 3-sub", "v_{2}{4} -2.4<#eta<2.4 3-sub")'
+root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta2.root", "grV2PbPb_sysTight2NegEta2.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_eta2_c2n.pdf", "c_{2}{4} 0<#eta<2.4 3-sub", "c_{2}{4} -2.4<#eta<0 3-sub", "c_{2}{4} -2.4<#eta<2.4 3-sub")'
+
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grV34", "comp_PbPb_eta2_v34.pdf", "v_{3}{4} 0<#eta<2.4",       "v_{3}{4} -2.4<#eta<0",       "v_{3}{4} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grV36", "comp_PbPb_eta2_v36.pdf", "v_{3}{6} 0<#eta<2.4",       "v_{3}{6} -2.4<#eta<0",       "v_{3}{6} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grV38", "comp_PbPb_eta2_v38.pdf", "v_{3}{8} 0<#eta<2.4",       "v_{3}{8} -2.4<#eta<0",       "v_{3}{8} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_eta2_c34.pdf", "c_{3}{4} 0<#eta<2.4",       "c_{3}{4} -2.4<#eta<0",       "c_{3}{4} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grC36", "comp_PbPb_eta2_c36.pdf", "c_{3}{6} 0<#eta<2.4",       "c_{3}{6} -2.4<#eta<0",       "c_{3}{6} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grC38", "comp_PbPb_eta2_c38.pdf", "c_{3}{8} 0<#eta<2.4",       "c_{3}{8} -2.4<#eta<0",       "c_{3}{8} -2.4<#eta<2.4")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grV3n", "comp_PbPb_eta2_v3n.pdf", "v_{3}{4} 0<#eta<2.4 3-sub", "v_{3}{4} -2.4<#eta<0 3-sub", "v_{3}{4} -2.4<#eta<2.4 3-sub")'
+root -l -b -q 'compare3.C("grV3PbPb_sysTight2PosEta2.root", "grV3PbPb_sysTight2NegEta2.root", "grV3PbPb_sysTight2.root", "grC3n", "comp_PbPb_eta2_c3n.pdf", "c_{3}{4} 0<#eta<2.4 3-sub", "c_{3}{4} -2.4<#eta<0 3-sub", "c_{3}{4} -2.4<#eta<2.4 3-sub")'
+

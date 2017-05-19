@@ -1,4 +1,5 @@
 #include "../../style.h"
+#include "HIN-16-022.h"
 
 typedef struct
 {
@@ -30,8 +31,8 @@ void getGraph(TFile * f, VnGraph &gr, int n)
 
 void plotC(TString s2pPb = "grV2_merged.root",
 		TString s3pPb = "grV3_merged.root",
-		TString s2PbPb = "grV2PbPb.root",
-		TString s3PbPb = "grV3PbPb.root",
+		TString s2PbPb = "grV2PbPb_sysTight2.root",
+		TString s3PbPb = "grV3PbPb_sysTight2.root",
 		TString s2pp = "grV2_pp13.root",
 		TString s3pp = "grV3_pp13.root")
 {
@@ -41,6 +42,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	TFile *f3PbPb = new TFile(s3PbPb.Data());
 	TFile *f2pp = new TFile(s2pp.Data());
 	TFile *f3pp = new TFile(s3pp.Data());
+
+	HIN_16_022();
 
 	VnGraph grPA2;
 	VnGraph grPA3;
@@ -270,8 +273,6 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	cV2->Divide(2, 1);
 
 
-	grPA3.grV4->SetMarkerStyle(kOpenCircle);
-	grAA3.grV4->SetMarkerStyle(kOpenCircle);
 
 	p = cV2->cd(1);
 	p->SetBottomMargin(0.15);
@@ -281,16 +282,18 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grPA2.grV4->Draw("Psame");
 	grPA2.grV6->Draw("Psame");
 	grPA2.grV8->Draw("Psame");
+	grHIN16022pPbV2->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} pPb 8.16 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
-	TLegend * legV2 = new TLegend(0.4, 0.55, 0.85, 0.7);
+	TLegend * legV2 = new TLegend(0.4, 0.55, 0.85, 0.8);
 	legV2->SetFillColor(kWhite);
 	legV2->SetTextFont(42);
 	legV2->SetTextSize(0.06);
 	legV2->SetBorderSize(0);
 
+	legV2->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "p");
 	legV2->AddEntry(grPA2.grV4, "v_{2}{4}", "p");
 	legV2->AddEntry(grPA2.grV6, "v_{2}{6}", "p");
 	legV2->AddEntry(grPA2.grV8, "v_{2}{8}", "p");
@@ -304,13 +307,63 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAA2.grV4->Draw("Psame");
 	grAA2.grV6->Draw("Psame");
 	grAA2.grV8->Draw("Psame");
+	grHIN16022PbPbV2->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} PbPb 5.02 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
+	///////// V3
+	TCanvas * cV3 = MakeCanvas("cV3", "cV3", 900, 500);
+	cV3->Divide(2, 1);
+
+	grPA3.grV4->SetMarkerStyle(kOpenSquare);
+	grAA3.grV4->SetMarkerStyle(kOpenSquare);
+
+	p = cV3->cd(1);
+	p->SetBottomMargin(0.15);
+	p->SetLeftMargin(0.15);
+	p->SetRightMargin(0.02);
+	hframeV2->Draw();
+	grPA3.grV4->Draw("Psame");
+//	grPA3.grV6->Draw("Psame");
+//	grPA3.grV8->Draw("Psame");
+	grHIN16022pPbV3->Draw("Psame");
+
+	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+
+	TLegend * legV3 = new TLegend(0.4, 0.55, 0.85, 0.8);
+	legV3->SetFillColor(kWhite);
+	legV3->SetTextFont(42);
+	legV3->SetTextSize(0.06);
+	legV3->SetBorderSize(0);
+
+	legV3->AddEntry(grHIN16022PbPbV2, "v_{3}{2, |#Delta#eta|>2}", "p");
+	legV3->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
+//	legV3->AddEntry(grPA3.grV6, "v_{3}{6}", "p");
+//	legV3->AddEntry(grPA3.grV8, "v_{3}{8}", "p");
+	legV3->Draw();
+
+	p = cV3->cd(2);
+	p->SetBottomMargin(0.15);
+	p->SetLeftMargin(0.15);
+	p->SetRightMargin(0.02);
+	hframeV2->Draw();
+	grAA3.grV4->Draw("Psame");
+//	grAA3.grV6->Draw("Psame");
+//	grAA3.grV8->Draw("Psame");
+	grHIN16022PbPbV3->Draw("Psame");
+
+	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	//
+	/////
 	cC->SaveAs("c4.pdf");
 	cCgap->SaveAs("c24gap.pdf");
 	cCgap3->SaveAs("c34gap.pdf");
 	cV->SaveAs("v23.pdf");
 	cV2->SaveAs("v2.pdf");
+	cV3->SaveAs("v3.pdf");
+	/////
+
 }

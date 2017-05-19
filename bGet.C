@@ -13,7 +13,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	if ( s1 == 31 ) {
 		NCent = NCentPP13TeV;
 		pCent = CentNoffCutPP13TeV;
-	} else if ( s1 == 177 ) {
+	} else if ( s1 == 177 or s1 == 193 or s1 == 194) {
 		NCent = NCentAA5TeV4;
 		pCent = CentCutAA5TeV;
 	}
