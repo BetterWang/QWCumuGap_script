@@ -1,5 +1,6 @@
 #include "../../style.h"
 #include "HIN-16-022.h"
+#include "HIN-14-006.h"
 
 typedef struct
 {
@@ -44,6 +45,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	TFile *f3pp = new TFile(s3pp.Data());
 
 	HIN_16_022();
+	HIN_14_006();
 
 	VnGraph grPA2;
 	VnGraph grPA3;
@@ -231,7 +233,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	cV->Divide(2, 1);
 
 	TH2D * hframeV2 = new TH2D("hframeV2", "", 1, 0, 399, 1, 0.01, 0.14);
-	InitHist(hframeV2, "N_{trk}^{offline}", "v_{n}{4}");
+	InitHist(hframeV2, "N_{trk}^{offline}", "v_{n}{m}");
 
 	grPA3.grV4->SetMarkerStyle(kOpenCircle);
 	grAA3.grV4->SetMarkerStyle(kOpenCircle);
@@ -283,6 +285,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grPA2.grV6->Draw("Psame");
 	grPA2.grV8->Draw("Psame");
 	grHIN16022pPbV2->Draw("Psame");
+	grHIN14006pPbV26->Draw("Psame");
+	grHIN14006pPbV28->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} pPb 8.16 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
@@ -308,6 +312,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAA2.grV6->Draw("Psame");
 	grAA2.grV8->Draw("Psame");
 	grHIN16022PbPbV2->Draw("Psame");
+	grHIN14006PbPbV26->Draw("Psame");
+	grHIN14006PbPbV28->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} PbPb 5.02 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
