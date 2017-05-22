@@ -226,6 +226,18 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLooseXstd_v2/170518_130707/0000/",	// 223 PbPb 5 TeV ppreco HIMB5 sysLooseXstd
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2Xstd_v2/170518_130649/0000/",	// 224 PbPb 5 TeV ppreco HIMB5 sysTight2Xstd
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight2XLoose_v2/170518_151643/0000/",	// 225 PbPb 5 TeV ppreco HIMB5 sysTight2XLoose
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight2_v5/170521_205336/0000/",				// 226 pPb HM0 sysTight2
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight2_v5/170521_205350/0000/",				// 227 pPb HM1 sysTight2
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight2_v5/170521_205404/0000/",				// 228 pPb HM7 sysTight2
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight2_reverse_v5/170521_205527/0000/",			// 229 pPb HM0 sysTight2 reverse
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight2_reverse_v5/170521_205541/0000/",			// 230 pPb HM1 sysTight2 reverse
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight2_reverse_v5/170521_205555/0000/",			// 231 pPb HM7 sysTight2 reverse
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight2_v5/170521_205628/0000/",				// 232 pPb MB1 sysTight2
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight2_reverse_v5/170521_205657/0000/",			// 233 pPb MB1 sysTight2 reverse
+	"",			// 234 pPb HM0 sysTight2 merged
+	"",			// 235 pPb HM1 sysTight2 merged
+	"",			// 236 pPb HM7 sysTight2 merged
+	"",			// 237 pPb MB1 sysTight2 merged
 };
 
 char const * ftxt[] = {
@@ -455,6 +467,18 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco5_sysLooseXstd/",		// 223
 	"txt/PbPb15_ppreco5_sysTight2Xstd/",		// 224
 	"txt/PbPb15_ppreco5_sysTight2XLoose/",		// 225
+	"txt/PAHM0_sysTight2/",				// 226
+	"txt/PAHM1_sysTight2/",				// 227
+	"txt/PAHM7_sysTight2/",				// 228
+	"txt/PAHM0_sysTight2_reverse/",			// 229
+	"txt/PAHM1_sysTight2_reverse/",			// 230
+	"txt/PAHM7_sysTight2_reverse/",			// 231
+	"txt/PAMB1_sysTight2/",				// 232
+	"txt/PAMB1_sysTight2_reverse/",			// 233
+	"txt/PAHM0_sysTight2_merge/",			// 234
+	"txt/PAHM1_sysTight2_merge/",			// 235
+	"txt/PAHM7_sysTight2_merge/",			// 236
+	"txt/PAMB1_sysTight2_merge/",			// 237
 };
 
 
