@@ -234,10 +234,22 @@ char const * fname[] = {
 	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight2_reverse_v5/170521_205555/0000/",			// 231 pPb HM7 sysTight2 reverse
 	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight2_v5/170521_205628/0000/",				// 232 pPb MB1 sysTight2
 	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight2_reverse_v5/170521_205657/0000/",			// 233 pPb MB1 sysTight2 reverse
-	"",			// 234 pPb HM0 sysTight2 merged
-	"",			// 235 pPb HM1 sysTight2 merged
-	"",			// 236 pPb HM7 sysTight2 merged
-	"",			// 237 pPb MB1 sysTight2 merged
+	"NA",			// 234 pPb HM0 sysTight2 merged
+	"NA",			// 235 pPb HM1 sysTight2 merged
+	"NA",			// 236 pPb HM7 sysTight2 merged
+	"NA",			// 237 pPb MB1 sysTight2 merged
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTighter_v5/170522_165834/0000/",				// 238 pPb HM0 sysTighter
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTighter_v5/170522_165851/0000/",				// 239 pPb HM1 sysTighter
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTighter_v5/170522_165908/0000/",				// 240 pPb HM7 sysTighter
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTighter_v5/170522_170119/0000/",				// 241 pPb MB1 sysTighter
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTighter_reverse_v5/170522_165947/0000/",			// 242 pPb HM0 sysTighter reverse
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTighter_reverse_v5/170522_170002/0000/",			// 243 pPb HM1 sysTighter reverse
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTighter_reverse_v5/170522_170018/0000/",			// 244 pPb HM7 sysTighter reverse
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTighter_reverse_v5/170522_170144/0000/",			// 245 pPb MB1 sysTighter reverse
+	"NA",			// 246 pPb HM0 sysTighter merged
+	"NA",			// 247 pPb HM1 sysTighter merged
+	"NA",			// 248 pPb HM7 sysTighter merged
+	"NA",			// 249 pPb MB1 sysTighter merged
 };
 
 char const * ftxt[] = {
@@ -479,6 +491,18 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysTight2_merge/",			// 235
 	"txt/PAHM7_sysTight2_merge/",			// 236
 	"txt/PAMB1_sysTight2_merge/",			// 237
+	"txt/PAHM0_sysTighter/",			// 238
+	"txt/PAHM1_sysTighter/",			// 239
+	"txt/PAHM7_sysTighter/",			// 240
+	"txt/PAMB1_sysTighter/",			// 241
+	"txt/PAHM0_sysTighter_reverse/",		// 242
+	"txt/PAHM1_sysTighter_reverse/",		// 243
+	"txt/PAHM7_sysTighter_reverse/",		// 244
+	"txt/PAMB1_sysTighter_reverse/",		// 245
+	"txt/PAHM0_sysTighter_merge/",			// 246
+	"txt/PAHM1_sysTighter_merge/",			// 247
+	"txt/PAHM7_sysTighter_merge/",			// 248
+	"txt/PAMB1_sysTighter_merge/",			// 249
 };
 
 
