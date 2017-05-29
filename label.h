@@ -298,6 +298,30 @@ char const * fname[] = {
 	"NA",			// 295 pPb HM1 sysWide2 merge
 	"NA",			// 296 pPb HM7 sysWide2 merge
 	"NA",			// 297 pPb MB1 sysWide2 merge
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTighter_v6/170528_225354/0000/",				// 298 pPb HM0 sysTighter6
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTighter_v6/170528_225410/0000/",				// 299 pPb HM1 sysTighter6
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTighter_v6/170528_225425/0000/",				// 300 pPb HM7 sysTighter6
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTighter_v6/170528_225841/0000/",				// 301 pPb MB1 sysTighter6
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTighter_reverse_v6/170528_225602/0000/",			// 302 pPb HM0 sysTighter6 reverse
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTighter_reverse_v6/170528_225618/0000/",			// 303 pPb HM1 sysTighter6 reverse
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTighter_reverse_v6/170528_225633/0000/",			// 304 pPb HM7 sysTighter6 reverse
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTighter_reverse_v6/170528_230121/0000/",			// 305 pPb MB1 sysTighter6 reverse
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight4_v6/170529_093944/0000/",				// 306 pPb HM0 sysTight4
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight4_v6/170529_094004/0000/",				// 307 pPb HM1 sysTight4
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight4_v6/170529_094027/0000/",				// 308 pPb HM7 sysTight4
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight4_v6/170529_094338/0000/",				// 309 pPb MB1 sysTight4
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysTight4_reverse_v6/170529_094109/0000/",			// 310 pPb HM0 sysTight4 reverse
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysTight4_reverse_v6/170529_094133/0000/",			// 311 pPb HM1 sysTight4 reverse
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysTight4_reverse_v6/170529_094155/0000/",			// 312 pPb HM7 sysTight4 reverse
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysTight4_reverse_v6/170529_094725/0000/",			// 313 pPb MB1 sysTight4 reverse
+	"NA",			// 314 pPb HM0 sysTighter6 merge
+	"NA",			// 315 pPb HM1 sysTighter6 merge
+	"NA",			// 316 pPb HM7 sysTighter6 merge
+	"NA",			// 317 pPb MB1 sysTighter6 merge
+	"NA",			// 318 pPb HM0 sysTight4 merge
+	"NA",			// 319 pPb HM1 sysTight4 merge
+	"NA",			// 320 pPb HM7 sysTight4 merge
+	"NA",			// 321 pPb MB1 sysTight4 merge
 };
 
 char const * ftxt[] = {
@@ -599,6 +623,30 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysWide2_merge/",			// 295
 	"txt/PAHM7_sysWide2_merge/",			// 296
 	"txt/PAMB1_sysWide2_merge/",			// 297
+	"txt/PAHM0_sysTighter6/",			// 298
+	"txt/PAHM1_sysTighter6/",			// 299
+	"txt/PAHM7_sysTighter6/",			// 300
+	"txt/PAMB1_sysTighter6/",			// 301
+	"txt/PAHM0_sysTighter6_reverse/",		// 302
+	"txt/PAHM1_sysTighter6_reverse/",		// 303
+	"txt/PAHM7_sysTighter6_reverse/",		// 304
+	"txt/PAMB1_sysTighter6_reverse/",		// 305
+	"txt/PAHM0_sysTight4/",				// 306
+	"txt/PAHM1_sysTight4/",				// 307
+	"txt/PAHM7_sysTight4/",				// 308
+	"txt/PAMB1_sysTight4/",				// 309
+	"txt/PAHM0_sysTight4_reverse/",			// 310
+	"txt/PAHM1_sysTight4_reverse/",			// 311
+	"txt/PAHM7_sysTight4_reverse/",			// 312
+	"txt/PAMB1_sysTight4_reverse/",			// 313
+	"txt/PAHM0_sysTighter6_merge/",			// 314
+	"txt/PAHM1_sysTighter6_merge/",			// 315
+	"txt/PAHM7_sysTighter6_merge/",			// 316
+	"txt/PAMB1_sysTighter6_merge/",			// 317
+	"txt/PAHM0_sysTight4_merge/",			// 318
+	"txt/PAHM1_sysTight4_merge/",			// 319
+	"txt/PAHM7_sysTight4_merge/",			// 320
+	"txt/PAMB1_sysTight4_merge/",			// 321
 };
 
 
