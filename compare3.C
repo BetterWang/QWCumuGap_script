@@ -31,7 +31,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 		{"grC26", make_pair(-0.000000014, 0.000000199)},
 		{"grC28", make_pair(-0.0000000024, 0.00000000119)},
 		{"grC2n", make_pair(-0.000014, 0.0000119)},
-		{"grC34", make_pair(-0.000014, 0.0000119)},
+		{"grC34", make_pair(-0.0000004, 0.0000007)},
 		{"grC36", make_pair(-0.000000014, 0.000000199)},
 		{"grC38", make_pair(-0.0000000024, 0.00000000119)},
 
@@ -39,7 +39,6 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 		{"grV3n", make_pair(0.00, 0.04)},
 		{"grV36", make_pair(0.00, 0.04)},
 		{"grV38", make_pair(0.00, 0.04)},
-		{"grC34", make_pair(-0.00000044, 0.0000019)},
 		{"grC3n", make_pair(-0.00000044, 0.0000019)},
 	};
 	if ( s1.find("PbPb") != string::npos ) {
@@ -60,7 +59,6 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 			{"grV3n", make_pair(0.00, 0.04)},
 			{"grV36", make_pair(0.00, 0.04)},
 			{"grV38", make_pair(0.00, 0.04)},
-			{"grC34", make_pair(-0.00000044, 0.0000019)},
 			{"grC3n", make_pair(-0.00000044, 0.0000019)},
 		};
 	}

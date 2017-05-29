@@ -30,8 +30,8 @@ void getGraph(TFile * f, VnGraph &gr, int n)
 }
 
 
-void plotC(TString s2pPb = "grV2_merged.root",
-		TString s3pPb = "grV3_merged.root",
+void plotC(TString s2pPb = "grV2_sysTight2.root",
+		TString s3pPb = "grV3_sysTight2.root",
 		TString s2PbPb = "grV2PbPb_sysTight2.root",
 		TString s3PbPb = "grV3PbPb_sysTight2.root",
 		TString s2pp = "grV2_pp13.root",
@@ -284,9 +284,9 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grPA2.grV4->Draw("Psame");
 	grPA2.grV6->Draw("Psame");
 	grPA2.grV8->Draw("Psame");
-	grHIN16022pPbV2->Draw("Psame");
-	grHIN14006pPbV26->Draw("Psame");
-	grHIN14006pPbV28->Draw("Psame");
+//	grHIN16022pPbV2->Draw("Psame");
+//	grHIN14006pPbV26->Draw("Psame");
+//	grHIN14006pPbV28->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} pPb 8.16 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
@@ -312,8 +312,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAA2.grV6->Draw("Psame");
 	grAA2.grV8->Draw("Psame");
 	grHIN16022PbPbV2->Draw("Psame");
-	grHIN14006PbPbV26->Draw("Psame");
-	grHIN14006PbPbV28->Draw("Psame");
+//	grHIN14006PbPbV26->Draw("Psame");
+//	grHIN14006PbPbV28->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.20, 0.92, "#bf{CMS Preliminary} PbPb 5.02 TeV");
 	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");

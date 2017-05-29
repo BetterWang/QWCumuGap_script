@@ -2,9 +2,17 @@ TGraphErrors * grHIN16022pPbV2 = 0;
 TGraphErrors * grHIN16022pPbV3 = 0;
 TGraphErrors * grHIN16022pPbV4 = 0;
 
+TF1 * fHIN16022pPbV2 = 0;
+TF1 * fHIN16022pPbV3 = 0;
+TF1 * fHIN16022pPbV4 = 0;
+
 TGraphErrors * grHIN16022PbPbV2 = 0;
 TGraphErrors * grHIN16022PbPbV3 = 0;
 TGraphErrors * grHIN16022PbPbV4 = 0;
+
+TF1 * fHIN16022PbPbV2 = 0;
+TF1 * fHIN16022PbPbV3 = 0;
+TF1 * fHIN16022PbPbV4 = 0;
 
 void HIN_16_022()
 {
@@ -45,4 +53,16 @@ void HIN_16_022()
 
 	fpPb->Close();
 	fPbPb->Close();
+
+	fHIN16022pPbV2 = new TF1("fHIN16022pPbV2", "pol6", 30, 350);
+	fHIN16022pPbV3 = new TF1("fHIN16022pPbV3", "pol6", 50, 350);
+
+	grHIN16022pPbV2->Fit(fHIN16022pPbV2, "QRN");
+	grHIN16022pPbV3->Fit(fHIN16022pPbV3, "QRN");
+
+	fHIN16022PbPbV2 = new TF1("fHIN16022PbPbV2", "pol6", 30, 350);
+	fHIN16022PbPbV3 = new TF1("fHIN16022PbPbV3", "pol6", 50, 350);
+
+	grHIN16022PbPbV2->Fit(fHIN16022PbPbV2, "QRN");
+	grHIN16022PbPbV3->Fit(fHIN16022PbPbV3, "QRN");
 }
