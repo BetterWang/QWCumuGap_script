@@ -322,6 +322,16 @@ char const * fname[] = {
 	"NA",			// 319 pPb HM1 sysTight4 merge
 	"NA",			// 320 pPb HM7 sysTight4 merge
 	"NA",			// 321 pPb MB1 sysTight4 merge
+	"../pPb/PAHighMultiplicity2/crab_PAHM2_cumugap_eff_sysTight2_v5/170531_120844/0000/",				// 322 pPb HM2 sysTight2
+	"../pPb/PAHighMultiplicity3/crab_PAHM3_cumugap_eff_sysTight2_v5/170531_120912/0000/",				// 323 pPb HM3 sysTight2
+	"../pPb/PAHighMultiplicity4/crab_PAHM4_cumugap_eff_sysTight2_v5/170531_120943/0000/",				// 324 pPb HM4 sysTight2
+	"../pPb/PAHighMultiplicity5/crab_PAHM5_cumugap_eff_sysTight2_v5/170531_121008/0000/",				// 325 pPb HM5 sysTight2
+	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_sysTight2_v5/170531_121033/0000/",				// 326 pPb HM6 sysTight2
+	"../pPb/PAHighMultiplicity2/crab_PAHM2_cumugap_eff_sysTight2_reverse_v5/170531_132114/0000/",			// 327 pPb HM2 sysTight2 reverse
+	"../pPb/PAHighMultiplicity3/crab_PAHM3_cumugap_eff_sysTight2_reverse_v5/170531_132134/0000/",			// 328 pPb HM3 sysTight2 reverse
+	"../pPb/PAHighMultiplicity4/crab_PAHM4_cumugap_eff_sysTight2_reverse_v5/170531_132156/0000/",			// 329 pPb HM4 sysTight2 reverse
+	"../pPb/PAHighMultiplicity5/crab_PAHM5_cumugap_eff_sysTight2_reverse_v5/170531_132216/0000/",			// 330 pPb HM5 sysTight2 reverse
+	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_sysTight2_reverse_v5/170531_132237/0000/",			// 331 pPb HM6 sysTight2 reverse
 };
 
 char const * ftxt[] = {
@@ -647,6 +657,16 @@ char const * ftxt[] = {
 	"txt/PAHM1_sysTight4_merge/",			// 319
 	"txt/PAHM7_sysTight4_merge/",			// 320
 	"txt/PAMB1_sysTight4_merge/",			// 321
+	"txt/PAHM2_sysTight2/",				// 322
+	"txt/PAHM3_sysTight2/",				// 323
+	"txt/PAHM4_sysTight2/",				// 324
+	"txt/PAHM5_sysTight2/",				// 325
+	"txt/PAHM6_sysTight2/",				// 326
+	"txt/PAHM2_sysTight2_reverse/",			// 327
+	"txt/PAHM3_sysTight2_reverse/",			// 328
+	"txt/PAHM4_sysTight2_reverse/",			// 329
+	"txt/PAHM5_sysTight2_reverse/",			// 330
+	"txt/PAHM6_sysTight2_reverse/",			// 331
 };
 
 
