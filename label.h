@@ -352,6 +352,8 @@ char const * fname[] = {
 	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_sysHLT2_reverse_v5/170602_150507/0000/",			// 349 pPb HM6 sysHLT2 reverse
 	"NA",			// 350 pPb HM0 sysHLT2 merge
 	"NA",			// 351 pPb HM123456 sysHLT2 merge
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLooseXCentCut_v1/171010_182211/0000/",	// 352 PbPb ppreco MB5 sysLoose NoCentCut
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoose_Skim_v2/171011_175840/0000/",	// 353 PbPb ppreco MB5 sysLoose Skim
 };
 
 char const * ftxt[] = {
@@ -707,6 +709,8 @@ char const * ftxt[] = {
 	"txt/PAHM6_sysHLT2_reverse/",			// 349
 	"txt/PAHM0_sysHLT2_merge/",			// 350
 	"txt/PAHM1_sysHLT2_merge/",			// 351
+	"txt/PbPb15_ppreco5_sysLooseXCentCut/",		// 352
+	"txt/PbPb15_ppreco5_sysLoose_Skim/",		// 353
 };
 
 
