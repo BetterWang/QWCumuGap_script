@@ -18,6 +18,13 @@ void bGetError(int s1 = 0, int s3 = 10)
 	double dC6nR[50][7][20];
 	double dC8nR[50][7][20];
 
+	double dV4nR[50][7][20];
+	double dV6nR[50][7][20];
+	double dV8nR[50][7][20];
+
+	double dV64nR[50][7][20];
+	double dV86nR[50][7][20];
+
 	// Get
 	for ( int fn = 0; fn <= s3; fn++ ) {
 		TFile * f = fr[fn];
@@ -35,6 +42,36 @@ void bGetError(int s1 = 0, int s3 = 10)
 		}
 	}
 
+	for ( int fn = 0; fn <= s3; fn++ ) {
+		for ( int n = 2; n < 7; n++ ) {
+			for ( int i = 0; i < 20; i++ ) {
+				double C4 = dC4nR[fn][n][i];
+				double V4 = 0;
+				if ( C4 > 0 ) V4 = - pow(C4, 1./4);
+				else V4 = pow(-C4, 1./4);
+				dV4nR[fn][n][i] = V4;
+
+				double C6 = dC6nR[fn][n][i];
+				double V6 = 0;
+				if ( C6 > 0 ) V6 = pow(C6/4., 1./6);
+				else V6 = -pow(-C6/4., 1./6);
+				dV6nR[fn][n][i] = V6;
+
+				double C8 = dC8nR[fn][n][i];
+				double V8 = 0;
+				if ( C8 > 0 ) V8 = -pow(C8/33., 1./8);
+				else V8 = pow(-C8/33., 1./8);
+				dV8nR[fn][n][i] = V8;
+
+				if ( V4 != 0 ) dV64nR[fn][n][i] = V6/V4;
+				if ( V6 != 0 ) dV86nR[fn][n][i] = V8/V6;
+				if ( n == 2 and i == 7 ) {
+					cout << " !!! fn = " << fn << " n = " << n << " i = " << i << "\t V8 = " << V8 << "\t V6 = " << V6 << "\t dV86nR[fn][n][i] = " << dV86nR[fn][n][i] << endl;
+				}
+			}
+		}
+	}
+
 	// Save
 	TH1D * hCnR[7] = {};
 	TH1D * hVnR[7] = {};
@@ -45,6 +82,9 @@ void bGetError(int s1 = 0, int s3 = 10)
 	TH1D * hC8nR[7] = {};
 	TH1D * hV8nR[7] = {};
 
+	TH1D * hV64nR[7] = {};
+	TH1D * hV86nR[7] = {};
+
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n] = (TH1D*) fr[s3]->Get(Form("hCnR%i", n));
 		hC4nR[n] = (TH1D*) fr[s3]->Get(Form("hC4nR%i", n));
@@ -54,25 +94,38 @@ void bGetError(int s1 = 0, int s3 = 10)
 		hV4nR[n] = new TH1D(Form("hV4nR%i", n), Form("hV4nR%i", n), 20, 0, 20);
 		hV6nR[n] = new TH1D(Form("hV6nR%i", n), Form("hV6nR%i", n), 20, 0, 20);
 		hV8nR[n] = new TH1D(Form("hV8nR%i", n), Form("hV8nR%i", n), 20, 0, 20);
+		hV64nR[n] = new TH1D(Form("hV64nR%i", n), Form("hV64nR%i", n), 20, 0, 20);
+		hV86nR[n] = new TH1D(Form("hV86nR%i", n), Form("hV86nR%i", n), 20, 0, 20);
 		for ( int i = 0; i < 20; i++ ) {
 			double sumC = 0;
 			double sum4 = 0;
 			double sum6 = 0;
 			double sum8 = 0;
+			double sum64 = 0;
+			double sum86 = 0;
 			for ( int fn = 0; fn < s3; fn++ ) {
 				sumC += (dCnR[fn][n][i] - dCnR[s3][n][i]) * (dCnR[fn][n][i] - dCnR[s3][n][i]);
 				sum4 += (dC4nR[fn][n][i] - dC4nR[s3][n][i]) * (dC4nR[fn][n][i] - dC4nR[s3][n][i]);
 				sum6 += (dC6nR[fn][n][i] - dC6nR[s3][n][i]) * (dC6nR[fn][n][i] - dC6nR[s3][n][i]);
 				sum8 += (dC8nR[fn][n][i] - dC8nR[s3][n][i]) * (dC8nR[fn][n][i] - dC8nR[s3][n][i]);
+				sum64 += (dV64nR[fn][n][i] - dV64nR[s3][n][i]) * (dV64nR[fn][n][i] - dV64nR[s3][n][i]);
+				sum86 += (dV86nR[fn][n][i] - dV86nR[s3][n][i]) * (dV86nR[fn][n][i] - dV86nR[s3][n][i]);
 			}
 			double errC = sqrt( sumC ) / s3;
 			double err4 = sqrt( sum4 ) / s3;
 			double err6 = sqrt( sum6 ) / s3;
 			double err8 = sqrt( sum8 ) / s3;
+			double err64 = sqrt( sum64 ) / s3;
+			double err86 = sqrt( sum86 ) / s3;
 			hCnR[n]->SetBinError(i+1, errC);
 			hC4nR[n]->SetBinError(i+1, err4);
 			hC6nR[n]->SetBinError(i+1, err6);
 			hC8nR[n]->SetBinError(i+1, err8);
+
+			hV64nR[n]->SetBinContent(i+1, dV64nR[s3][n][i]);
+			hV86nR[n]->SetBinContent(i+1, dV86nR[s3][n][i]);
+			hV64nR[n]->SetBinError(i+1, err64);
+			hV86nR[n]->SetBinError(i+1, err86);
 
 			double C = dCnR[s3][n][i];
 			double V = 0;
@@ -122,6 +175,9 @@ void bGetError(int s1 = 0, int s3 = 10)
 
 		hC8nR[n]->Write();
 		hV8nR[n]->Write();
+
+		hV64nR[n]->Write();
+		hV86nR[n]->Write();
 	}
 	fwrite->Close();
 }

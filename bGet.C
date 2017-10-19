@@ -198,16 +198,47 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	TH1D * hC4nR[7];
 	TH1D * hC6nR[7];
 	TH1D * hC8nR[7];
+
+	TH1D * hV4nR[7];
+	TH1D * hV6nR[7];
+	TH1D * hV8nR[7];
+
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n] = new TH1D(Form("hCnR%i", n), Form("hCnR%i", n), 20, 0, 20);
 		hC4nR[n] = new TH1D(Form("hC4nR%i", n), Form("hC4nR%i", n), 20, 0, 20);
 		hC6nR[n] = new TH1D(Form("hC6nR%i", n), Form("hC6nR%i", n), 20, 0, 20);
 		hC8nR[n] = new TH1D(Form("hC8nR%i", n), Form("hC8nR%i", n), 20, 0, 20);
+
 		for ( int c = 0; c < NCent; c++ ) {
 			hCnR[n]->SetBinContent( c+1, dCnR[n][c] );
 			hC4nR[n]->SetBinContent( c+1, dC4nR[n][c] );
 			hC6nR[n]->SetBinContent( c+1, dC6nR[n][c] );
 			hC8nR[n]->SetBinContent( c+1, dC8nR[n][c] );
+		}
+
+		hV4nR[n] = new TH1D(Form("hV4nR%i", n), Form("hV4nR%i", n), 20, 0, 20);
+		hV6nR[n] = new TH1D(Form("hV6nR%i", n), Form("hV6nR%i", n), 20, 0, 20);
+		hV8nR[n] = new TH1D(Form("hV8nR%i", n), Form("hV8nR%i", n), 20, 0, 20);
+
+		for ( int i = 0; i < NCent; i++ ) {
+			double C4 = dC4nR[n][i];
+			double V4 = 0;
+			if ( C4 > 0 ) V4 = - pow(C4, 1./4);
+			else V4 = pow(-C4, 1./4);
+
+			double C6 = dC6nR[n][i];
+			double V6 = 0;
+			if ( C6 > 0 ) V6 = pow(C6/4., 1./6);
+			else V6 = -pow(-C6/4., 1./6);
+
+			double C8 = dC8nR[n][i];
+			double V8 = 0;
+			if ( C8 > 0 ) V8 = -pow(C8/33., 1./8);
+			else V8 = pow(-C8/33., 1./8);
+
+			hV4nR[n]->SetBinContent( i+1, V4 );
+			hV6nR[n]->SetBinContent( i+1, V6 );
+			hV8nR[n]->SetBinContent( i+1, V8 );
 		}
 	}
 
@@ -217,6 +248,10 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 		hC4nR[n]->Write();
 		hC6nR[n]->Write();
 		hC8nR[n]->Write();
+
+		hV4nR[n]->Write();
+		hV6nR[n]->Write();
+		hV8nR[n]->Write();
 	}
 	hNoffR->Write();
 }

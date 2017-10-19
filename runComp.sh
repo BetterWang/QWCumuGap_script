@@ -189,17 +189,6 @@
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2dxy.root", "grV2PbPb_sysTight2dz.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_trackTight2xyz_c2n.pdf", "c_{2}{4} Tight2dxy 3-sub", "c_{2}{4} Tight2dz 3-sub", "c_{2}{4} Tight2 3-sub")'
 
 
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_vz2_v24.pdf", "v_{2}{4} |vz|<3.0 tight2",       "v_{2}{4} 3.0<|vz|<15.0 tight2",       "v_{2}{4} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_vz2_v26.pdf", "v_{2}{6} |vz|<3.0 tight2",       "v_{2}{6} 3.0<|vz|<15.0 tight2",       "v_{2}{6} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV28", "comp_PbPb_vz2_v28.pdf", "v_{2}{8} |vz|<3.0 tight2",       "v_{2}{8} 3.0<|vz|<15.0 tight2",       "v_{2}{8} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_vz2_c24.pdf", "c_{2}{4} |vz|<3.0 tight2",       "c_{2}{4} 3.0<|vz|<15.0 tight2",       "c_{2}{4} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_vz2_c26.pdf", "c_{2}{6} |vz|<3.0 tight2",       "c_{2}{6} 3.0<|vz|<15.0 tight2",       "c_{2}{6} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_vz2_c28.pdf", "c_{2}{8} |vz|<3.0 tight2",       "c_{2}{8} 3.0<|vz|<15.0 tight2",       "c_{2}{8} Tight2")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV2n", "comp_PbPb_vz2_v2n.pdf", "v_{2}{4} |vz|<3.0 tight2 3-sub", "v_{2}{4} 3.0<|vz|<15.0 tight2 3-sub", "v_{2}{4} Tight2 3-sub")'
-#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC2n", "comp_PbPb_vz2_c2n.pdf", "c_{2}{4} |vz|<3.0 tight2 3-sub", "c_{2}{4} 3.0<|vz|<15.0 tight2 3-sub", "c_{2}{4} Tight2 3-sub")'
-
-#root -l -b -q 'compare3.C("grV3PbPb_sysNarrow2.root", "grV3PbPb_sysWide2.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_vz2_c34.pdf", "c_{3}{4} |vz|<3.0 tight2",       "c_{3}{4} 3.0<|vz|<15.0 tight2",       "c_{3}{4} Tight2")'
-
 
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_eta_v24.pdf", "v_{2}{4} 0<#eta<2.4",       "v_{2}{4} -2.4<#eta<0",       "v_{2}{4} -2.4<#eta<2.4")'
 #root -l -b -q 'compare3.C("grV2PbPb_sysTight2PosEta.root", "grV2PbPb_sysTight2NegEta.root", "grV2PbPb_sysTight2.root", "grV26", "comp_PbPb_eta_v26.pdf", "v_{2}{6} 0<#eta<2.4",       "v_{2}{6} -2.4<#eta<0",       "v_{2}{6} -2.4<#eta<2.4")'
@@ -277,12 +266,6 @@
 
 
 
-#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC24", "comp_pPb_sysPU2_c24.pdf", "c_{2}{4} HighPU",    "c_{2}{4} LowPU",     "c_{2}{4}")'
-#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC26", "comp_pPb_sysPU2_c26.pdf", "c_{2}{6} HighPU",    "c_{2}{6} LowPU",     "c_{2}{6}")'
-#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC28", "comp_pPb_sysPU2_c28.pdf", "c_{2}{8} HighPU",    "c_{2}{8} LowPU",     "c_{2}{8}")'
-#root -l -b -q 'compare3.C("grV3_sysHighPU2.root", "grV3_sysLowPU2.root", "grV3_sysTight2.root", "grC34", "comp_pPb_sysPU2_c34.pdf", "c_{3}{4} HighPU",    "c_{3}{4} LowPU",     "c_{3}{4}")'
-
-
 
 
 
@@ -293,10 +276,92 @@
 #root -l -b -q 'compare3.C("grV3_sysNarrow2.root", "grV3_sysWide2.root", "grV3_sysTight2.root", "grC34", "comp_pPb_sysVz2_c34.pdf", "c_{3}{4} |vz|<3.0",    "c_{3}{4} 3.0<|vz|<15.",     "c_{3}{4} |vz|<15.")'
 
 
+#root -l -b -q 'compare3.C("grV2_sysTight4.root", "grV2_merged.root", "grV2_sysTight2.root", "grC24",  "comp_pPb_sysTrack_c24.pdf",  "c_{2}{4} tight",          "c_{2}{4} loose",          "c_{2}{4}"         , "c_{2}{4}"         )'
+#root -l -b -q 'compare3.C("grV2_sysTight4.root", "grV2_merged.root", "grV2_sysTight2.root", "grC26",  "comp_pPb_sysTrack_c26.pdf",  "c_{2}{6} tight",          "c_{2}{6} loose",          "c_{2}{6}"         , "c_{2}{6}"         )'
+#root -l -b -q 'compare3.C("grV2_sysTight4.root", "grV2_merged.root", "grV2_sysTight2.root", "grC28",  "comp_pPb_sysTrack_c28.pdf",  "c_{2}{8} tight",          "c_{2}{8} loose",          "c_{2}{8}"         , "c_{2}{8}"         )'
+#root -l -b -q 'compare3.C("grV3_sysTight4.root", "grV3_merged.root", "grV3_sysTight2.root", "grC34",  "comp_pPb_sysTrack_c34.pdf",  "c_{3}{4} tight",          "c_{3}{4} loose",          "c_{3}{4}"         , "c_{3}{4}"         )'
+#root -l -b -q 'compare3.C("grV2_sysTight4.root", "grV2_merged.root", "grV2_sysTight2.root", "grV264", "comp_pPb_sysTrack_v264.pdf", "v_{2}{6}/v_{2}{4} tight", "v_{2}{6}/v_{2}{4} loose", "v_{2}{6}/v_{2}{4}", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysTight4.root", "grV2_merged.root", "grV2_sysTight2.root", "grV286", "comp_pPb_sysTrack_v286.pdf", "v_{2}{8}/v_{2}{6} tight", "v_{2}{8}/v_{2}{6} loose", "v_{2}{8}/v_{2}{6}", "v_{2}{8}/v_{2}{6}")'
 
 
-root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_track_v24.pdf", "v_{2}{4}",       "v_{2}{4} Tighter",       "v_{2}{4} Tight2")'
-root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_track_c24.pdf", "c_{2}{4}",       "c_{2}{4} Tighter",       "c_{2}{4} Tight2")'
-root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_track_c26.pdf", "c_{2}{6}",       "c_{2}{6} Tighter",       "c_{2}{8} Tight2")'
-root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_track_c28.pdf", "c_{2}{8}",       "c_{2}{8} Tighter",       "c_{2}{8} Tight2")'
-root -l -b -q 'compare3.C("grV3PbPb.root", "grV3PbPb_sysTighter.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_track_c34.pdf", "c_{3}{4}",       "c_{3}{4} Tighter",       "c_{3}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grV24", "comp_PbPb_track_v24.pdf", "v_{2}{4}",       "v_{2}{4} Tighter",       "v_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC24", "comp_PbPb_track_c24.pdf", "c_{2}{4}",       "c_{2}{4} Tighter",       "c_{2}{4} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC26", "comp_PbPb_track_c26.pdf", "c_{2}{6}",       "c_{2}{6} Tighter",       "c_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV2PbPb.root", "grV2PbPb_sysTighter.root", "grV2PbPb_sysTight2.root", "grC28", "comp_PbPb_track_c28.pdf", "c_{2}{8}",       "c_{2}{8} Tighter",       "c_{2}{8} Tight2")'
+#root -l -b -q 'compare3.C("grV3PbPb.root", "grV3PbPb_sysTighter.root", "grV3PbPb_sysTight2.root", "grC34", "comp_PbPb_track_c34.pdf", "c_{3}{4}",       "c_{3}{4} Tighter",       "c_{3}{4} Tight2")'
+
+
+
+
+#root -l -b -q 'compare3.C("grV2_sysNarrow2.root", "grV2_sysWide2.root", "grV2_sysTight2.root", "grC24",  "comp_pPb_sysVz_c24.pdf",           "c_{2}{4} |vz|<3",          "c_{2}{4} 3<|vz|<15",          "c_{2}{4} |vz|<15", "c_{2}{4}"         )'
+#root -l -b -q 'compare3.C("grV2_sysNarrow2.root", "grV2_sysWide2.root", "grV2_sysTight2.root", "grC26",  "comp_pPb_sysVz_c26.pdf",           "c_{2}{6} |vz|<3",          "c_{2}{6} 3<|vz|<15",          "c_{2}{6} |vz|<15", "c_{2}{6}"         )'
+#root -l -b -q 'compare3.C("grV2_sysNarrow2.root", "grV2_sysWide2.root", "grV2_sysTight2.root", "grC28",  "comp_pPb_sysVz_c28.pdf",           "c_{2}{8} |vz|<3",          "c_{2}{8} 3<|vz|<15",          "c_{2}{8} |vz|<15", "c_{2}{8}"         )'
+#root -l -b -q 'compare3.C("grV3_sysNarrow2.root", "grV3_sysWide2.root", "grV3_sysTight2.root", "grC34",  "comp_pPb_sysVz_c34.pdf",           "c_{3}{4} |vz|<3",          "c_{3}{4} 3<|vz|<15",          "c_{3}{4} |vz|<15", "c_{3}{4}"         )'
+#root -l -b -q 'compare3.C("grV2_sysNarrow2.root", "grV2_sysWide2.root", "grV2_sysTight2.root", "grV264", "comp_pPb_sysVz_v264.pdf", "v_{2}{6}/v_{2}{4} |vz|<3", "v_{2}{6}/v_{2}{4} 3<|vz|<15", "v_{2}{6}/v_{2}{4} |vz|<15", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysNarrow2.root", "grV2_sysWide2.root", "grV2_sysTight2.root", "grV286", "comp_pPb_sysVz_v286.pdf", "v_{2}{8}/v_{2}{6} |vz|<3", "v_{2}{8}/v_{2}{6} 3<|vz|<15", "v_{2}{8}/v_{2}{6} |vz|<15", "v_{2}{8}/v_{2}{6}")'
+
+
+
+
+
+#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC24",  "comp_pPb_sysPU_c24.pdf",           "c_{2}{4} HighPU",          "c_{2}{4} LowPU",          "c_{2}{4}",          "c_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC26",  "comp_pPb_sysPU_c26.pdf",           "c_{2}{6} HighPU",          "c_{2}{6} LowPU",          "c_{2}{6}",          "c_{2}{6}")'
+#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grC28",  "comp_pPb_sysPU_c28.pdf",           "c_{2}{8} HighPU",          "c_{2}{8} LowPU",          "c_{2}{8}",          "c_{2}{8}")'
+#root -l -b -q 'compare3.C("grV3_sysHighPU2.root", "grV3_sysLowPU2.root", "grV3_sysTight2.root", "grC34",  "comp_pPb_sysPU_c34.pdf",           "c_{3}{4} HighPU",          "c_{3}{4} LowPU",          "c_{3}{4}",          "c_{3}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grV264", "comp_pPb_sysPU_v264.pdf", "v_{2}{6}/v_{2}{4} HighPU", "v_{2}{6}/v_{2}{4} LowPU", "v_{2}{6}/v_{2}{4}", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHighPU2.root", "grV2_sysLowPU2.root", "grV2_sysTight2.root", "grV286", "comp_pPb_sysPU_v286.pdf", "v_{2}{8}/v_{2}{6} HighPU", "v_{2}{8}/v_{2}{6} LowPU", "v_{2}{8}/v_{2}{6}", "v_{2}{8}/v_{2}{6}")'
+
+
+
+
+#root -l -b -q 'compare3.C("grV2_pPb2.root", "grV2_Pbp2.root", "grV2_sysTight2.root", "grC24",  "comp_pPb_sysBeam_c24.pdf",           "c_{2}{4} pPb",          "c_{2}{4} Pbp",          "c_{2}{4}",          "c_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_pPb2.root", "grV2_Pbp2.root", "grV2_sysTight2.root", "grC26",  "comp_pPb_sysBeam_c26.pdf",           "c_{2}{6} pPb",          "c_{2}{6} Pbp",          "c_{2}{6}",          "c_{2}{6}")'
+#root -l -b -q 'compare3.C("grV2_pPb2.root", "grV2_Pbp2.root", "grV2_sysTight2.root", "grC28",  "comp_pPb_sysBeam_c28.pdf",           "c_{2}{8} pPb",          "c_{2}{8} Pbp",          "c_{2}{8}",          "c_{2}{8}")'
+#root -l -b -q 'compare3.C("grV3_pPb2.root", "grV3_Pbp2.root", "grV3_sysTight2.root", "grC34",  "comp_pPb_sysBeam_c34.pdf",           "c_{3}{4} pPb",          "c_{3}{4} Pbp",          "c_{3}{4}",          "c_{3}{4}")'
+#root -l -b -q 'compare3.C("grV2_pPb2.root", "grV2_Pbp2.root", "grV2_sysTight2.root", "grV264", "comp_pPb_sysBeam_v264.pdf", "v_{2}{6}/v_{2}{4} pPb", "v_{2}{6}/v_{2}{4} Pbp", "v_{2}{6}/v_{2}{4}", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_pPb2.root", "grV2_Pbp2.root", "grV2_sysTight2.root", "grV286", "comp_pPb_sysBeam_v286.pdf", "v_{2}{8}/v_{2}{6} pPb", "v_{2}{8}/v_{2}{6} Pbp", "v_{2}{8}/v_{2}{6}", "v_{2}{8}/v_{2}{6}")'
+
+
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC24",  "comp_PbPb_sysVz_c24.pdf",           "c_{2}{4} |vz|<3",          "c_{2}{4} 3<|vz|<15",          "c_{2}{4} |vz|<15"),          "c_{2}{4}"'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC26",  "comp_PbPb_sysVz_c26.pdf",           "c_{2}{6} |vz|<3",          "c_{2}{6} 3<|vz|<15",          "c_{2}{6} |vz|<15"),          "c_{2}{6}"'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grC28",  "comp_PbPb_sysVz_c28.pdf",           "c_{2}{8} |vz|<3",          "c_{2}{8} 3<|vz|<15",          "c_{2}{8} |vz|<15"),          "c_{2}{8}"'
+#root -l -b -q 'compare3.C("grV3PbPb_sysNarrow2.root", "grV3PbPb_sysWide2.root", "grV3PbPb_sysTight2.root", "grC34",  "comp_PbPb_sysVz_c34.pdf",           "c_{3}{4} |vz|<3",          "c_{3}{4} 3<|vz|<15",          "c_{3}{4} |vz|<15"),          "c_{3}{4}"'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV264", "comp_PbPb_sysVz_v264.pdf", "v_{2}{6}/v_{2}{4} |vz|<3", "v_{2}{6}/v_{2}{4} 3<|vz|<15", "v_{2}{6}/v_{2}{4} |vz|<15"), "v_{2}{6}/v_{2}{4}"'
+#root -l -b -q 'compare3.C("grV2PbPb_sysNarrow2.root", "grV2PbPb_sysWide2.root", "grV2PbPb_sysTight2.root", "grV286", "comp_PbPb_sysVz_v286.pdf", "v_{2}{8}/v_{2}{6} |vz|<3", "v_{2}{8}/v_{2}{6} 3<|vz|<15", "v_{2}{8}/v_{2}{6} |vz|<15"), "v_{2}{8}/v_{2}{6}"'
+
+
+#root -l -b -q 'compare3.C("grV2_sysHLT2.root", "grV2_sysHLT2.root", "grV2_sysTight2.root", "grC24",  "comp_pPb_sysHLT2_c24.pdf",           "c_{2}{4} HLT",          "c_{2}{4} HLT",          "c_{2}{4}",          "c_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHLT2.root", "grV2_sysHLT2.root", "grV2_sysTight2.root", "grC26",  "comp_pPb_sysHLT2_c26.pdf",           "c_{2}{6} HLT",          "c_{2}{6} HLT",          "c_{2}{6}",          "c_{2}{6}")'
+#root -l -b -q 'compare3.C("grV2_sysHLT2.root", "grV2_sysHLT2.root", "grV2_sysTight2.root", "grC28",  "comp_pPb_sysHLT2_c28.pdf",           "c_{2}{8} HLT",          "c_{2}{8} HLT",          "c_{2}{8}",          "c_{2}{8}")'
+#root -l -b -q 'compare3.C("grV3_sysHLT2.root", "grV3_sysHLT2.root", "grV3_sysTight2.root", "grC34",  "comp_pPb_sysHLT2_c34.pdf",           "c_{3}{4} HLT",          "c_{3}{4} HLT",          "c_{3}{4}",          "c_{3}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHLT2.root", "grV2_sysHLT2.root", "grV2_sysTight2.root", "grV264", "comp_pPb_sysHLT2_v264.pdf", "v_{2}{6}/v_{2}{4} HLT", "v_{2}{6}/v_{2}{4} HLT", "v_{2}{6}/v_{2}{4}", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2_sysHLT2.root", "grV2_sysHLT2.root", "grV2_sysTight2.root", "grV286", "comp_pPb_sysHLT2_v286.pdf", "v_{2}{8}/v_{2}{6} HLT", "v_{2}{8}/v_{2}{6} HLT", "v_{2}{8}/v_{2}{6}", "v_{2}{8}/v_{2}{6}")'
+
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight4.root", "grV2PbPb.root", "grV2PbPb_sysTight2.root", "grC24",  "comp_PbPb_sysTrack_c24.pdf",           "c_{2}{4} tight",          "c_{2}{4} loose",          "c_{2}{4}",          "c_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight4.root", "grV2PbPb.root", "grV2PbPb_sysTight2.root", "grC26",  "comp_PbPb_sysTrack_c26.pdf",           "c_{2}{6} tight",          "c_{2}{6} loose",          "c_{2}{6}",          "c_{2}{6}")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight4.root", "grV2PbPb.root", "grV2PbPb_sysTight2.root", "grC28",  "comp_PbPb_sysTrack_c28.pdf",           "c_{2}{8} tight",          "c_{2}{8} loose",          "c_{2}{8}",          "c_{2}{8}")'
+#root -l -b -q 'compare3.C("grV3PbPb_sysTight4.root", "grV3PbPb.root", "grV3PbPb_sysTight2.root", "grC34",  "comp_PbPb_sysTrack_c34.pdf",           "c_{3}{4} tight",          "c_{3}{4} loose",          "c_{3}{4}",          "c_{3}{4}")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight4.root", "grV2PbPb.root", "grV2PbPb_sysTight2.root", "grV264", "comp_PbPb_sysTrack_v264.pdf", "v_{2}{6}/v_{2}{4} tight", "v_{2}{6}/v_{2}{4} loose", "v_{2}{6}/v_{2}{4}", "v_{2}{6}/v_{2}{4}")'
+#root -l -b -q 'compare3.C("grV2PbPb_sysTight4.root", "grV2PbPb.root", "grV2PbPb_sysTight2.root", "grV286", "comp_PbPb_sysTrack_v286.pdf", "v_{2}{8}/v_{2}{6} tight", "v_{2}{8}/v_{2}{6} loose", "v_{2}{8}/v_{2}{6}", "v_{2}{8}/v_{2}{6}")'
+
+
+
+
+
+
+
+
+
+
+
+
+
+root -l -b -q 'compare3.C("grV2PbPb_sysLooseXCentCut.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb_sysLoose.root", "grC24", "comp_PbPb_sysLoose_c24.pdf", "v_{2}{4} LooseXCentCut",       "v_{2}{4} LooseSkim",       "v_{2}{4} Loose", "c_{2}{4}" )'
+root -l -b -q 'compare3.C("grV2PbPb_sysLoose.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb.root", "grC24", "comp_PbPb_sysLooseSkim_c24.pdf", "v_{2}{4} Loose",       "v_{2}{4} LooseSkim",       "v_{2}{4} standard", "c_{2}{4}" )'
+
+
+
+
+

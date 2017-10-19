@@ -41,6 +41,12 @@ void genPlot(int s1 =0)
 	double dV8n[7][20];
 	double eV8n[7][20];
 
+	double dV64n[7][20];
+	double eV64n[7][20];
+
+	double dV86n[7][20];
+	double eV86n[7][20];
+
 	for ( int n = 2; n < 7; n++ ) {
 		TH1D * hc = (TH1D*) f->Get(Form("hCnR%i", n));
 		TH1D * hv = (TH1D*) f->Get(Form("hVnR%i", n));
@@ -53,6 +59,10 @@ void genPlot(int s1 =0)
 
 		TH1D * hc8 = (TH1D*) f->Get(Form("hC8nR%i", n));
 		TH1D * hv8 = (TH1D*) f->Get(Form("hV8nR%i", n));
+
+		TH1D * hv64 = (TH1D*) f->Get(Form("hV64nR%i", n));
+		TH1D * hv86 = (TH1D*) f->Get(Form("hV86nR%i", n));
+
 		for ( int c = 0; c < 20; c++ ) {
 			dCn[n][c] = hc->GetBinContent(c+1);
 			eCn[n][c] = hc->GetBinError(c+1);
@@ -73,6 +83,12 @@ void genPlot(int s1 =0)
 			eC8n[n][c] = hc8->GetBinError(c+1);
 			dV8n[n][c] = hv8->GetBinContent(c+1);
 			eV8n[n][c] = hv8->GetBinError(c+1);
+
+			dV64n[n][c] = hv64->GetBinContent(c+1);
+			eV64n[n][c] = hv64->GetBinError(c+1);
+
+			dV86n[n][c] = hv86->GetBinContent(c+1);
+			eV86n[n][c] = hv86->GetBinError(c+1);
 		}
 	}
 
@@ -87,6 +103,9 @@ void genPlot(int s1 =0)
 
 	TGraphErrors * grC8[7] = {};
 	TGraphErrors * grV8[7] = {};
+
+	TGraphErrors * grV64[7] = {};
+	TGraphErrors * grV86[7] = {};
 	for ( int n = 2; n < 7; n++ ) {
 		grCn[n] = new TGraphErrors(NCent, CentX, dCn[n], 0, eCn[n]);
 		grVn[n] = new TGraphErrors(NCent, CentX, dVn[n], 0, eVn[n]);
@@ -123,6 +142,16 @@ void genPlot(int s1 =0)
 		grV8[n]->SetMarkerStyle(kFullDiamond);
 		grV8[n]->SetMarkerColor(kRed);
 		grV8[n]->SetLineColor(kRed);
+
+		grV64[n] = new TGraphErrors(NCent, CentX, dV64n[n], 0, eV64n[n]);
+		grV64[n]->SetMarkerStyle(kFullCross);
+		grV64[n]->SetMarkerColor(kBlue);
+		grV64[n]->SetLineColor(kBlue);
+
+		grV86[n] = new TGraphErrors(NCent, CentX, dV86n[n], 0, eV86n[n]);
+		grV86[n]->SetMarkerStyle(kFullDiamond);
+		grV86[n]->SetMarkerColor(kRed);
+		grV86[n]->SetLineColor(kRed);
 	}
 
 	TCanvas * cT = MakeCanvas("cT", "cT", 600, 500);
@@ -162,5 +191,8 @@ void genPlot(int s1 =0)
 		grV6[n]->Write(Form("grV6%i", n));
 		grC8[n]->Write(Form("grC8%i", n));
 		grV8[n]->Write(Form("grV8%i", n));
+
+		grV64[n]->Write(Form("grV64%i", n));
+		grV86[n]->Write(Form("grV86%i", n));
 	}
 }

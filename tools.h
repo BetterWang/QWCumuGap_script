@@ -129,7 +129,7 @@ void trimV28AA(TGraphErrors* gr) {
 void trimV34AA(TGraphErrors* gr) {
 	int idx = 0;
 	while ( idx < gr->GetN() ) {
-		if ( gr->GetX()[idx] < 30. or gr->GetX()[idx] > 350 ) gr->RemovePoint( idx );
+		if ( gr->GetX()[idx] < 150. or gr->GetX()[idx] > 350 ) gr->RemovePoint( idx );
 		else idx++;
 	}
 };

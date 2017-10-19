@@ -4,7 +4,8 @@ void splitCanv(TCanvas * c);
 void initHist(TH2D* h);
 
 void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s3 = "grV2_merged.root", string str_gr = "grV4", string fname = "comp_pPb_v24.pdf",
-		string str_leg1 = "pPb", string str_leg2 = "Pbp", string str_leg3 = "pPb+Pbp")
+		string str_leg1 = "pPb", string str_leg2 = "Pbp", string str_leg3 = "pPb+Pbp",
+		string str_ylabel = "v_2")
 {
 
 	TFile * f1 = new TFile(s1.c_str());
@@ -40,6 +41,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 		{"grV36", make_pair(0.00, 0.04)},
 		{"grV38", make_pair(0.00, 0.04)},
 		{"grC3n", make_pair(-0.00000044, 0.0000019)},
+		{"grV264", make_pair(0.8, 0.99)},
+		{"grV286", make_pair(0.9, 1.1)},
 	};
 	if ( s1.find("PbPb") != string::npos ) {
 		hrange = {
@@ -60,6 +63,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 			{"grV36", make_pair(0.00, 0.04)},
 			{"grV38", make_pair(0.00, 0.04)},
 			{"grC3n", make_pair(-0.00000044, 0.0000019)},
+			{"grV264", make_pair(0.9, 1.1)},
+			{"grV286", make_pair(0.9, 1.1)},
 		};
 	}
 
@@ -67,6 +72,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	splitCanv(cT);
 
 	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{2}", 1, 0, 399, 1, hrange[str_gr].first, hrange[str_gr].second);
+	hframe->SetYTitle(str_ylabel.c_str());
 	initHist(hframe);
 	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.79, 1.19);
 	initHist(hframeR);
@@ -104,8 +110,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	}
 
 	hframeR->Draw();
-	grR1->Draw("Psame");
-	grR2->Draw("Psame");
+	grR1->Draw("PLsame");
+	grR2->Draw("PLsame");
 
 	cT->SaveAs(fname.c_str());
 }

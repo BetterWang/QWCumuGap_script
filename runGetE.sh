@@ -1,20 +1,3 @@
-./runGetE3.sh 246
-./runGetE3.sh 247
-./runGetE3.sh 248
-./runGetE3.sh 249
-./runGetE3.sh 266
-./runGetE3.sh 267
-./runGetE3.sh 268
-./runGetE3.sh 269
-./runGetE3.sh 270
-./runGetE3.sh 271
-./runGetE3.sh 272
-./runGetE3.sh 273
-./runGetE3.sh 290
-./runGetE3.sh 291
-./runGetE3.sh 292
-./runGetE3.sh 293
-./runGetE3.sh 294
-./runGetE3.sh 295
-./runGetE3.sh 296
-./runGetE3.sh 297
+
+./runGetE3.sh 352
+./runGetE3.sh 353

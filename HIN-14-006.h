@@ -4,6 +4,9 @@ TGraphErrors * grHIN14006pPbV28 = 0;
 TGraphErrors * grHIN14006PbPbV26 = 0;
 TGraphErrors * grHIN14006PbPbV28 = 0;
 
+TF1 *ffit64 = 0;
+TF1 *ffit86 = 0;
+
 void HIN_14_006()
 {
 // PbPb v26
@@ -216,4 +219,58 @@ void HIN_14_006()
 	grHIN14006PbPbV28->SetLineColor(kRed);
 	grHIN14006pPbV26->SetLineColor(kBlue);
 	grHIN14006pPbV28->SetLineColor(kRed);
+
+	ffit64 = new TF1("ffit64","pol6",0.2,1);
+	ffit64->SetLineColor(kBlue);
+	ffit64->SetFillColor(19);
+	ffit64->SetFillStyle(0);
+	ffit64->SetMarkerSize(2);
+	ffit64->SetParameter(0,0.318186);
+	ffit64->SetParError(0,0);
+	ffit64->SetParLimits(0,0,0);
+	ffit64->SetParameter(1,2.25153);
+	ffit64->SetParError(1,0);
+	ffit64->SetParLimits(1,0,0);
+	ffit64->SetParameter(2,-4.95326);
+	ffit64->SetParError(2,0);
+	ffit64->SetParLimits(2,0,0);
+	ffit64->SetParameter(3,8.50799);
+	ffit64->SetParError(3,0);
+	ffit64->SetParLimits(3,0,0);
+	ffit64->SetParameter(4,-9.04852);
+	ffit64->SetParError(4,0);
+	ffit64->SetParLimits(4,0,0);
+	ffit64->SetParameter(5,5.1117);
+	ffit64->SetParError(5,0);
+	ffit64->SetParLimits(5,0,0);
+	ffit64->SetParameter(6,-1.18764);
+	ffit64->SetParError(6,0);
+	ffit64->SetParLimits(6,0,0);
+
+	ffit86 = new TF1("ffit86","pol6",0.2,1);
+	ffit86->SetLineColor(kRed);
+	ffit86->SetFillColor(19);
+	ffit86->SetFillStyle(0);
+	ffit86->SetMarkerSize(2);
+	ffit86->SetParameter(0,0.592835);
+	ffit86->SetParError(0,0);
+	ffit86->SetParLimits(0,0,0);
+	ffit86->SetParameter(1,1.69652);
+	ffit86->SetParError(1,0);
+	ffit86->SetParLimits(1,0,0);
+	ffit86->SetParameter(2,-4.30736);
+	ffit86->SetParError(2,0);
+	ffit86->SetParLimits(2,0,0);
+	ffit86->SetParameter(3,7.82505);
+	ffit86->SetParError(3,0);
+	ffit86->SetParLimits(3,0,0);
+	ffit86->SetParameter(4,-8.72909);
+	ffit86->SetParError(4,0);
+	ffit86->SetParLimits(4,0,0);
+	ffit86->SetParameter(5,5.15827);
+	ffit86->SetParError(5,0);
+	ffit86->SetParLimits(5,0,0);
+	ffit86->SetParameter(6,-1.23624);
+	ffit86->SetParError(6,0);
+	ffit86->SetParLimits(6,0,0);
 }

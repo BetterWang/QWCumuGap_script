@@ -8,6 +8,11 @@ TMultiGraph mgr_pPb_v24;
 TMultiGraph mgr_pPb_v26;
 TMultiGraph mgr_pPb_v28;
 
+TGraphErrors * gr_pPb_v286;
+TGraphErrors * gr_pPb_v264;
+TGraphErrors * gr_PbPb_v286;
+TGraphErrors * gr_PbPb_v264;
+
 pair<TGraphErrors*, TGraphErrors*> getGr(string &s)
 {
         istringstream iss(s);
@@ -21,11 +26,27 @@ pair<TGraphErrors*, TGraphErrors*> getGr(string &s)
                 v2e.push_back(e);
                 v2s.push_back(sys);
         }
-        gr  = new TGraphErrors(Noff.size(), &Noff[0], &v2[0], 0, &v2e[0]);
-        grs = new TGraphErrors(Noff.size(), &Noff[0], &v2[0], 0, &v2s[0]);
+        TGraphErrors * gr  = new TGraphErrors(Noff.size(), &Noff[0], &v2[0], 0, &v2e[0]);
+        TGraphErrors * grs = new TGraphErrors(Noff.size(), &Noff[0], &v2[0], 0, &v2s[0]);
 	gr->SetMarkerSize(2.);
         return std::make_pair(gr, grs);
-}
+};
+
+TGraphErrors* getGr2(string &s)
+{
+        istringstream iss(s);
+        vector<double> vx, vy, vxe, vye;
+        while (!iss.eof())
+	{
+		double x, y, xe, ye, sys;
+		iss >> x >> xe >> y >> ye >> sys;
+		vx.push_back( x );
+		vy.push_back( y );
+		vxe.push_back( xe );
+		vye.push_back( ye );
+	}
+	return new TGraphErrors( vx.size(), &vx[0], &vy[0], &vxe[0], &vye[0] );
+};
 
 void published()
 {
@@ -192,6 +213,63 @@ string v28pPb =
 "108.2	0.05654   0.00248          0.00339 "
 ;
 
+
+
+
+// pPb v64:v42
+string v64pPb =
+"0.6693  0.013	0.8603  0.0678  0.0086 "
+"0.6798  0.006	0.9475  0.0224  0.0095 "
+"0.684   0.021	1.016   0.088   0.010  "
+"0.6977  0.004	0.9355  0.0136  0.0094 "
+"0.723   0.004	0.9165  0.0151  0.0092 "
+"0.747   0.006	0.9474  0.0243  0.0095 "
+"0.751   0.025	1.008   0.090   0.010  "
+;
+
+// pPb v86:v42
+string v86pPb =
+"0.6977 0.004	0.9526  0.0520 0.0343 "
+"0.723  0.004	1.003   0.048  0.036  "
+"0.747  0.006	0.9838  0.0540 0.0354 "
+"0.751  0.025	1.163   0.109  0.042  "
+;
+
+
+// PbPb v64:v42
+string v64PbPb =
+"0.8172 0.0116	0.9785  0.0189  0.0098 "
+"0.8174 0.0045	0.988   0.007   0.010  "
+"0.8214 0.0037	0.9847  0.0065  0.0098 "
+"0.822  0.0040	0.9862  0.0065  0.0099 "
+"0.8227 0.0047	0.9822  0.0079  0.0098 "
+"0.825  0.0069	0.9842  0.0103  0.0098 "
+"0.8269 0.0034	0.9864  0.0053  0.0099 "
+"0.8303 0.0040	0.9812  0.0061  0.0098 "
+"0.8313 0.0027	0.9874  0.0049  0.0099 "
+"0.8327 0.0036	0.9815  0.0059  0.0098 "
+"0.8337 0.0702	1.127   0.123   0.011  "
+"0.8362 0.0165	1.011   0.026   0.010  "
+"0.8412 0.0271	0.9982  0.0494  0.0100 "
+;
+
+
+// PbPb v86:v42
+string v86PbPb =
+"0.8172 0.0116	1.00000  0.02403  0.0100 "
+"0.8174 0.0045	0.9966   0.0071   0.0100 "
+"0.8214 0.0037	0.9967   0.0078   0.0100 "
+"0.822  0.0040	0.9965   0.0070   0.0100 "
+"0.8227 0.0047	0.994    0.010    0.010  "
+"0.825  0.0069	0.9938   0.0112   0.0099 "
+"0.8269 0.0034	0.9979   0.0055   0.0100 "
+"0.8303 0.0040	0.9952   0.0066   0.0100 "
+"0.8313 0.0027	0.998    0.006    0.010  "
+"0.8327 0.0036	0.9958   0.0069   0.0100 "
+"0.8362 0.0165	1.003    0.030    0.010  "
+"0.8412 0.0271	1.066    0.060    0.011  "
+;
+
 	auto grp = getGr(v22PbPb);
 	grp.first->SetMarkerStyle(kOpenCircle);
 	grp.first->SetMarkerColor(kRed);
@@ -241,4 +319,23 @@ string v28pPb =
 	grp.first->SetLineColor(kRed);
 	mgr_pPb_v28.Add(grp.first, "p");
 
+	gr_pPb_v264 = getGr2( v64pPb );
+	gr_pPb_v264->SetMarkerStyle(kFullSquare);
+	gr_pPb_v264->SetMarkerColor(kBlue);
+	gr_pPb_v264->SetLineColor(kBlue);
+
+	gr_PbPb_v264 = getGr2( v64PbPb );
+	gr_PbPb_v264->SetMarkerStyle(kOpenSquare);
+	gr_PbPb_v264->SetMarkerColor(kBlue);
+	gr_PbPb_v264->SetLineColor(kBlue);
+
+	gr_pPb_v286 = getGr2( v86pPb );
+	gr_pPb_v286->SetMarkerStyle(kFullCircle);
+	gr_pPb_v286->SetMarkerColor(kRed);
+	gr_pPb_v286->SetLineColor(kRed);
+
+	gr_PbPb_v286 = getGr2( v86PbPb );
+	gr_PbPb_v286->SetMarkerStyle(kOpenCircle);
+	gr_PbPb_v286->SetMarkerColor(kRed);
+	gr_PbPb_v286->SetLineColor(kRed);
 }
