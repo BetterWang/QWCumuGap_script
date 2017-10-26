@@ -359,6 +359,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysLoosePt01_v2/171018_211438/0000/",	// 356 PbPb ppreco MB7 sysLoosePt01
 	"NA",			// 357 merged PbPb ppreco MB567 sysLoosePt01
 	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_noeff_noff_v2/171024_152521/0000/",					// 358 XeXe MB1-10 noeff, noff
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_NoScrap_v1/171025_210620/0000/",		// 359 PbPb ppreco MB5 sysLoosePt01 HFcut NoScraping
 };
 
 char const * ftxt[] = {
@@ -721,6 +722,7 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco7_sysLoosePt01/",		// 356
 	"txt/PbPb15_ppreco_sysLoosePt01/",		// 357
 	"txt/XeXe_noeff_noff/",				// 358
+	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut_NoScrap/",	// 359
 };
 
 
