@@ -360,6 +360,8 @@ char const * fname[] = {
 	"NA",			// 357 merged PbPb ppreco MB567 sysLoosePt01
 	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_noeff_noff_v2/171024_152521/0000/",					// 358 XeXe MB1-10 noeff, noff
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_NoScrap_v1/171025_210620/0000/",		// 359 PbPb ppreco MB5 sysLoosePt01 HFcut NoScraping
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_v1/171026_222114/0000/",			// 360 PbPb ppreco MB5 sysLoosePt01 HFcut
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_NoScrap_v1/171026_222200/0000/",		// 361 PbPb ppreco MB5 sysLoosePt01 NoScraping
 };
 
 char const * ftxt[] = {
@@ -723,6 +725,8 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco_sysLoosePt01/",		// 357
 	"txt/XeXe_noeff_noff/",				// 358
 	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut_NoScrap/",	// 359
+	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut/",	// 360
+	"txt/PbPb15_ppreco5_sysLoosePt01_NoScrap/",	// 361
 };
 
 
