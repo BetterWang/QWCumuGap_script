@@ -358,10 +358,18 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoosePt01_v2/171018_211423/0000/",	// 355 PbPb ppreco MB6 sysLoosePt01
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysLoosePt01_v2/171018_211438/0000/",	// 356 PbPb ppreco MB7 sysLoosePt01
 	"NA",			// 357 merged PbPb ppreco MB567 sysLoosePt01
-	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_noeff_noff_v2/171024_152521/0000/",					// 358 XeXe MB1-10 noeff, noff
+	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_noeff_noff_v3/171027_202447/0000/",					// 358 XeXe MB1-10 noeff, noff
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_NoScrap_v1/171025_210620/0000/",		// 359 PbPb ppreco MB5 sysLoosePt01 HFcut NoScraping
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_v1/171026_222114/0000/",			// 360 PbPb ppreco MB5 sysLoosePt01 HFcut
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_NoScrap_v1/171026_222200/0000/",		// 361 PbPb ppreco MB5 sysLoosePt01 NoScraping
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_HFcut_v1/171027_221617/0000/",		// 362 PbPb ppreco MB5 std HFcut
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_HFcut_v1/171027_221636/0000/",		// 363 PbPb ppreco MB6 std HFcut
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_HFcut_v1/171027_221656/0000/",		// 364 PbPb ppreco MB7 std HFcut
+	"NA",			// 365 PbPb ppreco MB567 std HFcut
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221740/0000/",	// 366 PbPb ppreco MB5 sysTight HFcut
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221802/0000/",	// 367 PbPb ppreco MB6 sysTight HFcut
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221824/0000/",	// 368 PbPb ppreco MB7 sysTight HFcut
+	"NA",		// 369 PbPb ppreco MB567 sysTight HFcut
 };
 
 char const * ftxt[] = {
@@ -727,6 +735,14 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut_NoScrap/",	// 359
 	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut/",	// 360
 	"txt/PbPb15_ppreco5_sysLoosePt01_NoScrap/",	// 361
+	"txt/PbPb15_ppreco5_HFcut/",			// 362
+	"txt/PbPb15_ppreco6_HFcut/",			// 363
+	"txt/PbPb15_ppreco7_HFcut/",			// 364
+	"txt/PbPb15_ppreco_HFcut/",			// 365
+	"txt/PbPb15_ppreco5_sysTight_HFcut/",		// 366
+	"txt/PbPb15_ppreco6_sysTight_HFcut/",		// 367
+	"txt/PbPb15_ppreco7_sysTight_HFcut/",		// 368
+	"txt/PbPb15_ppreco_sysTight_HFcut/",		// 369
 };
 
 
