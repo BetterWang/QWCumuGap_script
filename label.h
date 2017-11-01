@@ -370,6 +370,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221802/0000/",	// 367 PbPb ppreco MB6 sysTight HFcut
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221824/0000/",	// 368 PbPb ppreco MB7 sysTight HFcut
 	"NA",		// 369 PbPb ppreco MB567 sysTight HFcut
+	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_eff_Cent_v1/171031_150528/0000/",					// 370 XeXe MB1-10 Cent eff, Cent
 };
 
 char const * ftxt[] = {
@@ -743,6 +744,7 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysTight_HFcut/",		// 367
 	"txt/PbPb15_ppreco7_sysTight_HFcut/",		// 368
 	"txt/PbPb15_ppreco_sysTight_HFcut/",		// 369
+	"txt/XeXe_eff_Cent/",				// 370
 };
 
 
