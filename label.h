@@ -358,7 +358,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysLoosePt01_v2/171018_211423/0000/",	// 355 PbPb ppreco MB6 sysLoosePt01
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysLoosePt01_v2/171018_211438/0000/",	// 356 PbPb ppreco MB7 sysLoosePt01
 	"NA",			// 357 merged PbPb ppreco MB567 sysLoosePt01
-	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_noeff_noff_v3/171027_202447/0000/",					// 358 XeXe MB1-10 noeff, noff
+	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_eff_Cent_v1/171031_150528/0000/",					// 358 XeXe MB1-10 noeff, noff
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_NoScrap_v1/171025_210620/0000/",		// 359 PbPb ppreco MB5 sysLoosePt01 HFcut NoScraping
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_HFcut_v1/171026_222114/0000/",			// 360 PbPb ppreco MB5 sysLoosePt01 HFcut
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_NoScrap_v1/171026_222200/0000/",		// 361 PbPb ppreco MB5 sysLoosePt01 NoScraping
@@ -370,10 +370,10 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221802/0000/",	// 367 PbPb ppreco MB6 sysTight HFcut
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221824/0000/",	// 368 PbPb ppreco MB7 sysTight HFcut
 	"NA",			// 369 PbPb ppreco MB567 sysTight HFcut
-	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_eff_Cent_v1/171031_150528/0000/",					// 370 XeXe MB1-10 Cent eff, Cent
-	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_GMOVtx_v5/171113_201757/0000/",		// 371 PbPb ppreco MB5 GMOVertex
-	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_GMOVtx_v5/171113_044251/0000/",		// 372 PbPb ppreco MB6 GMOVertex
-	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_GMOVtx_v5/171113_044306/0000/",		// 373 PbPb ppreco MB7 GMOVertex
+	"",			// 370 XeXe MB1-10 Cent eff, Cent
+	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154455/0000/",		// 371 PbPb ppreco MB5 GMOVertex
+	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154511/0000/",		// 372 PbPb ppreco MB6 GMOVertex
+	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154526/0000/",		// 373 PbPb ppreco MB7 GMOVertex
 	"NA",			// 374 PbPb ppreco MB567 GMOVertex
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_sysLoosePt01_GMOVtx_v5/171117_155249/0000/",	// 375 PbPb ppreco MB5 GMOVertex sysLoosePt01
 	"",	// 376 PbPb ppreco MB6 GMOVertex sysLoosePt01
@@ -744,7 +744,7 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysLoosePt01/",		// 355
 	"txt/PbPb15_ppreco7_sysLoosePt01/",		// 356
 	"txt/PbPb15_ppreco_sysLoosePt01/",		// 357
-	"txt/XeXe_noeff_noff/",				// 358
+	"txt/XeXe_effCent_noff/",			// 358
 	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut_NoScrap/",	// 359
 	"txt/PbPb15_ppreco5_sysLoosePt01_HFcut/",	// 360
 	"txt/PbPb15_ppreco5_sysLoosePt01_NoScrap/",	// 361
