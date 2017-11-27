@@ -358,10 +358,37 @@
 
 
 
-root -l -b -q 'compare3.C("grV2PbPb_sysLooseXCentCut.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb_sysLoose.root", "grC24", "comp_PbPb_sysLoose_c24.pdf", "v_{2}{4} LooseXCentCut",       "v_{2}{4} LooseSkim",       "v_{2}{4} Loose", "c_{2}{4}" )'
-root -l -b -q 'compare3.C("grV2PbPb_sysLoose.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb.root", "grC24", "comp_PbPb_sysLooseSkim_c24.pdf", "v_{2}{4} Loose",       "v_{2}{4} LooseSkim",       "v_{2}{4} standard", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLooseXCentCut.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb_sysLoose.root", "grC24", "comp_PbPb_sysLoose_c24.pdf", "v_{2}{4} LooseXCentCut",       "v_{2}{4} LooseSkim",       "v_{2}{4} Loose", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoose.root", "grV2PbPb_sysLooseSkim.root", "grV2PbPb.root", "grC24", "comp_PbPb_sysLooseSkim_c24.pdf", "v_{2}{4} Loose",       "v_{2}{4} LooseSkim",       "v_{2}{4} standard", "c_{2}{4}" )'
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoose.root", "grV2PbPb_sysLoosePt01.root", "grV2PbPb.root", "grC24", "comp_c24.pdf", "c_{2}{4} Loose",       "c_{2}{4} LoosePt01",       "c_{2}{4} standard", "c_{2}{4}" )'
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grV22", "comp_v22.pdf", "v_{2}{2} Loose",       "v_{2}{2} Tight",       "v_{2}{2} standard", "v_{2}{2}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC22", "comp_c22.pdf", "c_{2}{2} Loose",       "c_{2}{2} Tight",       "c_{2}{2} standard", "c_{2}{2}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC24", "comp_c24.pdf", "c_{2}{4} Loose",       "c_{2}{4} Tight",       "c_{2}{4} standard", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC26", "comp_c26.pdf", "c_{2}{6} Loose",       "c_{2}{6} Tight",       "c_{2}{6} standard", "c_{2}{6}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC28", "comp_c28.pdf", "c_{2}{8} Loose",       "c_{2}{8} Tight",       "c_{2}{8} standard", "c_{2}{8}" )'
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysTight_HFcut.root", "grV2PbPb_HFcut.root", "grC24", "comp_c24.pdf", "c_{2}{4} Loose",       "c_{2}{4} Tight",       "c_{2}{4} standard", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysTight_HFcut.root", "grV2PbPb_HFcut.root", "grC26", "comp_c26.pdf", "c_{2}{6} Loose",       "c_{2}{6} Tight",       "c_{2}{6} standard", "c_{2}{6}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysTight_HFcut.root", "grV2PbPb_HFcut.root", "grC28", "comp_c28.pdf", "c_{2}{8} Loose",       "c_{2}{8} Tight",       "c_{2}{8} standard", "c_{2}{8}" )'
+#root -l -b -q 'compare3.C("grV3PbPb_sysLoosePt01_HFcut.root", "grV3PbPb_sysTight_HFcut.root", "grV3PbPb_HFcut.root", "grC34", "comp_c34.pdf", "c_{3}{4} Loose",       "c_{3}{4} Tight",       "c_{3}{4} standard", "c_{2}{4}" )'
+
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC24", "comp_c24.pdf", "c_{2}{4} Loose HFcuts NoScrap",       "c_{2}{4} Tight",       "c_{2}{4} standard", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC26", "comp_c26.pdf", "c_{2}{6} Loose HFcuts NoScrap",       "c_{2}{6} Tight",       "c_{2}{6} standard", "c_{2}{6}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grV2PbPb_sysTight.root", "grV2PbPb.root", "grC28", "comp_c28.pdf", "c_{2}{8} Loose HFcuts NoScrap",       "c_{2}{8} Tight",       "c_{2}{8} standard", "c_{2}{8}" )'
 
 
 
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysLoosePt01_NoScrap.root", "grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grC24", "comp_c24_loose.pdf", "c_{2}{4} Loose HFcuts",       "c_{2}{4} Loose NoScrap",       "c_{2}{4} Loose HFcuts NoScrap", "c_{2}{4}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysLoosePt01_NoScrap.root", "grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grC26", "comp_c26_loose.pdf", "c_{2}{6} Loose HFcuts",       "c_{2}{6} Loose NoScrap",       "c_{2}{6} Loose HFcuts NoScrap", "c_{2}{6}" )'
+#root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_HFcut.root", "grV2PbPb_sysLoosePt01_NoScrap.root", "grV2PbPb_sysLoosePt01_HFcut_NoScrap.root", "grC28", "comp_c28_loose.pdf", "c_{2}{8} Loose HFcuts",       "c_{2}{8} Loose NoScrap",       "c_{2}{8} Loose HFcuts NoScrap", "c_{2}{8}" )'
 
 
+
+root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_GMO.root", "grV2PbPb_sysTight_GMO.root", "grV2PbPb_GMO.root", "grC22", "comp_c22.pdf", "c_{2}{2} Loose",       "c_{2}{2} Tight",       "c_{2}{2} standard", "c_{2}{2}" )'
+root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_GMO.root", "grV2PbPb_sysTight_GMO.root", "grV2PbPb_GMO.root", "grC24", "comp_c24.pdf", "c_{2}{4} Loose",       "c_{2}{4} Tight",       "c_{2}{4} standard", "c_{2}{4}" )'
+root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_GMO.root", "grV2PbPb_sysTight_GMO.root", "grV2PbPb_GMO.root", "grC26", "comp_c26.pdf", "c_{2}{6} Loose",       "c_{2}{6} Tight",       "c_{2}{6} standard", "c_{2}{6}" )'
+root -l -b -q 'compare3.C("grV2PbPb_sysLoosePt01_GMO.root", "grV2PbPb_sysTight_GMO.root", "grV2PbPb_GMO.root", "grC28", "comp_c28.pdf", "c_{2}{8} Loose",       "c_{2}{8} Tight",       "c_{2}{8} standard", "c_{2}{8}" )'
+
+root -l -b -q 'compare3.C("grV3PbPb_sysLoosePt01_GMO.root", "grV3PbPb_sysTight_GMO.root", "grV3PbPb_GMO.root", "grC34", "comp_c34.pdf", "c_{3}{4} Loose",       "c_{3}{4} Tight",       "c_{3}{4} standard", "c_{3}{4}" )'

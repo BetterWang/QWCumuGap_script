@@ -269,10 +269,65 @@
 #root -l -b -q "mergeGr.C(4, 335, 335, 335, 335)"
 
 # PbPb sysLooseXCentCut merged
-root -l -b -q "mergeGr.C(2, 352, 352, 352, 352)"
+#root -l -b -q "mergeGr.C(2, 352, 352, 352, 352)"
 # PbPb sysLooseSkim merged
-root -l -b -q "mergeGr.C(2, 353, 353, 353, 353)"
+#root -l -b -q "mergeGr.C(2, 353, 353, 353, 353)"
 
 
+## PbPb sysLoosePt01 merged
+#root -l -b -q "mergeGr.C(2, 357, 357, 357, 357)"
+#root -l -b -q "mergeGr.C(3, 357, 357, 357, 357)"
+#root -l -b -q "mergeGr.C(4, 357, 357, 357, 357)"
+
+# XeXe std merged
+root -l -b -q "mergeGr.C(2, 358, 358, 358, 358)"
+root -l -b -q "mergeGr.C(3, 358, 358, 358, 358)"
+root -l -b -q "mergeGr.C(4, 358, 358, 358, 358)"
+
+
+
+## PbPb sysLoosePt01_HFcuts_NoScrap
+#root -l -b -q "mergeGr.C(2, 359, 359, 359, 359)"
+#root -l -b -q "mergeGr.C(3, 359, 359, 359, 359)"
+#root -l -b -q "mergeGr.C(4, 359, 359, 359, 359)"
+
+## PbPb sysLoosePt01_HFcuts
+#root -l -b -q "mergeGr.C(2, 360, 360, 360, 360)"
+#root -l -b -q "mergeGr.C(3, 360, 360, 360, 360)"
+#root -l -b -q "mergeGr.C(4, 360, 360, 360, 360)"
+
+## PbPb sysLoosePt01_NoScrap
+#root -l -b -q "mergeGr.C(2, 361, 361, 361, 361)"
+#root -l -b -q "mergeGr.C(3, 361, 361, 361, 361)"
+#root -l -b -q "mergeGr.C(4, 361, 361, 361, 361)"
+
+## PbPb HFcuts
+#root -l -b -q "mergeGr.C(2, 363, 363, 363, 363)"
+#root -l -b -q "mergeGr.C(3, 363, 363, 363, 363)"
+#root -l -b -q "mergeGr.C(4, 363, 363, 363, 363)"
+
+## PbPb sysTight_HFcuts
+#root -l -b -q "mergeGr.C(2, 367, 367, 367, 367)"
+#root -l -b -q "mergeGr.C(3, 367, 367, 367, 367)"
+#root -l -b -q "mergeGr.C(4, 367, 367, 367, 367)"
+
+
+
+## PbPb std GMO
+#root -l -b -q "mergeGr.C(2, 374, 374, 374, 374)"
+#root -l -b -q "mergeGr.C(3, 374, 374, 374, 374)"
+#root -l -b -q "mergeGr.C(4, 374, 374, 374, 374)"
+
+
+## PbPb sysLoosePt01 GMO
+#root -l -b -q "mergeGr.C(2, 375, 375, 375, 375)"
+#root -l -b -q "mergeGr.C(3, 375, 375, 375, 375)"
+#root -l -b -q "mergeGr.C(4, 375, 375, 375, 375)"
+#
+#
+## PbPb sysTight GMO
+#root -l -b -q "mergeGr.C(2, 379, 379, 379, 379)"
+#root -l -b -q "mergeGr.C(3, 379, 379, 379, 379)"
+#root -l -b -q "mergeGr.C(4, 379, 379, 379, 379)"
 
 
