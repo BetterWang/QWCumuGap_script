@@ -370,7 +370,7 @@ char const * fname[] = {
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221802/0000/",	// 367 PbPb ppreco MB6 sysTight HFcut
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_sysTight_HFcut_v1/171027_221824/0000/",	// 368 PbPb ppreco MB7 sysTight HFcut
 	"NA",			// 369 PbPb ppreco MB567 sysTight HFcut
-	"",			// 370 XeXe MB1-20 Cent eff, Cent
+	"../XeXe/HIMinimumBias1/crab_XeXe1_CumuGap_eff_Cent_v2/171127_194149/0000/",					// 370 XeXe MB1-10 Cent eff, Cent
 	"../PbPb2015_cumu/HIMinimumBias5/crab_HIMB5_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154455/0000/",		// 371 PbPb ppreco MB5 GMOVertex
 	"../PbPb2015_cumu/HIMinimumBias6/crab_HIMB6_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154511/0000/",		// 372 PbPb ppreco MB6 GMOVertex
 	"../PbPb2015_cumu/HIMinimumBias7/crab_HIMB7_CumuGap_ppReco_eff_noff_GMOVtx_v6/171118_154526/0000/",		// 373 PbPb ppreco MB7 GMOVertex

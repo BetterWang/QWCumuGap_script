@@ -142,10 +142,10 @@ TGraphErrors * ratioGr(TGraphErrors* gr1, TGraphErrors* gr2)
 	return ret;
 }
 
-void plotC(TString s2pPb = "grV2_sysTight2.root",
-		TString s3pPb = "grV3_sysTight2.root",
-		TString s2PbPb = "grV2PbPb_sysTight2.root",
-		TString s3PbPb = "grV3PbPb_sysTight2.root",
+void plotC(TString s2pPb = "grV2_merged.root",
+		TString s3pPb = "grV3_merged.root",
+		TString s2PbPb = "grV2PbPb_GMO.root",
+		TString s3PbPb = "grV3PbPb_GMO.root",
 		TString s2pp = "grV2_pp13.root",
 		TString s3pp = "grV3_pp13.root")
 {

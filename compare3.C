@@ -28,6 +28,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 		{"grV2n", make_pair(0.01, 0.14)},
 		{"grV26", make_pair(0.01, 0.14)},
 		{"grV28", make_pair(0.01, 0.14)},
+		{"grC22", make_pair(0.004, 0.0249)},
 		{"grC24", make_pair(-0.000014, 0.0000119)},
 		{"grC26", make_pair(-0.000000014, 0.000000199)},
 		{"grC28", make_pair(-0.0000000024, 0.00000000119)},
@@ -46,10 +47,12 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	};
 	if ( s1.find("PbPb") != string::npos ) {
 		hrange = {
+			{"grV22", make_pair(0.01, 0.19)},
 			{"grV24", make_pair(0.01, 0.19)},
 			{"grV2n", make_pair(0.01, 0.19)},
 			{"grV26", make_pair(0.01, 0.19)},
 			{"grV28", make_pair(0.01, 0.19)},
+			{"grC22", make_pair(0.004, 0.0249)},
 			{"grC24", make_pair(-0.000074, 0.0000499)},
 			{"grC26", make_pair(-0.0000014, 0.00000699)},
 			{"grC28", make_pair(-0.00000029, 0.000000499)},
@@ -74,7 +77,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{2}", 1, 0, 399, 1, hrange[str_gr].first, hrange[str_gr].second);
 	hframe->SetYTitle(str_ylabel.c_str());
 	initHist(hframe);
-	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.79, 1.19);
+	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.88, 1.12);
 	initHist(hframeR);
 
 	TLegend * legPt = new TLegend(0.5, 0.7, 0.85, 0.9);
@@ -112,6 +115,13 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	hframeR->Draw();
 	grR1->Draw("PLsame");
 	grR2->Draw("PLsame");
+
+	TF1 *fR1 = new TF1("fR1", "pol0", 100., 300.);
+	TF1 *fR2 = new TF1("fR2", "pol0", 100., 300.);
+	fR1->SetLineColor(grR1->GetMarkerColor());
+	fR2->SetLineColor(grR2->GetMarkerColor());
+	grR1->Fit(fR1, "E", "", 100, 300);
+	grR2->Fit(fR2, "E", "", 100, 300);
 
 	cT->SaveAs(fname.c_str());
 }

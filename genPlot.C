@@ -16,6 +16,9 @@ void genPlot(int s1 =0)
 	} else if ( s1 == 177 or s1 == 193 or s1 == 194 ) {
 		NCent = NCentAA5TeV4;
 		CentX = CentPbPbX4;
+	} else if ( s1 == 370 ) {
+		NCent = NCentXeXe;
+		CentX = CentXeXeX;
 	}
 	TFile *f = new TFile(Form("%s/outputE.root", ftxt[s1]));
 
@@ -25,6 +28,11 @@ void genPlot(int s1 =0)
 	double eCn[7][20];
 	double dVn[7][20];
 	double eVn[7][20];
+
+	double dC2n[7][20];
+	double eC2n[7][20];
+	double dV2n[7][20];
+	double eV2n[7][20];
 
 	double dC4n[7][20];
 	double eC4n[7][20];
@@ -51,6 +59,9 @@ void genPlot(int s1 =0)
 		TH1D * hc = (TH1D*) f->Get(Form("hCnR%i", n));
 		TH1D * hv = (TH1D*) f->Get(Form("hVnR%i", n));
 
+		TH1D * hc2 = (TH1D*) f->Get(Form("hC2nR%i", n));
+		TH1D * hv2 = (TH1D*) f->Get(Form("hV2nR%i", n));
+
 		TH1D * hc4 = (TH1D*) f->Get(Form("hC4nR%i", n));
 		TH1D * hv4 = (TH1D*) f->Get(Form("hV4nR%i", n));
 
@@ -68,6 +79,11 @@ void genPlot(int s1 =0)
 			eCn[n][c] = hc->GetBinError(c+1);
 			dVn[n][c] = hv->GetBinContent(c+1);
 			eVn[n][c] = hv->GetBinError(c+1);
+
+			dC2n[n][c] = hc2->GetBinContent(c+1);
+			eC2n[n][c] = hc2->GetBinError(c+1);
+			dV2n[n][c] = hv2->GetBinContent(c+1);
+			eV2n[n][c] = hv2->GetBinError(c+1);
 
 			dC4n[n][c] = hc4->GetBinContent(c+1);
 			eC4n[n][c] = hc4->GetBinError(c+1);
@@ -95,6 +111,9 @@ void genPlot(int s1 =0)
 	TGraphErrors * grCn[7] = {};
 	TGraphErrors * grVn[7] = {};
 
+	TGraphErrors * grC2[7] = {};
+	TGraphErrors * grV2[7] = {};
+
 	TGraphErrors * grC4[7] = {};
 	TGraphErrors * grV4[7] = {};
 
@@ -115,6 +134,15 @@ void genPlot(int s1 =0)
 		grVn[n]->SetMarkerStyle(kFullSquare);
 		grVn[n]->SetMarkerColor(kGreen+2);
 		grVn[n]->SetLineColor(kGreen+2);
+
+		grC2[n] = new TGraphErrors(NCent, CentX, dC2n[n], 0, eC2n[n]);
+		grV2[n] = new TGraphErrors(NCent, CentX, dV2n[n], 0, eV2n[n]);
+		grC2[n]->SetMarkerStyle(kOpenCircle);
+		grC2[n]->SetMarkerColor(kRed);
+		grC2[n]->SetLineColor(kRed);
+		grV2[n]->SetMarkerStyle(kOpenCircle);
+		grV2[n]->SetMarkerColor(kRed);
+		grV2[n]->SetLineColor(kRed);
 
 		grC4[n] = new TGraphErrors(NCent, CentX, dC4n[n], 0, eC4n[n]);
 		grV4[n] = new TGraphErrors(NCent, CentX, dV4n[n], 0, eV4n[n]);
@@ -162,6 +190,7 @@ void genPlot(int s1 =0)
 		hframe_cent->SetYTitle(Form("v_{%i}{4}", n));
 		hframe_cent->Draw();
 		grVn[n]->Draw("Psame");
+		grV2[n]->Draw("Psame");
 		grV4[n]->Draw("Psame");
 		grV6[n]->Draw("Psame");
 		grV8[n]->Draw("Psame");
@@ -185,6 +214,8 @@ void genPlot(int s1 =0)
 	for ( int n = 2; n < 7; n++ ) {
 		grCn[n]->Write(Form("grCn%i", n));
 		grVn[n]->Write(Form("grVn%i", n));
+		grC2[n]->Write(Form("grC2%i", n));
+		grV2[n]->Write(Form("grV2%i", n));
 		grC4[n]->Write(Form("grC4%i", n));
 		grV4[n]->Write(Form("grV4%i", n));
 		grC6[n]->Write(Form("grC6%i", n));

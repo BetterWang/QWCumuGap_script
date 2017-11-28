@@ -16,6 +16,9 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	} else if ( s1 == 177 or s1 == 193 or s1 == 194) {
 		NCent = NCentAA5TeV4;
 		pCent = CentCutAA5TeV;
+	} else if ( s1 == 370 ) {
+		NCent = NCentXeXe;
+		pCent = CentXeXe;
 	}
 
 	TFile * f = new TFile(Form("%s/output_%i_%i.root", ftxt[s1], s2, s3));
@@ -38,6 +41,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	TH1D * hWQ8[7] = {};
 
 	TH1D * hCn[7]		= {};
+	TH1D * hC2n[7]		= {};
 	TH1D * hC4n[7]		= {};
 	TH1D * hC6n[7]		= {};
 	TH1D * hC8n[7]		= {};
@@ -46,6 +50,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 
 
 	double dCn[7][600] = {};
+	double dC2n[7][600] = {};
 	double dC4n[7][600] = {};
 	double dC6n[7][600] = {};
 	double dC8n[7][600] = {};
@@ -89,6 +94,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 		hWQ8[n] = (TH1D*) f->Get(Form("hWQ8%i", n));
 
 		hCn[n] = new TH1D(Form("hCn%i", n), Form("hCn%i", n), 600, -0.5, 599.5);
+		hC2n[n] = new TH1D(Form("hC2n%i", n), Form("hC2n%i", n), 600, -0.5, 599.5);
 		hC4n[n] = new TH1D(Form("hC4n%i", n), Form("hC4n%i", n), 600, -0.5, 599.5);
 		hC6n[n] = new TH1D(Form("hC6n%i", n), Form("hC6n%i", n), 600, -0.5, 599.5);
 		hC8n[n] = new TH1D(Form("hC8n%i", n), Form("hC8n%i", n), 600, -0.5, 599.5);
@@ -127,6 +133,9 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 			dCn[n][c] = dQaabc[n][c] - 2*dQab[n][c]*dQac[n][c];
 			hCn[n]->SetBinContent(c+1, dCn[n][c]);
 
+			dC2n[n][c] = dQ2[n][c];
+			hC2n[n]->SetBinContent(c+1, dC2n[n][c]);
+
 			dC4n[n][c] = dQ4[n][c] - 2*dQ2[n][c]*dQ2[n][c];
 			hC4n[n]->SetBinContent(c+1, dC4n[n][c]);
 
@@ -140,6 +149,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 
 	//rebin
 	double dCnR[7][20] = {};
+	double dC2nR[7][20] = {};
 	double dC4nR[7][20] = {};
 	double dC6nR[7][20] = {};
 	double dC8nR[7][20] = {};
@@ -147,6 +157,9 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 		for ( int c = 0; c <  NCent; c++ ) {
 			double sum = 0;
 			double weight = 0;
+
+			double sum2 = 0;
+			double weight2 = 0;
 
 			double sum4 = 0;
 			double weight4 = 0;
@@ -161,6 +174,9 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 				sum += dCn[n][m] * yQaabc[n][m];
 				weight += yQaabc[n][m];
 
+				sum2 += dC2n[n][m] * yQ2[n][m];
+				weight2 += yQ2[n][m];
+
 				sum4 += dC4n[n][m] * yQ4[n][m];
 				weight4 += yQ4[n][m];
 
@@ -172,6 +188,8 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 			}
 			if ( weight > 0 ) sum /= weight;
 			else sum = 0;
+			if ( weight2 > 0 ) sum2 /= weight2;
+			else sum2 = 0;
 			if ( weight4 > 0 ) sum4 /= weight4;
 			else sum4 = 0;
 			if ( weight6 > 0 ) sum6 /= weight6;
@@ -180,6 +198,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 			else sum8 = 0;
 
 			dCnR[n][c] = sum;
+			dC2nR[n][c] = sum2;
 			dC4nR[n][c] = sum4;
 			dC6nR[n][c] = sum6;
 			dC8nR[n][c] = sum8;
@@ -195,32 +214,42 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	}
 
 	TH1D * hCnR[7];
+	TH1D * hC2nR[7];
 	TH1D * hC4nR[7];
 	TH1D * hC6nR[7];
 	TH1D * hC8nR[7];
 
+	TH1D * hV2nR[7];
 	TH1D * hV4nR[7];
 	TH1D * hV6nR[7];
 	TH1D * hV8nR[7];
 
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n] = new TH1D(Form("hCnR%i", n), Form("hCnR%i", n), 20, 0, 20);
+		hC2nR[n] = new TH1D(Form("hC2nR%i", n), Form("hC2nR%i", n), 20, 0, 20);
 		hC4nR[n] = new TH1D(Form("hC4nR%i", n), Form("hC4nR%i", n), 20, 0, 20);
 		hC6nR[n] = new TH1D(Form("hC6nR%i", n), Form("hC6nR%i", n), 20, 0, 20);
 		hC8nR[n] = new TH1D(Form("hC8nR%i", n), Form("hC8nR%i", n), 20, 0, 20);
 
 		for ( int c = 0; c < NCent; c++ ) {
 			hCnR[n]->SetBinContent( c+1, dCnR[n][c] );
+			hC2nR[n]->SetBinContent( c+1, dC2nR[n][c] );
 			hC4nR[n]->SetBinContent( c+1, dC4nR[n][c] );
 			hC6nR[n]->SetBinContent( c+1, dC6nR[n][c] );
 			hC8nR[n]->SetBinContent( c+1, dC8nR[n][c] );
 		}
 
+		hV2nR[n] = new TH1D(Form("hV2nR%i", n), Form("hV2nR%i", n), 20, 0, 20);
 		hV4nR[n] = new TH1D(Form("hV4nR%i", n), Form("hV4nR%i", n), 20, 0, 20);
 		hV6nR[n] = new TH1D(Form("hV6nR%i", n), Form("hV6nR%i", n), 20, 0, 20);
 		hV8nR[n] = new TH1D(Form("hV8nR%i", n), Form("hV8nR%i", n), 20, 0, 20);
 
 		for ( int i = 0; i < NCent; i++ ) {
+			double C2 = dC2nR[n][i];
+			double V2 = 0;
+			if ( C2 > 0 ) V2 = pow(C2, 1./2);
+			else V2 = -pow(-C2, 1./2);
+
 			double C4 = dC4nR[n][i];
 			double V4 = 0;
 			if ( C4 > 0 ) V4 = - pow(C4, 1./4);
@@ -236,6 +265,7 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 			if ( C8 > 0 ) V8 = -pow(C8/33., 1./8);
 			else V8 = pow(-C8/33., 1./8);
 
+			hV2nR[n]->SetBinContent( i+1, V2 );
 			hV4nR[n]->SetBinContent( i+1, V4 );
 			hV6nR[n]->SetBinContent( i+1, V6 );
 			hV8nR[n]->SetBinContent( i+1, V8 );
@@ -245,10 +275,12 @@ void bGet(int s1 = 0, int s2 = 10, int s3 = 10)
 	TFile * fwrite = new TFile(Form("%s/outputC_%i_%i.root", ftxt[s1], s2, s3), "recreate");
 	for ( int n = 2; n < 7; n++ ) {
 		hCnR[n]->Write();
+		hC2nR[n]->Write();
 		hC4nR[n]->Write();
 		hC6nR[n]->Write();
 		hC8nR[n]->Write();
 
+		hV2nR[n]->Write();
 		hV4nR[n]->Write();
 		hV6nR[n]->Write();
 		hV8nR[n]->Write();

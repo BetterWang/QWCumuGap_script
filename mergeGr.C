@@ -6,6 +6,7 @@
 
 const double * NoffX;
 bool bPbPb;
+/*
 typedef struct
 {
 	TGraphErrors * grCn;
@@ -20,10 +21,14 @@ typedef struct
 	TGraphErrors * grV86;
 } VnGraph;
 
-void getGraph(TFile * f, VnGraph &gr, int n)
+*/
+void getGraphM(TFile * f, VnGraph &gr, int n)
 {
 	gr.grCn = (TGraphErrors*) f->Get(Form("grCn%i", n));
 	gr.grVn = (TGraphErrors*) f->Get(Form("grVn%i", n));
+
+	gr.grC2 = (TGraphErrors*) f->Get(Form("grC2%i", n));
+	gr.grV2 = (TGraphErrors*) f->Get(Form("grV2%i", n));
 
 	gr.grC4 = (TGraphErrors*) f->Get(Form("grC4%i", n));
 	gr.grV4 = (TGraphErrors*) f->Get(Form("grV4%i", n));
@@ -37,7 +42,6 @@ void getGraph(TFile * f, VnGraph &gr, int n)
 	gr.grV64 = (TGraphErrors*) f->Get(Form("grV64%i", n));
 	gr.grV86 = (TGraphErrors*) f->Get(Form("grV86%i", n));
 }
-
 
 TGraphErrors* combineGr(TGraphErrors* gMB0, TGraphErrors* gHM0, TGraphErrors* gHM1, TGraphErrors* gHM7)
 {
@@ -161,13 +165,17 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 	VnGraph grHM1;
 	VnGraph grHM7;
 
-	getGraph(fMB0, grMB0, n);
-	getGraph(fHM0, grHM0, n);
-	getGraph(fHM1, grHM1, n);
-	getGraph(fHM7, grHM7, n);
+	getGraphM(fMB0, grMB0, n);
+	getGraphM(fHM0, grHM0, n);
+	getGraphM(fHM1, grHM1, n);
+	getGraphM(fHM7, grHM7, n);
 
 	TGraphErrors * grCn = combineGr(grMB0.grCn, grHM0.grCn, grHM1.grCn, grHM7.grCn);
 	TGraphErrors * grVn = combineGr(grMB0.grVn, grHM0.grVn, grHM1.grVn, grHM7.grVn);
+
+	TGraphErrors * grC2 = combineGr(grMB0.grC2, grHM0.grC2, grHM1.grC2, grHM7.grC2);
+	TGraphErrors * grV2 = combineGr(grMB0.grV2, grHM0.grV2, grHM1.grV2, grHM7.grV2);
+
 	TGraphErrors * grC4 = combineGr(grMB0.grC4, grHM0.grC4, grHM1.grC4, grHM7.grC4);
 	TGraphErrors * grV4 = combineGr(grMB0.grV4, grHM0.grV4, grHM1.grV4, grHM7.grV4);
 
@@ -189,6 +197,8 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 
 	if ( bPbPb ) {
 		if ( n == 2 ) {
+			trimC24AA(grC2);
+			trimV24AA(grV2);
 			trimC24AA(grC4);
 			trimV24AA(grV4);
 			trimC26AA(grC6);
@@ -201,6 +211,8 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 			grV64V42 = grRatio(grV6, grV4, grV4, fHIN16022PbPbV2);
 			grV86V42 = grRatio(grV8, grV6, grV4, fHIN16022PbPbV2);
 		} else if ( n == 3 ) {
+			trimC34AA(grC2);
+			trimV34AA(grV2);
 			trimC34AA(grC4);
 			trimV34AA(grV4);
 			grV4V2 = gr2func(grV4, fHIN16022PbPbV3);
@@ -209,6 +221,8 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 		}
 	} else {
 		if ( n == 2 ) {
+			trimC24PA(grC2);
+			trimV24PA(grV2);
 			trimC24PA(grC4);
 			trimV24PA(grV4);
 			trimC26PA(grC6);
@@ -221,6 +235,8 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 			grV64V42 = grRatio(grV6, grV4, grV4, fHIN16022pPbV2);
 			grV86V42 = grRatio(grV8, grV6, grV4, fHIN16022pPbV2);
 		} else if ( n == 3 ) {
+			trimC34PA(grC2);
+			trimV34PA(grV2);
 			trimC34PA(grC4);
 			trimV34PA(grV4);
 			grV4V2 = gr2func(grV4, fHIN16022pPbV3);
@@ -232,6 +248,8 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 	TFile * fsave = new TFile(Form("combined_%i_%i_%i_%i_%i.root", sMB, sHM0, sHM1, sHM7, n), "recreate");
 	grCn->Write(Form("grC%in", n));
 	grVn->Write(Form("grV%in", n));
+	grC2->Write(Form("grC%i2", n));
+	grV2->Write(Form("grV%i2", n));
 	grC4->Write(Form("grC%i4", n));
 	grV4->Write(Form("grV%i4", n));
 	grC6->Write(Form("grC%i6", n));
