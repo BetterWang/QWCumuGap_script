@@ -1,2 +1,2 @@
 
-./runGetE3.sh 358
+./runGetE3.sh 370

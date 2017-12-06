@@ -105,11 +105,15 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 
 	for ( int i = 0; i < grR1->GetN(); i++ ) {
 		grR1->GetY()[i] = gr1->GetY()[i] / gr3->GetY()[i];
-		grR1->GetEY()[i] = fabs( grR1->GetY()[i] * sqrt( (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
+		grR1->GetEY()[i] = fabs( grR1->GetY()[i] * sqrt( (gr1->GetEY()[i]/gr1->GetY()[i])*(gr1->GetEY()[i]/gr1->GetY()[i]) + (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i])
+					- 2 * gr1->GetEY()[i] * gr3->GetEY()[i] /gr1->GetY()[i] / gr3->GetY()[i]
+					) );
 	}
 	for ( int i = 0; i < grR2->GetN(); i++ ) {
 		grR2->GetY()[i] = gr2->GetY()[i] / gr3->GetY()[i];
-		grR2->GetEY()[i] = fabs( grR2->GetY()[i] * sqrt( (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) ) );
+		grR2->GetEY()[i] = fabs( grR2->GetY()[i] * sqrt( (gr2->GetEY()[i]/gr2->GetY()[i])*(gr2->GetEY()[i]/gr2->GetY()[i]) + (gr3->GetEY()[i]/gr3->GetY()[i])*(gr3->GetEY()[i]/gr3->GetY()[i]) 
+					- 2 * gr2->GetEY()[i] * gr3->GetEY()[i] /gr2->GetY()[i] / gr3->GetY()[i]
+					) );
 	}
 
 	hframeR->Draw();

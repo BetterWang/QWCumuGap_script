@@ -14,9 +14,9 @@ void plotXeXe(TString fname = "txt/XeXe_eff_Cent/outGraph.root")
 	TH2D * hframe = new TH2D("hframe", "", 1, 0, 99, 1, 0.01, 0.14);
 	InitHist(hframe, "Centrality (%)", "v_{2}");
 
-	while ( grV82->GetX()[0] < 40 ) grV82->RemovePoint(0);
-	while ( grV62->GetX()[0] < 30 ) grV62->RemovePoint(0);
-	while ( grV42->GetX()[0] < 20 ) grV42->RemovePoint(0);
+//	while ( grV82->GetX()[0] < 40 ) grV82->RemovePoint(0);
+//	while ( grV62->GetX()[0] < 30 ) grV62->RemovePoint(0);
+//	while ( grV42->GetX()[0] < 20 ) grV42->RemovePoint(0);
 
 	hframe->Draw();
 

@@ -3,47 +3,47 @@
 #include "tools.h"
 #include "../../style.h"
 
-typedef struct
-{
-	TGraphErrors * grCn;
-	TGraphErrors * grVn;
-	TGraphErrors * grC4;
-	TGraphErrors * grV4;
-	TGraphErrors * grC6;
-	TGraphErrors * grV6;
-	TGraphErrors * grC8;
-	TGraphErrors * grV8;
-} VnGraph;
+//typedef struct
+//{
+//	TGraphErrors * grCn;
+//	TGraphErrors * grVn;
+//	TGraphErrors * grC4;
+//	TGraphErrors * grV4;
+//	TGraphErrors * grC6;
+//	TGraphErrors * grV6;
+//	TGraphErrors * grC8;
+//	TGraphErrors * grV8;
+//} VnGraph;
 
-void getGraph(TFile * f, VnGraph &gr, int n)
-{
-	gr.grCn = (TGraphErrors*) f->Get(Form("grC%in", n));
-	gr.grVn = (TGraphErrors*) f->Get(Form("grV%in", n));
-
-	gr.grC4 = (TGraphErrors*) f->Get(Form("grC%i4", n));
-	gr.grV4 = (TGraphErrors*) f->Get(Form("grV%i4", n));
-
-	gr.grC6 = (TGraphErrors*) f->Get(Form("grC%i6", n));
-	gr.grV6 = (TGraphErrors*) f->Get(Form("grV%i6", n));
-
-	gr.grC8 = (TGraphErrors*) f->Get(Form("grC%i8", n));
-	gr.grV8 = (TGraphErrors*) f->Get(Form("grV%i8", n));
-
-	gr.grV4->SetMarkerSize(2);
-	gr.grV6->SetMarkerSize(2);
-	gr.grV8->SetMarkerSize(2);
-
-	gr.grV4->SetMarkerStyle(kFullSquare);
-	gr.grV6->SetMarkerStyle(kFullCross);
-	gr.grV8->SetMarkerStyle(kFullDiamond);
-};
+//void getGraph(TFile * f, VnGraph &gr, int n)
+//{
+//	gr.grCn = (TGraphErrors*) f->Get(Form("grC%in", n));
+//	gr.grVn = (TGraphErrors*) f->Get(Form("grV%in", n));
+//
+//	gr.grC4 = (TGraphErrors*) f->Get(Form("grC%i4", n));
+//	gr.grV4 = (TGraphErrors*) f->Get(Form("grV%i4", n));
+//
+//	gr.grC6 = (TGraphErrors*) f->Get(Form("grC%i6", n));
+//	gr.grV6 = (TGraphErrors*) f->Get(Form("grV%i6", n));
+//
+//	gr.grC8 = (TGraphErrors*) f->Get(Form("grC%i8", n));
+//	gr.grV8 = (TGraphErrors*) f->Get(Form("grV%i8", n));
+//
+//	gr.grV4->SetMarkerSize(2);
+//	gr.grV6->SetMarkerSize(2);
+//	gr.grV8->SetMarkerSize(2);
+//
+//	gr.grV4->SetMarkerStyle(kFullSquare);
+//	gr.grV6->SetMarkerStyle(kFullCross);
+//	gr.grV8->SetMarkerStyle(kFullDiamond);
+//};
 
 void plotL()
 {
-	TString s2pPb = "grV2_sysTight2.root";
-	TString s3pPb = "grV3_sysTight2.root";
-	TString s2PbPb = "grV2PbPb_sysTight2.root";
-	TString s3PbPb = "grV3PbPb_sysTight2.root";
+	TString s2pPb = "grV2_merged.root";
+	TString s3pPb = "grV3_merged.root";
+	TString s2PbPb = "grV2PbPb_GMO.root";
+	TString s3PbPb = "grV3PbPb_GMO.root";
 	TString s2pp = "grV2_pp13.root";
 	TString s3pp = "grV3_pp13.root";
 
@@ -77,6 +77,7 @@ void plotL()
 
 	/////// pPb v24
 	hframeV->Draw();
+	grPA2.grV4->SetMarkerStyle(kFullSquare);
 	grPA2.grV4->Draw("psame");
 	mgr_pPb_v24.Draw();
 
@@ -125,6 +126,7 @@ void plotL()
 
 	/////// PbPb v24
 	hframeV->Draw();
+	grAA2.grV4->SetMarkerStyle(kFullSquare);
 	grAA2.grV4->Draw("psame");
 	mgr_PbPb_v24.Draw();
 

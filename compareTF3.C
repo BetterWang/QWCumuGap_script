@@ -4,7 +4,7 @@
 void splitCanv(TCanvas * c);
 void initHist(TH2D* h);
 
-void compareTF()
+void compareTF3()
 {
 
 	HIN_16_022();
@@ -12,7 +12,7 @@ void compareTF()
 	TCanvas * cT = MakeCanvas("cT", "cT", 600, 600);
 	splitCanv(cT);
 
-	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{2}", 1, 0, 399, 1, 0, 0.25);
+	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{3}", 1, 0, 399, 1, 0, 0.25);
 	initHist(hframe);
 	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.89, 1.09);
 	initHist(hframeR);
@@ -28,17 +28,17 @@ void compareTF()
 	cT->cd(1);
 	hframe->Draw();
 	l0->Draw();
-	TGraphErrors * gr1 = grHIN16022pPbV2;
-	TGraphErrors * gr2 = grHIN16022PbPbV2;
-	TF1 * func1 = fHIN16022pPbV2;
-	TF1 * func2 = fHIN16022PbPbV2;
+	TGraphErrors * gr1 = grHIN16022pPbV3;
+	TGraphErrors * gr2 = grHIN16022PbPbV3;
+	TF1 * func1 = fHIN16022pPbV3;
+	TF1 * func2 = fHIN16022PbPbV3;
 
 	gr2->SetMarkerColor(kBlue);
 	func1->SetLineColor(kRed);
 	func2->SetLineColor(kBlue);
 
-	legPt->AddEntry(gr1, "pPb v_{2}{2}", "p");
-	legPt->AddEntry(gr2, "PbPb v_{2}{2}", "p");
+	legPt->AddEntry(gr1, "pPb v_{3}{2}", "p");
+	legPt->AddEntry(gr2, "PbPb v_{3}{2}", "p");
 
 	gr1->Draw("Psame");
 	gr2->Draw("Psame");
@@ -66,7 +66,7 @@ void compareTF()
 	grR1->Draw("PLsame");
 	grR2->Draw("PLsame");
 
-	cT->SaveAs("v2func.pdf");
+	cT->SaveAs("v3func.pdf");
 }
 
 void splitCanv(TCanvas * c)
