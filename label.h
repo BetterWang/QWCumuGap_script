@@ -8,7 +8,7 @@ char const * fname[] = {
 	"../pPb/PAHighMultiplicity4/crab_PAHM4_cumugap_eff_v5/171205_030847/0000/",			// 5 pPb HM4 standard
 	"../pPb/PAHighMultiplicity5/crab_PAHM5_cumugap_eff_v5/171205_030926/0000/",			// 6 pPb HM5 standard
 	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_v5/171205_031005/0000/",			// 7 pPb HM6 standard
-	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_v5/170304_100748/0000/",			// 8 pPb HM7 standard
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_rerun_v5/171206_171041/0000/",		// 8 pPb HM7 standard
 	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_v5/170304_101121/0000/",				// 9 pPb MB1 standard
 	"../pPb/PAMinimumBias2/crab_PAMB2_cumugap_eff_v5/171205_032918/0000/",				// 10 pPb MB2 standard
 	"../pPb/PAMinimumBias3/crab_PAMB3_cumugap_eff_v5/171205_032941/0000/",				// 11 pPb MB3 standard
