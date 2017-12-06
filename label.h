@@ -383,6 +383,25 @@ char const * fname[] = {
 	"",	// 380 PbPb ppreco MB6 GMOVertex sysTight
 	"",	// 381 PbPb ppreco MB7 GMOVertex sysTight
 	"NA",			// 382 PbPb ppreco MB567 GMOVertex sysTight
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysPhiAcc_v1/171205_215920/0000/",			// 383 pPb HM0 sysPhiAcc
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysPhiAcc_v1/171205_215934/0000/",			// 384 pPb HM1 sysPhiAcc
+	"../pPb/PAHighMultiplicity2/crab_PAHM2_cumugap_eff_sysPhiAcc_v1/171205_215950/0000/",			// 385 pPb HM2 sysPhiAcc
+	"../pPb/PAHighMultiplicity3/crab_PAHM3_cumugap_eff_sysPhiAcc_v1/171205_220006/0000/",			// 386 pPb HM3 sysPhiAcc
+	"../pPb/PAHighMultiplicity4/crab_PAHM4_cumugap_eff_sysPhiAcc_v1/171205_220020/0000/",			// 387 pPb HM4 sysPhiAcc
+	"../pPb/PAHighMultiplicity5/crab_PAHM5_cumugap_eff_sysPhiAcc_v1/171205_220037/0000/",			// 388 pPb HM5 sysPhiAcc
+	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_sysPhiAcc_v1/171205_220052/0000/",			// 389 pPb HM6 sysPhiAcc
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysPhiAcc_v1/171205_220107/0000/",			// 390 pPb HM7 sysPhiAcc
+	"../pPb/PAHighMultiplicity0/crab_PAHM0_cumugap_eff_sysPhiAcc_reverse_v1/171205_220203/0000/",		// 391 pPb reverse HM0 sysPhiAcc
+	"../pPb/PAHighMultiplicity1/crab_PAHM1_cumugap_eff_sysPhiAcc_reverse_v1/171205_220219/0000/",		// 392 pPb reverse HM1 sysPhiAcc
+	"../pPb/PAHighMultiplicity2/crab_PAHM2_cumugap_eff_sysPhiAcc_reverse_v1/171205_220234/0000/",		// 393 pPb reverse HM2 sysPhiAcc
+	"../pPb/PAHighMultiplicity3/crab_PAHM3_cumugap_eff_sysPhiAcc_reverse_v1/171205_220250/0000/",		// 394 pPb reverse HM3 sysPhiAcc
+	"../pPb/PAHighMultiplicity4/crab_PAHM4_cumugap_eff_sysPhiAcc_reverse_v1/171205_220309/0000/",		// 395 pPb reverse HM4 sysPhiAcc
+	"../pPb/PAHighMultiplicity5/crab_PAHM5_cumugap_eff_sysPhiAcc_reverse_v1/171205_220325/0000/",		// 396 pPb reverse HM5 sysPhiAcc
+	"../pPb/PAHighMultiplicity6/crab_PAHM6_cumugap_eff_sysPhiAcc_reverse_v1/171205_220341/0000/",		// 397 pPb reverse HM6 sysPhiAcc
+	"../pPb/PAHighMultiplicity7/crab_PAHM7_cumugap_eff_sysPhiAcc_reverse_v1/171205_220357/0000/",		// 398 pPb reverse HM7 sysPhiAcc
+	"NA",		// 399 pPb+Pbp HM0 sysPhiAcc
+	"NA",		// 400 pPb+Pbp HM123456 sysPhiAcc
+	"NA",		// 401 pPb+Pbp HM7 sysPhiAcc
 };
 
 char const * ftxt[] = {
@@ -769,6 +788,25 @@ char const * ftxt[] = {
 	"txt/PbPb15_ppreco6_sysTight_GMO/",		// 380
 	"txt/PbPb15_ppreco7_sysTight_GMO/",		// 381
 	"txt/PbPb15_ppreco_sysTight_GMO/",		// 382
+	"txt/pPb_HM0_sysPhiAcc/",			// 383
+	"txt/pPb_HM1_sysPhiAcc/",			// 384
+	"txt/pPb_HM2_sysPhiAcc/",			// 385
+	"txt/pPb_HM3_sysPhiAcc/",			// 386
+	"txt/pPb_HM4_sysPhiAcc/",			// 387
+	"txt/pPb_HM5_sysPhiAcc/",			// 388
+	"txt/pPb_HM6_sysPhiAcc/",			// 389
+	"txt/pPb_HM7_sysPhiAcc/",			// 390
+	"txt/pPb_HM0_sysPhiAcc_reverse/",		// 391
+	"txt/pPb_HM1_sysPhiAcc_reverse/",		// 392
+	"txt/pPb_HM2_sysPhiAcc_reverse/",		// 393
+	"txt/pPb_HM3_sysPhiAcc_reverse/",		// 394
+	"txt/pPb_HM4_sysPhiAcc_reverse/",		// 395
+	"txt/pPb_HM5_sysPhiAcc_reverse/",		// 396
+	"txt/pPb_HM6_sysPhiAcc_reverse/",		// 397
+	"txt/pPb_HM7_sysPhiAcc_reverse/",		// 398
+	"txt/pPb_HM0_sysPhiAcc_merge/",			// 399
+	"txt/pPb_HM123456_sysPhiAcc_merge/",		// 400
+	"txt/pPb_HM7_sysPhiAcc_merge/",			// 401
 };
 
 
