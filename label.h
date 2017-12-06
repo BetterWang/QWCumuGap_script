@@ -402,6 +402,8 @@ char const * fname[] = {
 	"NA",		// 399 pPb+Pbp HM0 sysPhiAcc
 	"NA",		// 400 pPb+Pbp HM123456 sysPhiAcc
 	"NA",		// 401 pPb+Pbp HM7 sysPhiAcc
+	"NA",		// 402 pPb HM123456
+	"NA",		// 403 pPb reverse HM123456
 };
 
 char const * ftxt[] = {
@@ -807,6 +809,8 @@ char const * ftxt[] = {
 	"txt/pPb_HM0_sysPhiAcc_merge/",			// 399
 	"txt/pPb_HM123456_sysPhiAcc_merge/",		// 400
 	"txt/pPb_HM7_sysPhiAcc_merge/",			// 401
+	"txt/pPb_HM123456_full/",			// 402
+	"txt/pPb_HM123456_full_reverse/",		// 403
 };
 
 
