@@ -76,6 +76,7 @@ void plotL()
 	InitHist(hframeV, "N_{trk}^{offline}", "v_{n}{m}");
 
 	/////// pPb v24
+	hframeV->GetYaxis()->SetTitle("v_{2}{4}");
 	hframeV->Draw();
 	grPA2.grV4->SetMarkerStyle(kFullSquare);
 	grPA2.grV4->Draw("psame");
@@ -86,13 +87,14 @@ void plotL()
 	legV24->SetTextFont(42);
 	legV24->SetTextSize(0.06);
 	legV24->SetBorderSize(0);
-	legV24->AddEntry(grPA2.grV4, "v_{2}{4} pPb 8 TeV", "p");
-	legV24->AddEntry(mgr_pPb_v24.GetListOfGraphs()->At(0), "v_{2}{4} pPb 5 TeV", "p");
+	legV24->AddEntry(grPA2.grV4, "pPb 8 TeV", "p");
+	legV24->AddEntry(mgr_pPb_v24.GetListOfGraphs()->At(0), "pPb 5 TeV", "p");
 	legV24->Draw();
 
 	cV->SaveAs("pPb_v24.pdf");
 
 	/////// pPb v26
+	hframeV->GetYaxis()->SetTitle("v_{2}{6}");
 	hframeV->Draw();
 	grPA2.grV6->Draw("psame");
 	mgr_pPb_v26.Draw();
@@ -102,13 +104,14 @@ void plotL()
 	legV26->SetTextFont(42);
 	legV26->SetTextSize(0.06);
 	legV26->SetBorderSize(0);
-	legV26->AddEntry(grPA2.grV6, "v_{2}{6} pPb 8 TeV", "p");
-	legV26->AddEntry(mgr_pPb_v26.GetListOfGraphs()->At(0), "v_{2}{6} pPb 5 TeV", "p");
+	legV26->AddEntry(grPA2.grV6, "pPb 8 TeV", "p");
+	legV26->AddEntry(mgr_pPb_v26.GetListOfGraphs()->At(0), "pPb 5 TeV", "p");
 	legV26->Draw();
 
 	cV->SaveAs("pPb_v26.pdf");
 
 	/////// pPb v28
+	hframeV->GetYaxis()->SetTitle("v_{2}{8}");
 	hframeV->Draw();
 	grPA2.grV8->Draw("psame");
 	mgr_pPb_v28.Draw();
@@ -118,13 +121,14 @@ void plotL()
 	legV28->SetTextFont(42);
 	legV28->SetTextSize(0.06);
 	legV28->SetBorderSize(0);
-	legV28->AddEntry(grPA2.grV8, "v_{2}{8} pPb 8 TeV", "p");
-	legV28->AddEntry(mgr_pPb_v28.GetListOfGraphs()->At(0), "v_{2}{8} pPb 5 TeV", "p");
+	legV28->AddEntry(grPA2.grV8, "pPb 8 TeV", "p");
+	legV28->AddEntry(mgr_pPb_v28.GetListOfGraphs()->At(0), "pPb 5 TeV", "p");
 	legV28->Draw();
 
 	cV->SaveAs("pPb_v28.pdf");
 
 	/////// PbPb v24
+	hframeV->GetYaxis()->SetTitle("v_{2}{4}");
 	hframeV->Draw();
 	grAA2.grV4->SetMarkerStyle(kFullSquare);
 	grAA2.grV4->Draw("psame");
@@ -135,13 +139,14 @@ void plotL()
 	legV24AA->SetTextFont(42);
 	legV24AA->SetTextSize(0.06);
 	legV24AA->SetBorderSize(0);
-	legV24AA->AddEntry(grAA2.grV4, "v_{2}{4} PbPb 5 TeV", "p");
-	legV24AA->AddEntry(mgr_PbPb_v24.GetListOfGraphs()->At(0), "v_{2}{4} PbPb 2.76 TeV", "p");
+	legV24AA->AddEntry(grAA2.grV4, "PbPb 5 TeV", "p");
+	legV24AA->AddEntry(mgr_PbPb_v24.GetListOfGraphs()->At(0), "PbPb 2.76 TeV", "p");
 	legV24AA->Draw();
 
 	cV->SaveAs("PbPb_v24.pdf");
 
 	/////// PbPb v26
+	hframeV->GetYaxis()->SetTitle("v_{2}{6}");
 	hframeV->Draw();
 	grAA2.grV6->Draw("psame");
 	mgr_PbPb_v26.Draw();
@@ -151,14 +156,15 @@ void plotL()
 	legV26AA->SetTextFont(42);
 	legV26AA->SetTextSize(0.06);
 	legV26AA->SetBorderSize(0);
-	legV26AA->AddEntry(grAA2.grV6, "v_{2}{6} PbPb 5 TeV", "p");
-	legV26AA->AddEntry(mgr_PbPb_v26.GetListOfGraphs()->At(0), "v_{2}{6} PbPb 2.76 TeV", "p");
+	legV26AA->AddEntry(grAA2.grV6, "PbPb 5 TeV", "p");
+	legV26AA->AddEntry(mgr_PbPb_v26.GetListOfGraphs()->At(0), "PbPb 2.76 TeV", "p");
 	legV26AA->Draw();
 
 	cV->SaveAs("PbPb_v26.pdf");
 
 
 	/////// PbPb v28
+	hframeV->GetYaxis()->SetTitle("v_{2}{8}");
 	hframeV->Draw();
 	grAA2.grV8->Draw("psame");
 	mgr_PbPb_v28.Draw();
@@ -168,8 +174,8 @@ void plotL()
 	legV28AA->SetTextFont(42);
 	legV28AA->SetTextSize(0.06);
 	legV28AA->SetBorderSize(0);
-	legV28AA->AddEntry(grAA2.grV8, "v_{2}{8} PbPb 5 TeV", "p");
-	legV28AA->AddEntry(mgr_PbPb_v28.GetListOfGraphs()->At(0), "v_{2}{8} PbPb 2.76 TeV", "p");
+	legV28AA->AddEntry(grAA2.grV8, "PbPb 5 TeV", "p");
+	legV28AA->AddEntry(mgr_PbPb_v28.GetListOfGraphs()->At(0), "PbPb 2.76 TeV", "p");
 	legV28AA->Draw();
 
 	cV->SaveAs("PbPb_v28.pdf");

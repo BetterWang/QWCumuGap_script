@@ -23,6 +23,7 @@ typedef struct
 	TGraphErrors * grV64;
 	TGraphErrors * grV86;
 	TGraphErrors * grV4V2;
+	TGraphErrors * grV4V2sub;
 } VnGraph;
 
 void overRideE(TGraphErrors* gr, TGraphErrors* gr1, TGraphErrors* gr2)
@@ -85,6 +86,7 @@ void getGraph(TFile * f, VnGraph &gr, int n)
 	}
 
 	gr.grV4V2= (TGraphErrors*) f->Get(Form("grV4V2%i", n));
+	gr.grV4V2sub= (TGraphErrors*) f->Get(Form("grV4V2sub%i", n));
 }
 
 TGraphErrors * negGr(TGraphErrors * gr)
@@ -392,6 +394,10 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	hframeVn->Draw();
 
 	grPA3.grV4->SetMarkerStyle(kMultiply);
+	grHIN16022pPbV3sub->SetMarkerStyle(kMultiply);
+	grHIN16022pPbV3sub->SetMarkerColor(kGreen);
+	grHIN16022pPbV3sub->SetLineColor(kGreen);
+	grHIN16022pPbV3->SetLineColor(kGreen);
 	grHIN16022pPbV3->SetMarkerStyle(kMultiply);
 
 	TGraphErrors * grPAV24sys = sysGr(grPA2.grV4, 0.01 , 3003);
@@ -400,8 +406,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	TGraphErrors * grPAV34sys = sysGr(grPA3.grV4, 0.05, 3003);
 
-	TGraphErrors * grHIN16022pPbV2sys = sysGr(grHIN16022pPbV2, 0.026, 3001);
-	TGraphErrors * grHIN16022pPbV3sys = sysGr(grHIN16022pPbV3, 0.042, 3001);
+	TGraphErrors * grHIN16022pPbV2sys = sysGr(grHIN16022pPbV2sub, 0.018, 3001);
+	TGraphErrors * grHIN16022pPbV3sys = sysGr(grHIN16022pPbV3sub, 0.018, 3002);
 
 	grPAV24sys->Draw("[]3");
 	grPAV26sys->Draw("[]3");
@@ -419,37 +425,41 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	grPA3.grV4->SetMarkerSize(1.5);
 	grPA3.grV4->Draw("Psame");
-	grHIN16022pPbV2->Draw("Psame");
-	grHIN16022pPbV3->Draw("Psame");
+	grHIN16022pPbV2sub->Draw("Psame");
+	grHIN16022pPbV3sub->Draw("Psame");
+	grHIN16022pPbV2->Draw("lxsame");
+	grHIN16022pPbV3->Draw("lxsame");
 
 //	grHIN14006pPbV26->Draw("Psame");
 //	grHIN14006pPbV28->Draw("Psame");
 
 	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
-	latexS.DrawLatexNDC(0.20, 0.92, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
 //	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
-	TLegend * legV2 = new TLegend(0.18, 0.60, 0.60, 0.85);
+	TLegend * legV2 = new TLegend(0.18, 0.60, 0.60, 0.93);
 	legV2->SetFillColor(kWhite);
 	legV2->SetTextFont(42);
 	legV2->SetTextSize(0.05);
 	legV2->SetBorderSize(0);
 
-	legV2->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "p");
 	legV2->AddEntry(grPA2.grV4, "v_{2}{4}", "p");
 	legV2->AddEntry(grPA2.grV6, "v_{2}{6}", "p");
 	legV2->AddEntry(grPA2.grV8, "v_{2}{8}", "p");
+	legV2->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
+	legV2->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "l");
 	legV2->Draw();
 
-	TLegend * legV21 = new TLegend(0.58, 0.66, 0.90, 0.85);
+	TLegend * legV21 = new TLegend(0.58, 0.68, 0.90, 0.93);
 	legV21->SetFillColor(kWhite);
 	legV21->SetTextFont(42);
 	legV21->SetTextSize(0.05);
 	legV21->SetBorderSize(0);
 
-	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "p");
-	legV21->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
-	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro", "l");
+	legV21->AddEntry(grHIN16022PbPbV2sub, "v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV21->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "l");
+	legV21->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "l");
 	legV21->Draw();
 
 	p = cVn->cd(2);
@@ -457,7 +467,10 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	hframeVn->Draw();
 
 	grAA3.grV4->SetMarkerStyle(kMultiply);
-	grHIN16022PbPbV3->SetMarkerStyle(kMultiply);
+	grHIN16022PbPbV3sub->SetMarkerStyle(kMultiply);
+	grHIN16022PbPbV3sub->SetMarkerColor(kGreen);
+	grHIN16022PbPbV3sub->SetLineColor(kGreen);
+	grHIN16022PbPbV3->SetLineColor(kGreen);
 
 	TGraphErrors * grAAV24sys = sysGr(grAA2.grV4, 0.01, 3003);
 	TGraphErrors * grAAV26sys = sysGr(grAA2.grV6, 0.01, 3003);
@@ -465,8 +478,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	TGraphErrors * grAAV34sys = sysGr(grAA3.grV4, 0.03, 3003);
 
-	TGraphErrors * grHIN16022PbPbV2sys = sysGr(grHIN16022PbPbV2, 0.014, 3001);
-	TGraphErrors * grHIN16022PbPbV3sys = sysGr(grHIN16022PbPbV3, 0.014, 3001);
+	TGraphErrors * grHIN16022PbPbV2sys = sysGr(grHIN16022PbPbV2sub, 0.018, 3001);
+	TGraphErrors * grHIN16022PbPbV3sys = sysGr(grHIN16022PbPbV3sub, 0.018, 3002);
 
 	grAAV24sys->Draw("[]3");
 	grAAV26sys->Draw("[]3");
@@ -482,13 +495,15 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	grAA3.grV4->SetMarkerSize(1.5);
 	grAA3.grV4->Draw("Psame");
-	grHIN16022PbPbV2->Draw("Psame");
-	grHIN16022PbPbV3->Draw("Psame");
+	grHIN16022PbPbV2sub->Draw("Psame");
+	grHIN16022PbPbV3sub->Draw("Psame");
+	grHIN16022PbPbV2->Draw("Lxsame");
+	grHIN16022PbPbV3->Draw("Lxsame");
 //	grHIN14006PbPbV26->Draw("Psame");
 //	grHIN14006PbPbV28->Draw("Psame");
 
-	latexS.DrawLatexNDC(0.10, 0.92, "PbPb 5.02 TeV");
-	latexS.DrawLatexNDC(0.10, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	latexS.DrawLatexNDC(0.59, 1.0, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
 	////////////////////////////////////
 	TCanvas * cV2 = MakeCanvas("cV2", "cV2", 800, 500);
@@ -681,56 +696,70 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	p = cV42ratio->cd(1);
 	p->SetTopMargin(0.06);
 	hframeV42ratio->Draw();
-	grPA3.grV4V2->SetMarkerStyle(kMultiply);
+	grPA3.grV4V2sub->SetMarkerStyle(kMultiply);
 
+	grPA2.grV4V2sub->SetMarkerColor(kRed);
+	grPA2.grV4V2sub->SetLineColor(kRed);
 	grPA2.grV4V2->SetMarkerColor(kRed);
 	grPA2.grV4V2->SetLineColor(kRed);
 
-	TGraphErrors * grPA2V42sys = sysGr(grPA2.grV4V2, 0.03, 3001);
-	TGraphErrors * grPA3V42sys = sysGr(grPA3.grV4V2, 0.03, 3003);
+	TGraphErrors * grPA2V42sys = sysGr(grPA2.grV4V2sub, 0.03, 3001);
+	TGraphErrors * grPA3V42sys = sysGr(grPA3.grV4V2sub, 0.03, 3003);
 
 	grPA2V42sys->Draw("[]3");
 	grPA3V42sys->Draw("[]3");
 
-	grPA2.grV4V2->Draw("psame");
-	grPA3.grV4V2->Draw("psame");
+	grPA2.grV4V2sub->Draw("psame");
+	grPA3.grV4V2sub->Draw("psame");
+	grPA2.grV4V2->Draw("lxsame");
+	grPA3.grV4V2->Draw("lxsame");
+
+	gr1702_01730v242_3->SetLineStyle(kDashed);
+	gr1702_01730v342_3->SetLineStyle(kDashed);
+
 	gr1702_01730v242_3->Draw("lsame");
 	gr1702_01730v342_3->Draw("lsame");
 
-	latexS.DrawLatexNDC(0.15, 0.99, "#bf{CMS}");
-	latexS.DrawLatexNDC(0.20, 0.92, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
 
-	TLegend * legV42 = new TLegend(0.22, 0.62, 0.70, 0.85);
+	TLegend * legV42 = new TLegend(0.22, 0.60, 0.70, 0.93);
 	legV42->SetFillColor(kWhite);
 	legV42->SetTextFont(42);
 	legV42->SetTextSize(0.05);
 	legV42->SetBorderSize(0);
 
-	legV42->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "p");
-	legV42->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "p");
-	legV42->AddEntry(gr1702_01730v242_3, "#epsilon_{2}{4} / #epsilon_{3}{2}, #sigma=0.3fm", "l");
-	legV42->AddEntry(gr1702_01730v342_3, "#epsilon_{3}{4} / #epsilon_{3}{2}, #sigma=0.3fm", "l");
+	legV42->AddEntry(grPA2.grV4V2sub, "v_{2}{4} / v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV42->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "l");
+	legV42->AddEntry(grPA3.grV4V2sub, "v_{3}{4} / v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV42->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "l");
+	legV42->AddEntry(gr1702_01730v242_3, "#epsilon_{2}{4} / #epsilon_{3}{2}, 5.02 TeV", "l");
+	legV42->AddEntry(gr1702_01730v342_3, "#epsilon_{3}{4} / #epsilon_{3}{2}, 5.02 TeV", "l");
 	legV42->Draw();
 
 	p = cV42ratio->cd(2);
 	p->SetTopMargin(0.06);
 	hframeV42ratio->Draw();
-	grAA3.grV4V2->SetMarkerStyle(kMultiply);
+	grAA3.grV4V2sub->SetMarkerStyle(kMultiply);
 
+	grAA2.grV4V2sub->SetMarkerColor(kRed);
+	grAA2.grV4V2sub->SetLineColor(kRed);
 	grAA2.grV4V2->SetMarkerColor(kRed);
 	grAA2.grV4V2->SetLineColor(kRed);
 
-	TGraphErrors * grAA2V42sys = sysGr(grAA2.grV4V2, 0.01, 3001);
-	TGraphErrors * grAA3V42sys = sysGr(grAA3.grV4V2, 0.01, 3003);
+	TGraphErrors * grAA2V42sys = sysGr(grAA2.grV4V2sub, 0.01, 3001);
+	TGraphErrors * grAA3V42sys = sysGr(grAA3.grV4V2sub, 0.01, 3003);
 
 	grAA2V42sys->Draw("[]3");
 	grAA3V42sys->Draw("[]3");
 
-	grAA2.grV4V2->Draw("psame");
-	grAA3.grV4V2->Draw("psame");
+	grAA2.grV4V2sub->Draw("psame");
+	grAA3.grV4V2sub->Draw("psame");
+	grAA2.grV4V2->Draw("lxsame");
+	grAA3.grV4V2->Draw("lxsame");
 
-	latexS.DrawLatexNDC(0.10, 0.92, "PbPb 5.02 TeV");
-	latexS.DrawLatexNDC(0.10, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	latexS.DrawLatexNDC(0.59, 1.0, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 	///////////////////
 
 	TCanvas * cVratio = MakeCanvas("cVratio", "cVratio", 500, 900);
@@ -812,7 +841,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	lred->Draw("lsame");
 	lblue->Draw("lsame");
-	latexS.DrawLatex(0.66, 0.82, "Fluctuation-Driven Eccentricities");
+	latexS.DrawLatex(0.66, 0.81, "Fluctuation-Driven Eccentricities");
 
 	////////////////////
 	TCanvas * cC8 = MakeCanvas("cC8", "cC8", 500, 600);

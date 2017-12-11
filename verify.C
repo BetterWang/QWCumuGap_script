@@ -10,7 +10,7 @@ void verify(int s1 = 1){
 
 		TH1D * h;
 		TH1D * x;
-		int Nevt;
+		unsigned int Nevt;
 		if (!f->IsZombie()) {
 			h= (TH1D*) f->Get("hNoff");
 			x= (TH1D*) f->Get("hCnR2");

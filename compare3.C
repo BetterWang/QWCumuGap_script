@@ -117,8 +117,8 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	}
 
 	hframeR->Draw();
-	grR1->Draw("PLsame");
-	grR2->Draw("PLsame");
+	grR1->Draw("Psame");
+	grR2->Draw("Psame");
 
 	TF1 *fR1 = new TF1("fR1", "pol0", 100., 300.);
 	TF1 *fR2 = new TF1("fR2", "pol0", 100., 300.);

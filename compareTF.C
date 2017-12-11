@@ -17,7 +17,7 @@ void compareTF()
 	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.89, 1.09);
 	initHist(hframeR);
 
-	TLegend * legPt = new TLegend(0.5, 0.7, 0.85, 0.9);
+	TLegend * legPt = new TLegend(0.5, 0.5, 0.85, 0.9);
 	legPt->SetFillColor(kWhite);
 	legPt->SetTextFont(42);
 	legPt->SetTextSize(0.06);
@@ -30,20 +30,35 @@ void compareTF()
 	l0->Draw();
 	TGraphErrors * gr1 = grHIN16022pPbV2;
 	TGraphErrors * gr2 = grHIN16022PbPbV2;
+	TGraphErrors * gr3 = grHIN16022pPbV2sub;
+	TGraphErrors * gr4 = grHIN16022PbPbV2sub;
 	TF1 * func1 = fHIN16022pPbV2;
 	TF1 * func2 = fHIN16022PbPbV2;
+	TF1 * func3 = fHIN16022pPbV2sub;
+	TF1 * func4 = fHIN16022PbPbV2sub;
 
+	gr1->SetMarkerColor(kRed);
 	gr2->SetMarkerColor(kBlue);
+	gr3->SetMarkerColor(kBlack);
+	gr4->SetMarkerColor(kGreen);
 	func1->SetLineColor(kRed);
 	func2->SetLineColor(kBlue);
+	func3->SetLineColor(kBlack);
+	func4->SetLineColor(kGreen);
 
 	legPt->AddEntry(gr1, "pPb v_{2}{2}", "p");
+	legPt->AddEntry(gr3, "pPb v_{2}^{sub}{2}", "p");
 	legPt->AddEntry(gr2, "PbPb v_{2}{2}", "p");
+	legPt->AddEntry(gr4, "PbPb v_{2}^{sub}{2}", "p");
 
 	gr1->Draw("Psame");
 	gr2->Draw("Psame");
+	gr3->Draw("Psame");
+	gr4->Draw("Psame");
 	func1->Draw("lsame");
 	func2->Draw("lsame");
+	func3->Draw("lsame");
+	func4->Draw("lsame");
 //	grHIN16022pPbV2int->Draw("[]3");
 //	grHIN16022PbPbV2int->Draw("[]3");
 	legPt->Draw();
@@ -51,6 +66,8 @@ void compareTF()
 
 	TGraphErrors * grR1 = (TGraphErrors*) gr1->Clone("grR1");
 	TGraphErrors * grR2 = (TGraphErrors*) gr2->Clone("grR2");
+	TGraphErrors * grR3 = (TGraphErrors*) gr3->Clone("grR3");
+	TGraphErrors * grR4 = (TGraphErrors*) gr4->Clone("grR4");
 
 	for ( int i = 0; i < grR1->GetN(); i++ ) {
 		grR1->GetY()[i] = gr1->GetY()[i] / func1->Eval(gr1->GetX()[i]);
@@ -62,9 +79,21 @@ void compareTF()
 		grR2->GetEY()[i] = gr2->GetEY()[i] / func2->Eval(gr2->GetX()[i]);
 	}
 
+	for ( int i = 0; i < grR3->GetN(); i++ ) {
+		grR3->GetY()[i] = gr3->GetY()[i] / func3->Eval(gr3->GetX()[i]);
+		grR3->GetEY()[i] = gr3->GetEY()[i] / func3->Eval(gr3->GetX()[i]);
+	}
+
+	for ( int i = 0; i < grR4->GetN(); i++ ) {
+		grR4->GetY()[i] = gr4->GetY()[i] / func4->Eval(gr4->GetX()[i]);
+		grR4->GetEY()[i] = gr4->GetEY()[i] / func4->Eval(gr4->GetX()[i]);
+	}
+
 	hframeR->Draw();
 	grR1->Draw("PLsame");
 	grR2->Draw("PLsame");
+	grR3->Draw("PLsame");
+	grR4->Draw("PLsame");
 
 	cT->SaveAs("v2func.pdf");
 }

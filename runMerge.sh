@@ -1,19 +1,93 @@
-## pPb
-#root -l -b -q "mergeGr.C(2, 9, 1, 2, 8)"
-#root -l -b -q "mergeGr.C(3, 9, 1, 2, 8)"
-#root -l -b -q "mergeGr.C(4, 9, 1, 2, 8)"
-#
-## Pbp
-#root -l -b -q "mergeGr.C(2, 24, 16, 17, 23)"
-#root -l -b -q "mergeGr.C(3, 24, 16, 17, 23)"
-#root -l -b -q "mergeGr.C(4, 24, 16, 17, 23)"
-#
-## pPb+Pbp
-#root -l -b -q "mergeGr.C(2, 52, 49, 50, 51)"
-#root -l -b -q "mergeGr.C(3, 52, 49, 50, 51)"
-#root -l -b -q "mergeGr.C(4, 52, 49, 50, 51)"
-#
-#
+# pPb !!!
+root -l -b -q "mergeGr.C(2, 15, 1, 402, 8)"
+root -l -b -q "mergeGr.C(3, 15, 1, 402, 8)"
+root -l -b -q "mergeGr.C(4, 15, 1, 402, 8)"
+
+# Pbp
+root -l -b -q "mergeGr.C(2, 30, 16, 403, 23)"
+root -l -b -q "mergeGr.C(3, 30, 16, 403, 23)"
+root -l -b -q "mergeGr.C(4, 30, 16, 403, 23)"
+
+# pPb+Pbp !!!
+root -l -b -q "mergeGr.C(2, 52, 49, 50, 51)"
+root -l -b -q "mergeGr.C(3, 52, 49, 50, 51)"
+root -l -b -q "mergeGr.C(4, 52, 49, 50, 51)"
+
+# pPb+Pbp sysPhiAcc
+root -l -b -q "mergeGr.C(2, 52, 399, 400, 401)"
+root -l -b -q "mergeGr.C(3, 52, 399, 400, 401)"
+root -l -b -q "mergeGr.C(4, 52, 399, 400, 401)"
+
+# pPb sysHighPU
+root -l -b -q "mergeGr.C(2, 141, 138, 139, 140)"
+root -l -b -q "mergeGr.C(3, 141, 138, 139, 140)"
+root -l -b -q "mergeGr.C(4, 141, 138, 139, 140)"
+
+# pPb sysLowPU
+root -l -b -q "mergeGr.C(2, 145, 142, 143, 144)"
+root -l -b -q "mergeGr.C(3, 145, 142, 143, 144)"
+root -l -b -q "mergeGr.C(4, 145, 142, 143, 144)"
+
+# pPb HLT
+root -l -b -q "mergeGr.C(2, 52, 49, 116, 117)"
+root -l -b -q "mergeGr.C(3, 52, 49, 116, 117)"
+root -l -b -q "mergeGr.C(4, 52, 49, 116, 117)"
+
+# pPb merge sysLoose
+root -l -b -q "mergeGr.C(2, 76, 73, 74, 75)"
+root -l -b -q "mergeGr.C(3, 76, 73, 74, 75)"
+root -l -b -q "mergeGr.C(4, 76, 73, 74, 75)"
+
+# pPb merge sysTight
+root -l -b -q "mergeGr.C(2, 72, 69, 70, 71)"
+root -l -b -q "mergeGr.C(3, 72, 69, 70, 71)"
+root -l -b -q "mergeGr.C(4, 72, 69, 70, 71)"
+
+# pPb merge sysNarrow
+root -l -b -q "mergeGr.C(2, 80, 77, 78, 79)"
+root -l -b -q "mergeGr.C(3, 80, 77, 78, 79)"
+root -l -b -q "mergeGr.C(4, 80, 77, 78, 79)"
+
+# pPb merge sysWide
+root -l -b -q "mergeGr.C(2, 84, 81, 82, 83)"
+root -l -b -q "mergeGr.C(3, 84, 81, 82, 83)"
+root -l -b -q "mergeGr.C(4, 84, 81, 82, 83)"
+
+# PbPb std GMO
+root -l -b -q "mergeGr.C(2, 374, 374, 374, 374)"
+root -l -b -q "mergeGr.C(3, 374, 374, 374, 374)"
+root -l -b -q "mergeGr.C(4, 374, 374, 374, 374)"
+
+# PbPb sysLoosePt01 GMO
+root -l -b -q "mergeGr.C(2, 375, 375, 375, 375)"
+root -l -b -q "mergeGr.C(3, 375, 375, 375, 375)"
+root -l -b -q "mergeGr.C(4, 375, 375, 375, 375)"
+
+# PbPb sysTight GMO
+root -l -b -q "mergeGr.C(2, 379, 379, 379, 379)"
+root -l -b -q "mergeGr.C(3, 379, 379, 379, 379)"
+root -l -b -q "mergeGr.C(4, 379, 379, 379, 379)"
+
+# PbPb sysNarrow2 merge
+root -l -b -q "mergeGr.C(2, 192, 192, 192, 192)"
+root -l -b -q "mergeGr.C(3, 192, 192, 192, 192)"
+root -l -b -q "mergeGr.C(4, 192, 192, 192, 192)"
+
+# PbPb sysWide2 merged
+root -l -b -q "mergeGr.C(2, 188, 188, 188, 188)"
+root -l -b -q "mergeGr.C(3, 188, 188, 188, 188)"
+root -l -b -q "mergeGr.C(4, 188, 188, 188, 188)"
+
+# PbPb sysTight2 merged
+root -l -b -q "mergeGr.C(2, 184, 184, 184, 184)"
+root -l -b -q "mergeGr.C(3, 184, 184, 184, 184)"
+root -l -b -q "mergeGr.C(4, 184, 184, 184, 184)"
+
+# pp
+root -l -b -q "mergeGr.C(2, 31, 31, 31, 31)"
+root -l -b -q "mergeGr.C(3, 31, 31, 31, 31)"
+root -l -b -q "mergeGr.C(4, 31, 31, 31, 31)"
+
 ##PbPb sysStd
 #root -l -b -q "mergeGr.C(2, 181, 181, 181, 181)"
 #root -l -b -q "mergeGr.C(3, 181, 181, 181, 181)"
@@ -54,10 +128,6 @@
 #root -l -b -q "mergeGr.C(3, 100, 100, 100, 100)"
 #root -l -b -q "mergeGr.C(4, 100, 100, 100, 100)"
 #
-## PbPb sysTight2 merged
-#root -l -b -q "mergeGr.C(2, 184, 184, 184, 184)"
-#root -l -b -q "mergeGr.C(3, 184, 184, 184, 184)"
-#root -l -b -q "mergeGr.C(4, 184, 184, 184, 184)"
 #
 ## PbPb sysTight2dz merged
 #root -l -b -q "mergeGr.C(2, 198, 198, 198, 198)"
@@ -89,10 +159,6 @@
 #root -l -b -q "mergeGr.C(3, 102, 102, 102, 102)"
 #root -l -b -q "mergeGr.C(4, 102, 102, 102, 102)"
 #
-## PbPb sysNarrow2 merge
-#root -l -b -q "mergeGr.C(2, 192, 192, 192, 192)"
-#root -l -b -q "mergeGr.C(3, 192, 192, 192, 192)"
-#root -l -b -q "mergeGr.C(4, 192, 192, 192, 192)"
 #
 #
 ## PbPb sysWide
@@ -100,10 +166,6 @@
 #root -l -b -q "mergeGr.C(3, 103, 103, 103, 103)"
 #root -l -b -q "mergeGr.C(4, 103, 103, 103, 103)"
 #
-## PbPb sysWide2 merged
-#root -l -b -q "mergeGr.C(2, 188, 188, 188, 188)"
-#root -l -b -q "mergeGr.C(3, 188, 188, 188, 188)"
-#root -l -b -q "mergeGr.C(4, 188, 188, 188, 188)"
 #
 #
 ## PbPb sysTight2PosEta merged
@@ -167,10 +229,6 @@
 #
 #
 #
-## pp
-##root -l -b -q "mergeGr.C(2, 31, 31, 31, 31)"
-##root -l -b -q "mergeGr.C(3, 31, 31, 31, 31)"
-##root -l -b -q "mergeGr.C(4, 31, 31, 31, 31)"
 #
 ## pPb merge sysTight
 #root -l -b -q "mergeGr.C(2, 72, 69, 70, 71)"
@@ -279,10 +337,10 @@
 #root -l -b -q "mergeGr.C(3, 357, 357, 357, 357)"
 #root -l -b -q "mergeGr.C(4, 357, 357, 357, 357)"
 
-# XeXe std merged
-root -l -b -q "mergeGr.C(2, 358, 358, 358, 358)"
-root -l -b -q "mergeGr.C(3, 358, 358, 358, 358)"
-root -l -b -q "mergeGr.C(4, 358, 358, 358, 358)"
+## XeXe std merged
+#root -l -b -q "mergeGr.C(2, 358, 358, 358, 358)"
+#root -l -b -q "mergeGr.C(3, 358, 358, 358, 358)"
+#root -l -b -q "mergeGr.C(4, 358, 358, 358, 358)"
 
 
 
@@ -319,15 +377,5 @@ root -l -b -q "mergeGr.C(4, 358, 358, 358, 358)"
 #root -l -b -q "mergeGr.C(4, 374, 374, 374, 374)"
 
 
-## PbPb sysLoosePt01 GMO
-#root -l -b -q "mergeGr.C(2, 375, 375, 375, 375)"
-#root -l -b -q "mergeGr.C(3, 375, 375, 375, 375)"
-#root -l -b -q "mergeGr.C(4, 375, 375, 375, 375)"
-#
-#
-## PbPb sysTight GMO
-#root -l -b -q "mergeGr.C(2, 379, 379, 379, 379)"
-#root -l -b -q "mergeGr.C(3, 379, 379, 379, 379)"
-#root -l -b -q "mergeGr.C(4, 379, 379, 379, 379)"
 
 
