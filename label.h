@@ -404,6 +404,9 @@ char const * fname[] = {
 	"NA",		// 401 pPb+Pbp HM7 sysPhiAcc
 	"NA",		// 402 pPb HM123456
 	"NA",		// 403 pPb reverse HM123456
+	"../PbPb2015_cumu/MC/FlatPt/",										// 404 FlatPt 300
+	"../PbPb2015_cumu/MC/FlatPtAcc/",									// 405 FlatPt 300 Acc
+	"../PbPb2015_cumu/MC/FlatPtAccNoEff/",									// 406 FlatPt 300 Acc NoEff
 };
 
 char const * ftxt[] = {
@@ -811,6 +814,9 @@ char const * ftxt[] = {
 	"txt/pPb_HM7_sysPhiAcc_merge/",			// 401
 	"txt/pPb_HM123456_full/",			// 402
 	"txt/pPb_HM123456_full_reverse/",		// 403
+	"txt/FlatPt/",					// 404
+	"txt/FlatPtAcc/",				// 405
+	"txt/FlatPtAccNoEff/",				// 406
 };
 
 
