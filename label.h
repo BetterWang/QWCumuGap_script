@@ -407,6 +407,21 @@ char const * fname[] = {
 	"../PbPb2015_cumu/MC/FlatPt/",										// 404 FlatPt 300
 	"../PbPb2015_cumu/MC/FlatPtAcc/",									// 405 FlatPt 300 Acc
 	"../PbPb2015_cumu/MC/FlatPtAccNoEff/",									// 406 FlatPt 300 Acc NoEff
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysPhiAcc_v2/171212_043233/0000/",			// 407 pPb MB1 sysPhiAcc
+	"../pPb/PAMinimumBias2/crab_PAMB2_cumugap_eff_sysPhiAcc_v2/171212_043250/0000/",			// 408 pPb MB2 sysPhiAcc
+	"../pPb/PAMinimumBias3/crab_PAMB3_cumugap_eff_sysPhiAcc_v2/171212_043307/0000/",			// 409 pPb MB3 sysPhiAcc
+	"../pPb/PAMinimumBias4/crab_PAMB4_cumugap_eff_sysPhiAcc_v2/171212_043325/0000/",			// 410 pPb MB4 sysPhiAcc
+	"../pPb/PAMinimumBias5/crab_PAMB5_cumugap_eff_sysPhiAcc_v2/171212_043341/0000/",			// 411 pPb MB5 sysPhiAcc
+	"../pPb/PAMinimumBias6/crab_PAMB6_cumugap_eff_sysPhiAcc_v2/171212_043355/0000/",			// 412 pPb MB6 sysPhiAcc
+	"../pPb/PAMinimumBias1/crab_PAMB1_cumugap_eff_sysPhiAcc_reverse_v2/171212_043429/0000/",		// 413 pPb reverse MB1 sysPhiAcc
+	"../pPb/PAMinimumBias2/crab_PAMB2_cumugap_eff_sysPhiAcc_reverse_v2/171212_043445/0000/",		// 414 pPb reverse MB2 sysPhiAcc
+	"../pPb/PAMinimumBias3/crab_PAMB3_cumugap_eff_sysPhiAcc_reverse_v2/171212_043502/0000/",		// 415 pPb reverse MB3 sysPhiAcc
+	"../pPb/PAMinimumBias4/crab_PAMB4_cumugap_eff_sysPhiAcc_reverse_v2/171212_043519/0000/",		// 416 pPb reverse MB4 sysPhiAcc
+	"../pPb/PAMinimumBias5/crab_PAMB5_cumugap_eff_sysPhiAcc_reverse_v2/171212_043535/0000/",		// 417 pPb reverse MB5 sysPhiAcc
+	"../pPb/PAMinimumBias6/crab_PAMB6_cumugap_eff_sysPhiAcc_reverse_v2/171212_043553/0000/",		// 418 pPb reverse MB6 sysPhiAcc
+	"NA",			// 419 pPb MB123456 sysPhiAcc
+	"NA",			// 420 pPb reverse MB123456 sysPhiAcc
+	"NA",			// 421 pPb+Pbp MB123456 sysPhiAcc
 };
 
 char const * ftxt[] = {
@@ -817,6 +832,21 @@ char const * ftxt[] = {
 	"txt/FlatPt/",					// 404
 	"txt/FlatPtAcc/",				// 405
 	"txt/FlatPtAccNoEff/",				// 406
+	"txt/pPb_MB1_sysPhiAcc/",			// 407
+	"txt/pPb_MB2_sysPhiAcc/",			// 408
+	"txt/pPb_MB3_sysPhiAcc/",			// 409
+	"txt/pPb_MB4_sysPhiAcc/",			// 410
+	"txt/pPb_MB5_sysPhiAcc/",			// 411
+	"txt/pPb_MB6_sysPhiAcc/",			// 412
+	"txt/pPb_MB1_sysPhiAcc_reverse/",		// 413
+	"txt/pPb_MB2_sysPhiAcc_reverse/",		// 414
+	"txt/pPb_MB3_sysPhiAcc_reverse/",		// 415
+	"txt/pPb_MB4_sysPhiAcc_reverse/",		// 416
+	"txt/pPb_MB5_sysPhiAcc_reverse/",		// 417
+	"txt/pPb_MB6_sysPhiAcc_reverse/",		// 418
+	"txt/pPb_MB123456_sysPhiAcc_full/",		// 419
+	"txt/pPb_MB123456_sysPhiAcc_full_reverse/",	// 420
+	"txt/pPb_MB123456_sysPhiAcc_merge/",		// 421
 };
 
 
