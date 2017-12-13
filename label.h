@@ -422,6 +422,8 @@ char const * fname[] = {
 	"NA",			// 419 pPb MB123456 sysPhiAcc
 	"NA",			// 420 pPb reverse MB123456 sysPhiAcc
 	"NA",			// 421 pPb+Pbp MB123456 sysPhiAcc
+	"NA",			// 422 pPb HM123456 sysPhiAcc
+	"NA",			// 423 pPb HM123456 sysPhiAcc reverse
 };
 
 char const * ftxt[] = {
@@ -847,6 +849,8 @@ char const * ftxt[] = {
 	"txt/pPb_MB123456_sysPhiAcc_full/",		// 419
 	"txt/pPb_MB123456_sysPhiAcc_full_reverse/",	// 420
 	"txt/pPb_MB123456_sysPhiAcc_merge/",		// 421
+	"txt/pPb_HM123456_sysPhiAcc_full/",		// 422
+	"txt/pPb_HM123456_sysPhiAcc_full_reverse/",	// 423
 };
 
 
