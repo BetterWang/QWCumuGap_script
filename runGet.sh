@@ -96,16 +96,39 @@
 #./runGet1.sh 82
 ## HM7
 #./runGet1.sh 83
-#
+
 ###### PhiAcc
-## MB1
-##./runGet1.sh 52
-## HM0
+## HM0 merge
 #./runGet1.sh 399
+## HM0 pPb
+#./runGet1.sh 383
+## HM0 Pbp
+#./runGet1.sh 391
+
 ## HM123456
 #./runGet1.sh 400
+## HM123456 pPb
+#./runGet1.sh 422
+## HM123456 Pbp
+#./runGet1.sh 423
+
 ## HM7
 #./runGet1.sh 401
+## HM7 pPb
+#./runGet1.sh 390
+## HM7 Pbp
+#./runGet1.sh 398
+
+## MB123456 pPb
+#./runGet1.sh 419
+####### MB123456 Pbp
+######./runGet1.sh 420
+####### MB123456
+######./runGet1.sh 421
+
+###### PhiAcc PbPb GMO
+#####./runGet1.sh 427
+
 #
 ############ PbPb GMO
 #./runGet1.sh 374
@@ -127,11 +150,11 @@
 ############ PbPb Tight2
 #./runGet1.sh 188
 
-############ FlatPt
-./runGet1.sh 404
-
-############ FlatPtAcc
-./runGet1.sh 405
-
-########### FlatPtAccNoEff
-./runGet1.sh 406
+############# FlatPt
+#./runGet1.sh 404
+#
+############# FlatPtAcc
+#./runGet1.sh 405
+#
+############ FlatPtAccNoEff
+#./runGet1.sh 406
