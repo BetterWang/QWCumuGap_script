@@ -105,29 +105,29 @@
 ## HM0 Pbp
 #./runGet1.sh 391
 
-## HM123456
+## PhiAcc HM123456
 #./runGet1.sh 400
-## HM123456 pPb
+## PhiAcc HM123456 pPb
 #./runGet1.sh 422
-## HM123456 Pbp
+## PhiAcc HM123456 Pbp
 #./runGet1.sh 423
 
-## HM7
+## PhiAcc HM7
 #./runGet1.sh 401
-## HM7 pPb
+## PhiAcc HM7 pPb
 #./runGet1.sh 390
-## HM7 Pbp
+## PhiAcc HM7 Pbp
 #./runGet1.sh 398
 
-## MB123456 pPb
+## PhiAcc MB123456 pPb
 #./runGet1.sh 419
-####### MB123456 Pbp
-######./runGet1.sh 420
-####### MB123456
-######./runGet1.sh 421
+## PhiAcc MB123456 Pbp
+#./runGet1.sh 420
+## PhiAcc MB123456
+#./runGet1.sh 421
 
-###### PhiAcc PbPb GMO
-#####./runGet1.sh 427
+## PhiAcc PbPb GMO
+#./runGet1.sh 427
 
 #
 ############ PbPb GMO

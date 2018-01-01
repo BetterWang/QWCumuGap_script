@@ -198,14 +198,14 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 
 	if ( bPbPb ) {
 		if ( n == 2 ) {
-			trimC24AA(grC2);
+			trimV24AA(grC2);
 			trimV24AA(grV2);
-			trimC24AA(grC4);
+			trimV24AA(grC4);
 			trimV24AA(grV4);
-			trimC26AA(grC6);
+			trimV26AA(grC6);
 			trimV26AA(grV6);
 			trimV26AA(grV64);
-			trimC28AA(grC8);
+			trimV28AA(grC8);
 			trimV28AA(grV8);
 			trimV28AA(grV86);
 			grV4V2 = gr2func(grV4, fHIN16022PbPbV2);
@@ -213,9 +213,9 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 			grV64V42 = grRatio(grV6, grV4, grV4, fHIN16022PbPbV2sub);
 			grV86V42 = grRatio(grV8, grV6, grV4, fHIN16022PbPbV2sub);
 		} else if ( n == 3 ) {
-			trimC34AA(grC2);
+			trimV34AA(grC2);
 			trimV34AA(grV2);
-			trimC34AA(grC4);
+			trimV34AA(grC4);
 			trimV34AA(grV4);
 			grV4V2 = gr2func(grV4, fHIN16022PbPbV3);
 			grV4V2sub = gr2func(grV4, fHIN16022PbPbV3sub);
@@ -224,14 +224,14 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 		}
 	} else {
 		if ( n == 2 ) {
-			trimC24PA(grC2);
+			trimV24PA(grC2);
 			trimV24PA(grV2);
-			trimC24PA(grC4);
+			trimV24PA(grC4);
 			trimV24PA(grV4);
-			trimC26PA(grC6);
+			trimV26PA(grC6);
 			trimV26PA(grV6);
 			trimV26PA(grV64);
-			trimC28PA(grC8);
+			trimV28PA(grC8);
 			trimV28PA(grV8);
 			trimV28PA(grV86);
 			grV4V2 = gr2func(grV4, fHIN16022pPbV2);
@@ -239,9 +239,9 @@ void mergeGr(int n = 2, int sMB = 9, int sHM0 = 1, int sHM1 = 2, int sHM7 = 8)
 			grV64V42 = grRatio(grV6, grV4, grV4, fHIN16022pPbV2sub);
 			grV86V42 = grRatio(grV8, grV6, grV4, fHIN16022pPbV2sub);
 		} else if ( n == 3 ) {
-			trimC34PA(grC2);
+			trimV34PA(grC2);
 			trimV34PA(grV2);
-			trimC34PA(grC4);
+			trimV34PA(grC4);
 			trimV34PA(grV4);
 			grV4V2 = gr2func(grV4, fHIN16022pPbV3);
 			grV4V2sub = gr2func(grV4, fHIN16022pPbV3sub);

@@ -144,10 +144,10 @@ TGraphErrors * ratioGr(TGraphErrors* gr1, TGraphErrors* gr2)
 	return ret;
 }
 
-void plotC(TString s2pPb = "grV2_merged.root",
-		TString s3pPb = "grV3_merged.root",
-		TString s2PbPb = "grV2PbPb_GMO.root",
-		TString s3PbPb = "grV3PbPb_GMO.root",
+void plotC(TString s2pPb = "grV2_sysPhiAcc.root",
+		TString s3pPb = "grV3_sysPhiAcc.root",
+		TString s2PbPb = "grV2PbPb_sysPhiAcc.root",
+		TString s3PbPb = "grV3PbPb_sysPhiAcc.root",
 		TString s2pp = "grV2_pp13.root",
 		TString s3pp = "grV3_pp13.root")
 {
@@ -427,8 +427,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grPA3.grV4->Draw("Psame");
 	grHIN16022pPbV2sub->Draw("Psame");
 	grHIN16022pPbV3sub->Draw("Psame");
-	grHIN16022pPbV2->Draw("lxsame");
-	grHIN16022pPbV3->Draw("lxsame");
+//	grHIN16022pPbV2->Draw("lxsame");
+//	grHIN16022pPbV3->Draw("lxsame");
 
 //	grHIN14006pPbV26->Draw("Psame");
 //	grHIN14006pPbV28->Draw("Psame");
@@ -447,19 +447,19 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	legV2->AddEntry(grPA2.grV6, "v_{2}{6}", "p");
 	legV2->AddEntry(grPA2.grV8, "v_{2}{8}", "p");
 	legV2->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
-	legV2->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "l");
 	legV2->Draw();
 
-	TLegend * legV21 = new TLegend(0.58, 0.68, 0.90, 0.93);
+	TLegend * legV21 = new TLegend(0.45, 0.68, 0.90, 0.93);
 	legV21->SetFillColor(kWhite);
 	legV21->SetTextFont(42);
 	legV21->SetTextSize(0.05);
 	legV21->SetBorderSize(0);
 
 	legV21->AddEntry(grHIN16022PbPbV2sub, "v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
-	legV21->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "l");
+//	legV21->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "l");
 	legV21->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
-	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "l");
+//	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "l");
+	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "l");
 	legV21->Draw();
 
 	p = cVn->cd(2);
@@ -497,8 +497,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAA3.grV4->Draw("Psame");
 	grHIN16022PbPbV2sub->Draw("Psame");
 	grHIN16022PbPbV3sub->Draw("Psame");
-	grHIN16022PbPbV2->Draw("Lxsame");
-	grHIN16022PbPbV3->Draw("Lxsame");
+//	grHIN16022PbPbV2->Draw("Lxsame");
+//	grHIN16022PbPbV3->Draw("Lxsame");
 //	grHIN14006PbPbV26->Draw("Psame");
 //	grHIN14006PbPbV28->Draw("Psame");
 
@@ -711,8 +711,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	grPA2.grV4V2sub->Draw("psame");
 	grPA3.grV4V2sub->Draw("psame");
-	grPA2.grV4V2->Draw("lxsame");
-	grPA3.grV4V2->Draw("lxsame");
+//	grPA2.grV4V2->Draw("lxsame");
+//	grPA3.grV4V2->Draw("lxsame");
 
 	gr1702_01730v242_3->SetLineStyle(kDashed);
 	gr1702_01730v342_3->SetLineStyle(kDashed);
@@ -723,17 +723,17 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
 	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
 
-	TLegend * legV42 = new TLegend(0.22, 0.60, 0.70, 0.93);
+	TLegend * legV42 = new TLegend(0.22, 0.63, 0.70, 0.93);
 	legV42->SetFillColor(kWhite);
 	legV42->SetTextFont(42);
 	legV42->SetTextSize(0.05);
 	legV42->SetBorderSize(0);
 
 	legV42->AddEntry(grPA2.grV4V2sub, "v_{2}{4} / v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
-	legV42->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "l");
+//	legV42->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "l");
 	legV42->AddEntry(grPA3.grV4V2sub, "v_{3}{4} / v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
-	legV42->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "l");
-	legV42->AddEntry(gr1702_01730v242_3, "#epsilon_{2}{4} / #epsilon_{3}{2}, 5.02 TeV", "l");
+//	legV42->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "l");
+	legV42->AddEntry(gr1702_01730v242_3, "#epsilon_{2}{4} / #epsilon_{2}{2}, 5.02 TeV", "l");
 	legV42->AddEntry(gr1702_01730v342_3, "#epsilon_{3}{4} / #epsilon_{3}{2}, 5.02 TeV", "l");
 	legV42->Draw();
 
@@ -755,8 +755,8 @@ void plotC(TString s2pPb = "grV2_merged.root",
 
 	grAA2.grV4V2sub->Draw("psame");
 	grAA3.grV4V2sub->Draw("psame");
-	grAA2.grV4V2->Draw("lxsame");
-	grAA3.grV4V2->Draw("lxsame");
+//	grAA2.grV4V2->Draw("lxsame");
+//	grAA3.grV4V2->Draw("lxsame");
 
 	latexS.DrawLatexNDC(0.59, 1.0, "PbPb 5.02 TeV");
 	latexS.DrawLatexNDC(0.10, 0.92, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
@@ -782,9 +782,9 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAAVratio64sys->SetFillStyle(3004);
 
 	grPAVratio64sys->Draw("[]2");
-	grAAVratio64sys->Draw("[]2");
+//	grAAVratio64sys->Draw("[]2");
 	grPAVratio64->Draw("psame");
-	grAAVratio64->Draw("psame");
+//	grAAVratio64->Draw("psame");
 
 	p = cVratio->cd(2);
 	hframeVratio->GetYaxis()->SetTitle("v_{2}{8} / v_{2}{6}");
@@ -801,13 +801,14 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	grAAVratio86sys->SetFillStyle(3004);
 
 	grPAVratio86sys->Draw("[]2");
-	grAAVratio86sys->Draw("[]2");
+//	grAAVratio86sys->Draw("[]2");
 	grPAVratio86->Draw("psame");
-	grAAVratio86->Draw("psame");
+//	grAAVratio86->Draw("psame");
 
 	cVratio->cd(1);
 	latexS.DrawLatexNDC(0.15, 0.96, "#bf{CMS}");
-	latexS.DrawLatexNDC(0.20, 0.85, "pPb 8.16 TeV, PbPb 5.02 TeV");
+//	latexS.DrawLatexNDC(0.20, 0.85, "pPb 8.16 TeV, PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.20, 0.85, "pPb 8.16 TeV");
 	latexS.DrawLatexNDC(0.20, 0.77, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
 	TLegend * legVratio1 = new TLegend(0.2, 0.5, 0.55, 0.65);
@@ -817,7 +818,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	legVratio1->SetBorderSize(0);
 	legVratio1->AddEntry(grPAVratio64, "pPb", "p");
 	legVratio1->AddEntry(grAAVratio64, "PbPb", "p");
-	legVratio1->Draw();
+//	legVratio1->Draw();
 
 	cVratio->cd(2);
 
@@ -828,7 +829,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	legVratio2->SetBorderSize(0);
 	legVratio2->AddEntry(grPAVratio86, "pPb", "p");
 	legVratio2->AddEntry(grAAVratio86, "PbPb", "p");
-	legVratio2->Draw();
+//	legVratio2->Draw();
 
 	TLine * lred  = new TLine(0.6, 0.78, 0.65, 0.78);
 	TLine * lblue = new TLine(0.6, 0.80, 0.65, 0.80);
@@ -901,6 +902,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	splitCanv(cVratioPA);
 
 	p = cVratioPA->cd(1);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{6} / v_{2}{4}");
 	hframeVratio->DrawClone();
 	ffit64->Draw("same");
 	grPAVratio64->SetMarkerColor(kRed);
@@ -912,6 +914,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	gr_pPb_v264->Draw("psame");
 
 	p = cVratioPA->cd(2);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{8} / v_{2}{6}");
 	hframeVratio->Draw();
 	ffit86->Draw("same");
 	grPAVratio86->SetMarkerColor(kRed);
@@ -927,6 +930,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	splitCanv(cVratioAA);
 
 	p = cVratioAA->cd(1);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{6} / v_{2}{4}");
 	hframeVratio->DrawClone();
 	ffit64->Draw("same");
 	grAAVratio64->SetMarkerColor(kRed);
@@ -938,6 +942,7 @@ void plotC(TString s2pPb = "grV2_merged.root",
 	gr_PbPb_v264->Draw("psame");
 
 	p = cVratioAA->cd(2);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{8} / v_{2}{6}");
 	hframeVratio->Draw();
 	ffit86->Draw("same");
 	grAAVratio86->SetMarkerColor(kRed);

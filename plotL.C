@@ -40,10 +40,10 @@
 
 void plotL()
 {
-	TString s2pPb = "grV2_merged.root";
-	TString s3pPb = "grV3_merged.root";
-	TString s2PbPb = "grV2PbPb_GMO.root";
-	TString s3PbPb = "grV3PbPb_GMO.root";
+	TString s2pPb = "grV2_sysPhiAcc.root";
+	TString s3pPb = "grV3_sysPhiAcc.root";
+	TString s2PbPb = "grV2PbPb_sysPhiAcc.root";
+	TString s3PbPb = "grV3PbPb_sysPhiAcc.root";
 	TString s2pp = "grV2_pp13.root";
 	TString s3pp = "grV3_pp13.root";
 

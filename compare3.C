@@ -77,7 +77,7 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	TH2D * hframe = new TH2D("hframe", ";N_{trk}^{offline};v_{2}", 1, 0, 399, 1, hrange[str_gr].first, hrange[str_gr].second);
 	hframe->SetYTitle(str_ylabel.c_str());
 	initHist(hframe);
-	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.88, 1.12);
+	TH2D * hframeR = new TH2D("hframeR", ";N_{trk}^{offline};Ratio", 1, 0, 399, 1, 0.91, 1.09);
 	initHist(hframeR);
 
 	TLegend * legPt = new TLegend(0.5, 0.7, 0.85, 0.9);
@@ -148,7 +148,7 @@ void splitCanv(TCanvas * c)
 	p2->SetRightMargin(0.05);
 	p2->SetBottomMargin(0.25);
 	p2->SetTopMargin(0.);
-	p2->SetGrid();
+	p2->SetGridy();
 	p2->Draw();
 	p2->SetNumber(2);
 }
