@@ -733,8 +733,8 @@ void plotC(TString s2pPb = "grV2_sysPhiAcc.root",
 //	legV42->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "l");
 	legV42->AddEntry(grPA3.grV4V2sub, "v_{3}{4} / v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
 //	legV42->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "l");
-	legV42->AddEntry(gr1702_01730v242_3, "#epsilon_{2}{4} / #epsilon_{2}{2}, 5.02 TeV", "l");
-	legV42->AddEntry(gr1702_01730v342_3, "#epsilon_{3}{4} / #epsilon_{3}{2}, 5.02 TeV", "l");
+	legV42->AddEntry(gr1702_01730v242_3, "#varepsilon_{2}{4} /#varepsilon_{2}{2} 5.02 TeV", "l");
+	legV42->AddEntry(gr1702_01730v342_3, "#varepsilon_{3}{4} /#varepsilon_{3}{2} 5.02 TeV", "l");
 	legV42->Draw();
 
 	p = cV42ratio->cd(2);

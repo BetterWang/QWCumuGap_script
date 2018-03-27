@@ -5,7 +5,7 @@ void initHist(TH2D* h);
 
 void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s3 = "grV2_merged.root", string str_gr = "grV4", string fname = "comp_pPb_v24.pdf",
 		string str_leg1 = "pPb", string str_leg2 = "Pbp", string str_leg3 = "pPb+Pbp",
-		string str_ylabel = "v_2")
+		string str_ylabel = "v_2", double sysd = -1.)
 {
 
 	TFile * f1 = new TFile(s1.c_str());
@@ -124,8 +124,14 @@ void compare3(string s1 = "grV2_pPb.root", string s2 = "grV2_Pbp.root", string s
 	TF1 *fR2 = new TF1("fR2", "pol0", 100., 300.);
 	fR1->SetLineColor(grR1->GetMarkerColor());
 	fR2->SetLineColor(grR2->GetMarkerColor());
-	grR1->Fit(fR1, "E", "", 100, 300);
-	grR2->Fit(fR2, "E", "", 100, 300);
+//	grR1->Fit(fR1, "E", "Goff", 100, 300);
+//	grR2->Fit(fR2, "E", "Goff", 100, 300);
+	TLine * lsys1 = new TLine(1, 1+sysd, 399., 1+sysd );
+	TLine * lsys2 = new TLine(1, 1-sysd, 399., 1-sysd );
+	if ( sysd > 0. ) {
+		lsys1->Draw("same");
+		lsys2->Draw("same");
+	}
 
 	cT->SaveAs(fname.c_str());
 }

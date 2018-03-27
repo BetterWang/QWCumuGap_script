@@ -36,15 +36,17 @@ TGraphErrors* getGr2(string &s)
 {
         istringstream iss(s);
         vector<double> vx, vy, vxe, vye;
-        while (!iss.eof())
+	double x, y, xe, ye, sys;
+        while (iss >> x >> xe >> y >> ye >> sys)
 	{
-		double x, y, xe, ye, sys;
-		iss >> x >> xe >> y >> ye >> sys;
+		//iss >> x >> xe >> y >> ye >> sys;
 		vx.push_back( x );
 		vy.push_back( y );
 		vxe.push_back( xe );
 		vye.push_back( ye );
 	}
+//	for ( auto i : vx ) cout << "--> " << i << "\t";
+//	cout << endl;
 	return new TGraphErrors( vx.size(), &vx[0], &vy[0], &vxe[0], &vye[0] );
 };
 
