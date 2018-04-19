@@ -7,7 +7,7 @@
 TColor *red = new TColor(3001, 1, 0, 0, "red", 0.4);
 TColor *green = new TColor(3002, 0, 1, 0, "green", 0.4);
 TColor *blue = new TColor(3003, 0, 0, 1, "blue", 0.4);
-TColor *gray = new TColor(3005, 0, 0, 0, "black", 0.2);
+TColor *gray = new TColor(3005, 0, 0, 0, "black", 0.5);
 
 void splitCanv(TCanvas * c);
 
@@ -197,6 +197,14 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	TH2D * hframeVn = new TH2D("hframeVn", "", 1, 1, 399, 1, 0.0001, 0.14);
 	InitHist(hframeVn, "N_{trk}^{offline}", "v_{n}");
+//	hframeVn->SetLabelFont(43, "Y");
+	hframeVn->GetXaxis()->SetLabelFont(43);
+	hframeVn->GetXaxis()->SetTitleFont(43);
+	hframeVn->GetXaxis()->SetLabelSize(20);
+	hframeVn->GetXaxis()->SetTitleSize(25);
+//	hframeVn->GetXaxis()->SetLabelSize(1);
+//	cout << " --> LabelSize() = " << hframeVn->GetXaxis()->GetLabelSize() << endl;;
+//	cout << " --> TitleSize() = " << hframeVn->GetXaxis()->GetTitleSize() << endl;;
 
 	auto p = cVn->cd(1);
 	p->SetTopMargin(0.06);
@@ -218,6 +226,9 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	TGraphErrors * grHIN16022pPbV2sys = sysGr(grHIN16022pPbV2sub, 0.018, 3001);
 	TGraphErrors * grHIN16022pPbV3sys = sysGr(grHIN16022pPbV3sub, 0.018, 3002);
 
+	gr1405_3976v34->SetFillColor(3005);
+	gr1405_3976v34->Draw("[]3");
+
 	grPAV24sys->Draw("[]2");
 	grPAV26sys->Draw("[]2");
 	grPAV28sys->Draw("[]2");
@@ -230,7 +241,6 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	grPA2.grV6->Draw("Psame");
 	grPA2.grV8->Draw("Psame");
 
-	gr1405_3976v34->Draw("lsame");
 
 	grPA3.grV4->SetMarkerSize(1.5);
 	grPA3.grV4->Draw("Psame");
@@ -246,7 +256,7 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
 //	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
-	TLegend * legV2 = new TLegend(0.18, 0.62, 0.60, 0.93);
+	TLegend * legV2 = new TLegend(0.18, 0.61, 0.60, 0.93);
 	legV2->SetFillColor(kWhite);
 	legV2->SetTextFont(42);
 	legV2->SetTextSize(0.05);
@@ -258,17 +268,17 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	legV2->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
 	legV2->Draw();
 
-	TLegend * legV21 = new TLegend(0.43, 0.68, 0.90, 0.93);
+	TLegend * legV21 = new TLegend(0.43, 0.69, 0.90, 0.93);
 	legV21->SetFillColor(kWhite);
 	legV21->SetTextFont(42);
 	legV21->SetTextSize(0.05);
 	legV21->SetBorderSize(0);
 
-	legV21->AddEntry(grHIN16022PbPbV2sub, "v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV21->AddEntry(grHIN16022PbPbV2sub, "v_{2}^{sub}{2}(|#Delta#eta|>2)", "p");
 //	legV21->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "l");
-	legV21->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV21->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2}(|#Delta#eta|>2)", "p");
 //	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "l");
-	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "l");
+	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "f");
 	legV21->Draw();
 
 	p = cVn->cd(2);
@@ -324,6 +334,10 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	TH2D * hframeV42ratio = new TH2D("hframeV42ratio", "", 1, 1, 399, 1, 0.0, 1.5);
 	InitHist(hframeV42ratio, "N_{trk}^{offline}", "v_{n}{4} / v_{n}{2}");
+	hframeV42ratio->GetXaxis()->SetLabelFont(43);
+	hframeV42ratio->GetXaxis()->SetTitleFont(43);
+	hframeV42ratio->GetXaxis()->SetLabelSize(20);
+	hframeV42ratio->GetXaxis()->SetTitleSize(25);
 
 
 	p = cV42ratio->cd(1);
@@ -358,8 +372,8 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	TLegend * legV42 = new TLegend(0.22, 0.20, 0.67, 0.35);
 	legV42->SetFillColor(kWhite);
-	legV42->SetTextFont(42);
-	legV42->SetTextSize(0.05);
+	legV42->SetTextFont(43);
+	legV42->SetTextSize(22);
 	legV42->SetBorderSize(0);
 
 //	legV42->AddEntry(grPA2.grV4V2sub, "v_{2}{4} / v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
@@ -396,12 +410,12 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	TLegend * legV42b = new TLegend(0.20, 0.20, 0.65, 0.35);
 	legV42b->SetFillColor(kWhite);
-	legV42b->SetTextFont(42);
-	legV42b->SetTextSize(0.05);
+	legV42b->SetTextFont(43);
+	legV42b->SetTextSize(22);
 	legV42b->SetBorderSize(0);
 
-	legV42b->AddEntry(grPA2.grV4V2sub, "v_{2}{4} / v_{2}^{sub}{2, |#Delta#eta|>2}", "p");
-	legV42b->AddEntry(grPA3.grV4V2sub, "v_{3}{4} / v_{3}^{sub}{2, |#Delta#eta|>2}", "p");
+	legV42b->AddEntry(grPA2.grV4V2sub, "v_{2}{4} / v_{2}^{sub}{2}(|#Delta#eta|>2)", "p");
+	legV42b->AddEntry(grPA3.grV4V2sub, "v_{3}{4} / v_{3}^{sub}{2}(|#Delta#eta|>2)", "p");
 //	legV42b->AddEntry(gr1702_01730v242_3, "#varepsilon_{2}{4} /#varepsilon_{2}{2} 5.02 TeV", "l");
 //	legV42b->AddEntry(gr1702_01730v342_3, "#varepsilon_{3}{4} /#varepsilon_{3}{2} 5.02 TeV", "l");
 //	legV42b->AddEntry(grPA2.grV4V2, "v_{2}{4} / v_{2}{2, |#Delta#eta|>2}", "l");
@@ -510,12 +524,67 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	latexS.DrawLatex(0.66, 0.81, "Fluctuation-Driven Eccentricities");
 
 	////////////////////
+	// gamma1
 
+	TCanvas * cGamma = MakeCanvas("cGamma", "cGamma", 800, 500);
+	makeMultiPanelCanvas(cGamma, 2, 1, 0.0, 0., 0.15, 0.15, 0.03);
+	TH2D * hframeG = new TH2D("hframeG", "", 1, 1, 399, 1, -5, 0.5);
+	InitHist(hframeG, "N_{trk}^{offline}", "#gamma_{1}^{exp}");
+
+	p = cGamma->cd(1);
+	p->SetTopMargin(0.06);
+	hframeG->Draw();
+
+	TGraphErrors * grPAGamma1 = (TGraphErrors*) grPA2.grV64->Clone();
+	for ( int i = 0; i < grPAGamma1->GetN(); i++ ) {
+		double x6 = grPAGamma1->GetX()[i];
+		double x2 = grPA2.grV4V2sub->GetX()[i+3];
+
+		double v24 = 1./grPA2.grV4V2sub->GetY()[i+3];
+		double v64 = grPA2.grV64->GetY()[i];
+
+		double e24 = grPA2.grV4V2sub->GetEY()[i+3]*v24*v24;
+		double e64 = grPA2.grV64->GetEY()[i];
+
+		grPAGamma1->GetY()[i] = -6.*sqrt(2.)*(1-v64)/pow( (v24*v24 -1), 1.5);
+		grPAGamma1->GetEY()[i] = 72.*( (e64/(1-v64))*(e64/(1-v64)) +
+			9.*v24*v24*e24*e24/(v24*v24-1)/(v24*v24-1) );
+
+		cout << " -> i = " << i << " x6 = " << x6 << " x2 = " << x2 << endl;
+	}
+
+	grPAGamma1->SetMarkerStyle(kStar);
+	grPAGamma1->Draw("p");
+
+	p = cGamma->cd(2);
+	p->SetTopMargin(0.06);
+	hframeG->Draw();
+
+	TGraphErrors * grAAGamma1 = (TGraphErrors*) grAA2.grV64->Clone();
+	for ( int i = 0; i < grAAGamma1->GetN(); i++ ) {
+		double x6 = grAAGamma1->GetX()[i];
+		double x2 = grAA2.grV4V2sub->GetX()[i+1];
+
+		double v24 = 1./grAA2.grV4V2sub->GetY()[i+1];
+		double v64 = grAA2.grV64->GetY()[i];
+
+		double e24 = grAA2.grV4V2sub->GetEY()[i+1]*v24*v24;
+		double e64 = grAA2.grV64->GetEY()[i];
+
+		grAAGamma1->GetY()[i] = -6.*sqrt(2.)*(1-v64)/pow( (v24*v24 -1), 1.5);
+		grAAGamma1->GetEY()[i] = 72.*( (e64/(1-v64))*(e64/(1-v64)) +
+			9.*v24*v24*e24*e24/(v24*v24-1)/(v24*v24-1) );
+
+		cout << " -> i = " << i << " x6 = " << x6 << " x2 = " << x2 << endl;
+	}
+	grAAGamma1->SetMarkerStyle(kStar);
+	grAAGamma1->Draw("p");
 
 	///// save
 	cVn->SaveAs("vn.pdf");
 	cVratio->SaveAs("v2rs.pdf");
 	cV42ratio->SaveAs("v42.pdf");
+	cGamma->SaveAs("gamma1.pdf");
 	/////
 }
 
