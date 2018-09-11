@@ -4,10 +4,13 @@
 #include "theory.h"
 #include "published.h"
 
+bool bPrelim = true;
+
 TColor *red = new TColor(3001, 1, 0, 0, "red", 0.4);
-TColor *green = new TColor(3002, 0, 1, 0, "green", 0.4);
+TColor *green = new TColor(3002, 0, 0.5, 0, "green", 0.4);
 TColor *blue = new TColor(3003, 0, 0, 1, "blue", 0.4);
-TColor *gray = new TColor(3005, 0, 0, 0, "black", 0.5);
+TColor *gray = new TColor(3005, 0, 0, 0, "black", 0.4);
+//TColor *gray = new TColor(3005, 0, 0, 1, "black", 0.4);
 
 void splitCanv(TCanvas * c);
 
@@ -97,6 +100,18 @@ TGraphErrors * negGr(TGraphErrors * gr)
 		ret->GetY()[i] = -1 * ret->GetY()[i];
 	}
 	return ret;
+}
+
+void ratio2fluct(TGraphErrors* gr)
+{
+  for ( int i = 0; i < gr->GetN(); i++ )
+  {
+    double r = gr->GetY()[i];
+    double e = gr->GetEY()[i];
+    double er2 = 2*e*r;
+    gr->GetY()[i] = sqrt( (1-r*r) / (1+r*r) );
+    gr->GetEY()[i] = 2 * er2 / (1+r*r) / (1+r*r);
+  }
 }
 
 TGraphErrors * sysGr(TGraphErrors * gr, double sys, int k = 3001)
@@ -212,9 +227,9 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	grPA3.grV4->SetMarkerStyle(kMultiply);
 	grHIN16022pPbV3sub->SetMarkerStyle(kMultiply);
-	grHIN16022pPbV3sub->SetMarkerColor(kGreen);
-	grHIN16022pPbV3sub->SetLineColor(kGreen);
-	grHIN16022pPbV3->SetLineColor(kGreen);
+	grHIN16022pPbV3sub->SetMarkerColor(kGreen+3);
+	grHIN16022pPbV3sub->SetLineColor(kGreen+3);
+	grHIN16022pPbV3->SetLineColor(kGreen+3);
 	grHIN16022pPbV3->SetMarkerStyle(kMultiply);
 
 	TGraphErrors * grPAV24sys = sysGr(grPA2.grV4, 0.01 , 3003);
@@ -252,8 +267,11 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 //	grHIN14006pPbV26->Draw("Psame");
 //	grHIN14006pPbV28->Draw("Psame");
 
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
 	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
-	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
 //	latexS.DrawLatexNDC(0.20, 0.87, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
 
 	TLegend * legV2 = new TLegend(0.18, 0.61, 0.60, 0.93);
@@ -278,8 +296,13 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 //	legV21->AddEntry(grHIN16022PbPbV2, "v_{2}{2, |#Delta#eta|>2}", "l");
 	legV21->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2}(|#Delta#eta|>2)", "p");
 //	legV21->AddEntry(grHIN16022PbPbV3, "v_{3}{2, |#Delta#eta|>2}", "l");
-	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "f");
+	legV21->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "");
 	legV21->Draw();
+
+	TBox * box = new TBox();
+	box->SetFillColor(3005);
+//	box->SetFillColor(kRed);
+	box->DrawBox(146, 0.099, 174, 0.105);
 
 	p = cVn->cd(2);
 	p->SetTopMargin(0.06);
@@ -287,9 +310,9 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	grAA3.grV4->SetMarkerStyle(kMultiply);
 	grHIN16022PbPbV3sub->SetMarkerStyle(kMultiply);
-	grHIN16022PbPbV3sub->SetMarkerColor(kGreen);
-	grHIN16022PbPbV3sub->SetLineColor(kGreen);
-	grHIN16022PbPbV3->SetLineColor(kGreen);
+	grHIN16022PbPbV3sub->SetMarkerColor(kGreen+3);
+	grHIN16022PbPbV3sub->SetLineColor(kGreen+3);
+	grHIN16022PbPbV3->SetLineColor(kGreen+3);
 
 	TGraphErrors * grAAV24sys = sysGr(grAA2.grV4, 0.01, 3003);
 	TGraphErrors * grAAV26sys = sysGr(grAA2.grV6, 0.01, 3003);
@@ -321,14 +344,131 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 //	grHIN14006PbPbV26->Draw("Psame");
 //	grHIN14006PbPbV28->Draw("Psame");
 
-	latexS.DrawLatexNDC(0.59, 1.0, "PbPb 5.02 TeV");
-	latexS.DrawLatexNDC(0.10, 0.92, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
 
 	////////////////////////////////////
+
+	TCanvas * cV3 = MakeCanvas("cV3", "cV3", 800, 500);
+	makeMultiPanelCanvas(cV3, 2, 1, 0.0, 0., 0.15, 0.15, 0.03);
+
+	TH2D * hframeV3 = new TH2D("hframeV3", "", 1, 1, 399, 1, 0.0001, 0.049);
+	InitHist(hframeV3, "N_{trk}^{offline}", "v_{3}");
+	hframeV3->GetXaxis()->SetLabelFont(43);
+	hframeV3->GetXaxis()->SetTitleFont(43);
+	hframeV3->GetXaxis()->SetLabelSize(20);
+	hframeV3->GetXaxis()->SetTitleSize(25);
+
+	p = cV3->cd(1);
+	p->SetTopMargin(0.06);
+	hframeV3->Draw();
+
+	gr1405_3976v34->Draw("[]3");
+
+	grPAV34sys->Draw("[]2");
+	grHIN16022pPbV3sys->Draw("[]2");
+
+	grPA3.grV4->Draw("Psame");
+	grHIN16022pPbV3sub->Draw("Psame");
+
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+
+	TLegend * legV3 = new TLegend(0.18, 0.71, 0.60, 0.93);
+	legV3->SetFillColor(kWhite);
+	legV3->SetTextFont(42);
+	legV3->SetTextSize(0.05);
+	legV3->SetBorderSize(0);
+
+	legV3->AddEntry(grHIN16022PbPbV3sub, "v_{3}^{sub}{2}(|#Delta#eta|>2)", "p");
+	legV3->AddEntry(grPA3.grV4, "v_{3}{4}", "p");
+	legV3->AddEntry(gr1405_3976v34, "v_{3}{4} hydro 5.02 TeV", "");
+
+	legV3->Draw();
+	box->DrawBox(25, 0.0355, 55, 0.038);
+
+	p = cV3->cd(2);
+	p->SetTopMargin(0.06);
+	hframeV3->Draw();
+
+	grHIN16022PbPbV3sys->Draw("[]2");
+	grAAV34sys->Draw("[]2");
+
+	grHIN16022PbPbV3sub->Draw("Psame");
+	grAA3.grV4->Draw("Psame");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
 
 
 	///////////////////
 
+	TCanvas * cV2 = MakeCanvas("cV2", "cV2", 800, 500);
+	makeMultiPanelCanvas(cV2, 2, 1, 0.0, 0., 0.15, 0.15, 0.03);
+
+	TH2D * hframeV2 = new TH2D("hframeV2", "", 1, 1, 399, 1, 0.0001, 0.14);
+	InitHist(hframeV2, "N_{trk}^{offline}", "v_{2}");
+	hframeV2->GetXaxis()->SetLabelFont(43);
+	hframeV2->GetXaxis()->SetTitleFont(43);
+	hframeV2->GetXaxis()->SetLabelSize(20);
+	hframeV2->GetXaxis()->SetTitleSize(25);
+
+	p = cV2->cd(1);
+	p->SetTopMargin(0.06);
+	hframeV2->Draw();
+
+	grPAV24sys->Draw("[]2");
+	grPAV26sys->Draw("[]2");
+	grPAV28sys->Draw("[]2");
+
+	grHIN16022pPbV2sys->Draw("[]2");
+
+	grPA2.grV4->Draw("Psame");
+	grPA2.grV6->Draw("Psame");
+	grPA2.grV8->Draw("Psame");
+
+	grHIN16022pPbV2sub->Draw("Psame");
+
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+
+	TLegend * legV22 = new TLegend(0.18, 0.61, 0.60, 0.93);
+	legV22->SetFillColor(kWhite);
+	legV22->SetTextFont(42);
+	legV22->SetTextSize(0.05);
+	legV22->SetBorderSize(0);
+
+	legV22->AddEntry(grHIN16022pPbV2sub, "v_{2}^{sub}{2}(|#Delta#eta|>2)", "p");
+	legV22->AddEntry(grPA2.grV4, "v_{2}{4}", "p");
+	legV22->AddEntry(grPA2.grV6, "v_{2}{6}", "p");
+	legV22->AddEntry(grPA2.grV8, "v_{2}{8}", "p");
+	legV22->Draw();
+
+	p = cV2->cd(2);
+	p->SetTopMargin(0.06);
+	hframeV2->Draw();
+
+
+	grAAV24sys->Draw("[]2");
+	grAAV26sys->Draw("[]2");
+	grAAV28sys->Draw("[]2");
+
+	grHIN16022PbPbV2sys->Draw("[]2");
+
+	grAA2.grV4->Draw("Psame");
+	grAA2.grV6->Draw("Psame");
+	grAA2.grV8->Draw("Psame");
+
+	grHIN16022PbPbV2sub->Draw("Psame");
+
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+	///////////////////
 	TCanvas * cV42ratio = MakeCanvas("cV42ratio", "cV42ratio", 800, 500);
 	makeMultiPanelCanvas(cV42ratio, 2, 1, 0.0, 0., 0.15, 0.15, 0.03);
 
@@ -363,12 +503,18 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	gr1702_01730v242_3->SetLineStyle(kDashed);
 	gr1702_01730v342_3->SetLineStyle(kDashed);
+	gr1702_01730v242_3->SetLineWidth(2.0);
+	gr1702_01730v342_3->SetLineWidth(2.0);
 
 	gr1702_01730v242_3->Draw("lsame");
 	gr1702_01730v342_3->Draw("lsame");
 
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
 	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
-	latexS.DrawLatexNDC(0.68, 1.0, "pPb 8.16 TeV");
+//	latexS.DrawLatexNDC(0.38, 1.003, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
 
 	TLegend * legV42 = new TLegend(0.22, 0.20, 0.67, 0.35);
 	legV42->SetFillColor(kWhite);
@@ -385,7 +531,8 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 
 	legV42->Draw();
 
-	latexS.DrawLatexNDC(0.20, 0.90, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+//	latexS.DrawLatexNDC(0.20, 0.90, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	latexS.DrawLatexNDC(0.20, 0.90, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
 
 	p = cV42ratio->cd(2);
 	p->SetTopMargin(0.06);
@@ -422,14 +569,15 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 //	legV42b->AddEntry(grPA3.grV4V2, "v_{3}{4} / v_{3}{2, |#Delta#eta|>2}", "l");
 
 	legV42b->Draw();
-	latexS.DrawLatexNDC(0.59, 1.0, "PbPb 5.02 TeV");
+//	latexS.DrawLatexNDC(0.25, 1.003, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
 	///////////////////
 
 	TCanvas * cVratio = MakeCanvas("cVratio", "cVratio", 500, 900);
 	splitCanv(cVratio);
 //	makeMultiPanelCanvas(cVratio, 1, 2, 0.0, 0.05, 0.01, 0.05, 0.03);
 	TH2D * hframeVratio = new TH2D("hframeVratio", "", 1, 0.58, 0.92, 1, 0.7, 1.5);
-	InitHist(hframeVratio, "v_{2}{4} / v_{2}{2}", "v_{2}{6} / v_{2}{4}");
+	InitHist(hframeVratio, "v_{2}{4} / v_{2}^{sub}{2}(|#Delta#eta|>2)", "v_{2}{6} / v_{2}{4}");
 
 	p = cVratio->cd(1);
 	hframeVratio->DrawClone();
@@ -485,12 +633,13 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	gr_pPb_v286->Draw("psame");
 
 	cVratio->cd(1);
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 0.96, "#bf{CMS} #it{Preliminary}");
+	else
 	latexS.DrawLatexNDC(0.15, 0.96, "#bf{CMS}");
-//	latexS.DrawLatexNDC(0.20, 0.85, "pPb 8.16 TeV, PbPb 5.02 TeV");
-//	latexS.DrawLatexNDC(0.68, 0.96, "pPb 8.16 TeV");
-	latexS.DrawLatexNDC(0.22, 0.85, "0.3 < p_{T} < 3.0 GeV/c; |#eta| < 2.4");
+	latexS.DrawLatexNDC(0.22, 0.87, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
 
-	TLegend * legVratio1 = new TLegend(0.2, 0.6, 0.55, 0.75);
+	TLegend * legVratio1 = new TLegend(0.2, 0.56, 0.55, 0.71);
 	legVratio1->SetFillColor(kWhite);
 	legVratio1->SetTextFont(42);
 	legVratio1->SetTextSize(0.06);
@@ -580,12 +729,226 @@ void plotFinal(TString s2pPb = "grV2_sysPhiAcc.root",
 	grAAGamma1->SetMarkerStyle(kStar);
 	grAAGamma1->Draw("p");
 
+	////////////////////
+  // sigma/vn
+
+	TCanvas * cFluct = MakeCanvas("cFluct", "cFluct", 800, 500);
+	makeMultiPanelCanvas(cFluct, 2, 1, 0.0, 0., 0.15, 0.15, 0.03);
+
+	TH2D * hframeFluct = new TH2D("hframeFluct", "", 1, 1, 399, 1, 0.0, 1.1);
+	InitHist(hframeFluct, "N_{trk}^{offline}", "#sigma_{v} / <v_{n}>");
+	hframeFluct->GetXaxis()->SetLabelFont(43);
+	hframeFluct->GetXaxis()->SetTitleFont(43);
+	hframeFluct->GetXaxis()->SetLabelSize(20);
+	hframeFluct->GetXaxis()->SetTitleSize(25);
+
+  TGraphErrors * grPA2Fluct = (TGraphErrors*) grPA2.grV4V2sub->Clone();
+  TGraphErrors * grPA3Fluct = (TGraphErrors*) grPA3.grV4V2sub->Clone();
+  TGraphErrors * grAA2Fluct = (TGraphErrors*) grAA2.grV4V2sub->Clone();
+  TGraphErrors * grAA3Fluct = (TGraphErrors*) grAA3.grV4V2sub->Clone();
+
+  TGraphErrors * grPA2Fluct_sys = (TGraphErrors*) grPA2V42sys->Clone();
+  TGraphErrors * grPA3Fluct_sys = (TGraphErrors*) grPA3V42sys->Clone();
+  TGraphErrors * grAA2Fluct_sys = (TGraphErrors*) grAA2V42sys->Clone();
+  TGraphErrors * grAA3Fluct_sys = (TGraphErrors*) grAA3V42sys->Clone();
+
+  ratio2fluct(grPA2Fluct);
+  ratio2fluct(grPA3Fluct);
+  ratio2fluct(grAA2Fluct);
+  ratio2fluct(grAA3Fluct);
+
+  ratio2fluct(grPA2Fluct_sys);
+  ratio2fluct(grPA3Fluct_sys);
+  ratio2fluct(grAA2Fluct_sys);
+  ratio2fluct(grAA3Fluct_sys);
+
+	p = cFluct->cd(1);
+	p->SetTopMargin(0.06);
+  hframeFluct->Draw();
+
+  grPA2Fluct_sys->Draw("[]2");
+  grPA3Fluct_sys->Draw("[]2");
+  grPA2Fluct->Draw("psame");
+  grPA3Fluct->Draw("psame");
+
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+
+	TLegend * legFluct = new TLegend(0.18, 0.75, 0.7, 0.93);
+	legFluct->SetFillColor(kWhite);
+	legFluct->SetTextFont(43);
+	legFluct->SetTextSize(22);
+	legFluct->SetBorderSize(0);
+
+  legFluct->AddEntry(grPA2Fluct, "n = 2", "p");
+  legFluct->AddEntry(grPA3Fluct, "n = 3", "p");
+  legFluct->Draw();
+
+
+	p = cFluct->cd(2);
+	p->SetTopMargin(0.06);
+  hframeFluct->Draw();
+
+  grAA2Fluct_sys->Draw("[]2");
+  grAA3Fluct_sys->Draw("[]2");
+  grAA2Fluct->Draw("psame");
+  grAA3Fluct->Draw("psame");
+
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+
 	///// save
 	cVn->SaveAs("vn.pdf");
+	cV2->SaveAs("v2.pdf");
+	cV3->SaveAs("v3.pdf");
 	cVratio->SaveAs("v2rs.pdf");
 	cV42ratio->SaveAs("v42.pdf");
 	cGamma->SaveAs("gamma1.pdf");
+  cFluct->SaveAs("fluct.pdf");
 	/////
+	// anime
+	p = cV2->cd(1);
+	p->SetTopMargin(0.06);
+	hframeV2->Draw();
+
+	legV22->Draw();
+	grHIN16022pPbV2sys->Draw("[]2");
+	grHIN16022pPbV2sub->Draw("Psame");
+
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+//	latexS.DrawLatexNDC(0.38, 1.003, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+
+	p = cV2->cd(2);
+	p->SetTopMargin(0.06);
+	hframeV2->Draw();
+	grHIN16022PbPbV2sys->Draw("[]2");
+	grHIN16022PbPbV2sub->Draw("Psame");
+//	latexS.DrawLatexNDC(0.25, 1.003, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+
+	cV2->SaveAs("v2_0.pdf");
+
+	p = cV2->cd(1);
+	grPAV24sys->Draw("[]2");
+	grPA2.grV4->Draw("Psame");
+	p = cV2->cd(2);
+	grAAV24sys->Draw("[]2");
+	grAA2.grV4->Draw("Psame");
+	cV2->SaveAs("v2_1.pdf");
+
+	p = cV2->cd(1);
+	grPAV26sys->Draw("[]2");
+	grPA2.grV6->Draw("Psame");
+	p = cV2->cd(2);
+	grAAV26sys->Draw("[]2");
+	grAA2.grV6->Draw("Psame");
+	cV2->SaveAs("v2_2.pdf");
+
+	p = cV2->cd(1);
+	grPAV28sys->Draw("[]2");
+	grPA2.grV8->Draw("Psame");
+	p = cV2->cd(2);
+	grAAV28sys->Draw("[]2");
+	grAA2.grV8->Draw("Psame");
+	cV2->SaveAs("v2_3.pdf");
+
+	// v3
+	p = cV3->cd(1);
+	hframeV3->Draw();
+	grHIN16022pPbV3sys->Draw("[]2");
+	grHIN16022pPbV3sub->Draw("Psame");
+	legV3->Draw();
+
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+//	latexS.DrawLatexNDC(0.38, 1.003, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+
+	p = cV3->cd(2);
+	hframeV3->Draw();
+	grHIN16022PbPbV3sys->Draw("[]2");
+	grHIN16022PbPbV3sub->Draw("Psame");
+//	latexS.DrawLatexNDC(0.25, 1.003, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.10, 0.92, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+	cV3->SaveAs("v3_0.pdf");
+
+	p = cV3->cd(1);
+	grPAV34sys->Draw("[]2");
+	grPA3.grV4->Draw("Psame");
+	p = cV3->cd(2);
+	grAAV34sys->Draw("[]2");
+	grAA3.grV4->Draw("Psame");
+	cV3->SaveAs("v3_1.pdf");
+
+	// v42
+	p = cV42ratio->cd(1);
+	hframeV42ratio->Draw();
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 1.0, "#bf{CMS}");
+//	latexS.DrawLatexNDC(0.38, 1.003, "pPb 8.16 TeV");
+	latexS.DrawLatexNDC(0.68, 1.000, "pPb 8.16 TeV");
+	grPA2V42sys->Draw("[]2");
+	grPA2.grV4V2sub->Draw("psame");
+	latexS.DrawLatexNDC(0.20, 0.90, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+	p = cV42ratio->cd(2);
+	hframeV42ratio->Draw();
+	grAA2V42sys->Draw("[]2");
+	grAA2.grV4V2sub->Draw("psame");
+//	latexS.DrawLatexNDC(0.25, 1.003, "PbPb 5.02 TeV");
+	latexS.DrawLatexNDC(0.60, 1.000, "PbPb 5.02 TeV");
+	legV42b->Draw();
+	cV42ratio->SaveAs("v42_0.pdf");
+	p = cV42ratio->cd(1);
+	grPA3V42sys->Draw("[]2");
+	grPA3.grV4V2sub->Draw("psame");
+	p = cV42ratio->cd(2);
+	grAA3V42sys->Draw("[]2");
+	grAA3.grV4V2sub->Draw("psame");
+	cV42ratio->SaveAs("v42_1.pdf");
+
+	// v2rs
+	cVratio->cd(1);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{6} / v_{2}{4}");
+	hframeVratio->DrawClone();
+	ffit64->Draw("same");
+	if ( bPrelim )
+	latexS.DrawLatexNDC(0.15, 0.96, "#bf{CMS} #it{Preliminary}");
+	else
+	latexS.DrawLatexNDC(0.15, 0.96, "#bf{CMS}");
+	latexS.DrawLatexNDC(0.22, 0.87, "#splitline{0.3 < p_{T} < 3.0 GeV/c}{|#eta| < 2.4}");
+//	legVratio1->Draw();
+	cVratio->cd(2);
+	hframeVratio->GetYaxis()->SetTitle("v_{2}{8} / v_{2}{6}");
+	hframeVratio->Draw();
+	ffit86->Draw("same");
+	lred->Draw("lsame");
+	lblue->Draw("lsame");
+	latexS.DrawLatex(0.66, 0.81, "Fluctuation-Driven Eccentricities");
+//	legVratio2->Draw();
+	cVratio->SaveAs("v2rs_0.pdf");
+	cVratio->cd(1);
+	gr_pPb_v264sys->Draw("[]2");
+	gr_pPb_v264->Draw("psame");
+	legVratio1->Draw();
+	cVratio->cd(2);
+	gr_pPb_v286sys->Draw("[]2");
+	gr_pPb_v286->Draw("psame");
+	legVratio2->Draw();
+	cVratio->SaveAs("v2rs_1.pdf");
 }
 
 void splitCanv(TCanvas * c)
